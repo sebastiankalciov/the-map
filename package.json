@@ -1,0 +1,23 @@
+{
+  "name": "beta-2d",
+  "version": "1.0.0",
+  "description": "Beta 2D is a repository used for storing attempts of 2D Applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastiankalciov/beta-2D.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastiankalciov/beta-2D/issues"
+  },
+  "homepage": "https://github.com/sebastiankalciov/beta-2D#readme",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "pixi.js": "^8.0.4"
+  }
+}
