@@ -1,15 +1,29 @@
-import Image from "next/image";
-import '../app/globals.css'
+import Head from 'next/head';
+import Link from 'next/link';
 
-import PixiCanvas from '../components/object';
+import '../app/globals.css';
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="text-6xl text-center font-bold">Computer Science - The Map</h1>
-        <PixiCanvas/>
-      </div>
-    </main>
-  );
+
+    return (
+
+        <main className={`landing-page`}>
+
+            <Head>
+                <title>Computer Science - The Map</title>
+            </Head>
+
+            <h1 className="text-8xl font-extrabold title">Welcome, wanderer</h1>
+
+            <p>Are you here to find your path in Computer Science?</p>
+            <p>Click on the button below to start your journey</p>
+
+            <Link href = "/village">
+                <button className="redirect-button">Start</button>
+            </Link>
+
+
+        </main>
+    );
 }
