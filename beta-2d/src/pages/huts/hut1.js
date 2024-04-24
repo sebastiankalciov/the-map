@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import '../app/globals.css';
+import '../../app/globals.css';
 
 import * as PIXI from 'pixi.js';
 
-export default function Village() {
+export default function Hut1() {
     
     const app = new PIXI.Application();
     app
@@ -33,13 +33,15 @@ export default function Village() {
 
             <Head>
                 <title>Village</title>
+                
             </Head>
-            
+            <h1 className="text-8xl font-extrabold title">Hut 1</h1>
             <Link href = "/">
                     <button className="redirect-button top-right">Return home</button>
             </Link>
             
             
+
         </main>
     );
 }
