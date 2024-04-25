@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import '../app/globals.css';
-import keyboard from '../components/Keyboard'
+import '../../../app/globals.css';
+import keyboard from '../../../components/Keyboard'
 import * as PIXI from 'pixi.js';
 
 
-export default function Village() {
+export default function Index() {
     console.log(keyboard("ArrowLeft"))
     const app = new PIXI.Application();
     app
@@ -93,7 +93,7 @@ export default function Village() {
         <main className={`landing-page`} id = "main">
 
             <Head>
-                <title>Village</title>
+                <title>Page 1 - AI & Robotics</title>
             </Head>
             
             <Link href = "/">

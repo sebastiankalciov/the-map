@@ -22,7 +22,9 @@ export default function Home() {
             <Link href = "/village">
                 <button className="redirect-button">Start</button>
             </Link>
-
+            <Link href = "/about">
+                <button className="redirect-button top-right">About us</button>
+            </Link>
 
         </main>
     );
