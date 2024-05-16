@@ -3,7 +3,7 @@ import * as PIXI from 'pixi.js';
 const Hut = {
 
     /**
-     * Create a hut for a domain.
+     * # Create a hut for a domain.
      * @param {PIXI_APPLICATION} app - Pixi Application
      * @param {string} name - Name of the domain
      * @param {PIXI_TEXTURE} texture - Image of the hut
@@ -15,16 +15,18 @@ const Hut = {
         const hut = new PIXI.Sprite(texture);
 
         const titleStyle = new PIXI.TextStyle({
-            fontFamily: 'monospace',
-            fontSize: 15,
+            fontFamily: "\"Courier New\", Courier, monospace",
+            fontSize: 20,
+            fontVariant: "small-caps",
+            fontWeight: "bold",
             fill: '#ffffff'
         });
 
         const hutTitle = new PIXI.Text({text: name, style: titleStyle});
 
-        // Set the position of the hut
 
-        hutTitle.position.set((app.screen.width - position.x - 20) / 2, (app.screen.height - position.y - 50) / 2);
+        // Set the position of the hut
+        hutTitle.position.set((app.screen.width - position.x - 20) / 2, (app.screen.height - position.y - 30) / 2);
         hut.position.set((app.screen.width - position.x) / 2, (app.screen.height - position.y) / 2);
         
         // Set the size of the hut
@@ -32,7 +34,7 @@ const Hut = {
         hut.width = 100;
         hut.height = 100;
         
-        // Make the hut interactive to be able to access the page
+        // Make the hut interactive to be able to access it
 
         hut.interactive = true;
         hut.buttonMode = true;

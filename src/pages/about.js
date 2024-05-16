@@ -11,9 +11,9 @@ export default function Home() {
         <main className={`landing-page`}>
 
             <Head>
+                <link rel = "icon" href = "/assets/icon.png"/>
                 <title>Computer Science - The Map</title>
             </Head>
-
 
             <p className="text-2xl">We are a team of Computer Science Students that want to guide you to find your path in Computer Science.</p>
         

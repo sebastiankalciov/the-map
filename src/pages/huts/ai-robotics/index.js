@@ -19,7 +19,7 @@ export default function Index() {
         <main className={`landing-page`} id = "main">
 
             <Head>
-                <link rel = "icon" href = "assets/character3.png"/>
+                <link rel = "icon" href = "/assets/icon.png"/>
                 <title>AI & Robotics</title>
             </Head>
             

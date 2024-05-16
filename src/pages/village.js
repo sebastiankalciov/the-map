@@ -19,15 +19,12 @@ export default function Village() {
 
         await app.init({hello: true, backgroundAlpha: 0, resizeTo: window})
         
-
         const mainContainer = document.getElementById("main");
-
         mainContainer.appendChild(app.canvas)
 
         // Create character's texture and the character itself
 
-        const characterTexture = await PIXI.Assets.load('/assets/character5.png');
-
+        const characterTexture = await PIXI.Assets.load('/assets/characterTexture.png');
         const character = Character.create(app, characterTexture);
 
         // Create the huts
@@ -44,18 +41,14 @@ export default function Village() {
             {sprite: algorithms, location: "algorithms"}
         ]
 
-
         const keyController = new Controller();
 
-
-        
         app.ticker.add(() => {
 
             // Move the character based on key inputs
             Character.move(app, keyController, character);
 
             // Add listeners for interaction with huts
-            
             for (let i = 0; i < listOfHuts.length; i++) {
                 handleHutInteraction(listOfHuts[i], character);
                 handleHutClickListener(listOfHuts[i], character);
@@ -65,6 +58,7 @@ export default function Village() {
         });
 
     })();
+
     let lastInteractionTime = 0; 
 
     const handleHutClickListener = (hut, character) => {
@@ -92,6 +86,7 @@ export default function Village() {
         if (currentTime - lastInteractionTime < 1000) {
             return;
         }
+        
         if (distanceBetweenTwoPoints(hut.sprite, character) < INTERACTION_DISTANCE) {
             window.location.href = `huts/${hut.location}`;
             lastInteractionTime = currentTime;
@@ -112,7 +107,7 @@ export default function Village() {
         <main className={`landing-page`} id = "main">
 
             <Head>
-                <link rel = "icon" href = "/assets/character3.png"/>
+                <link rel = "icon" href = "/assets/icon.png"/>
                 <title>Village</title>
             </Head>
             

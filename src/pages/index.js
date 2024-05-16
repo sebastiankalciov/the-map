@@ -11,13 +11,12 @@ export default function Home() {
         <main className={`landing-page`}>
 
             <Head>
-                <link rel = "icon" href = "/assets/character3.png"/>
+                <link rel = "icon" href = "/assets/icon.png"/>
                 <title>Computer Science - The Map</title>
             </Head>
 
             <header>
                 <h1 className="text-8xl font-extrabold title">Welcome, wanderer</h1>
-
             </header>
 
             <p>Are you here to find your path in Computer Science?</p>
@@ -26,6 +25,7 @@ export default function Home() {
             <Link href = "/village">
                 <button className="redirect-button">Start</button>
             </Link>
+
             <Link href = "/about">
                 <button className="redirect-button top-right">About us</button>
             </Link>

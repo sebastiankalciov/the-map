@@ -11,7 +11,9 @@ const keyMap = {
     ArrowRight: 'right',
 };
 
-// Class for handling keyboard inputs.
+/**
+ * ## Class for handling keyboard inputs.
+ */
 export class Controller {
 
     constructor() {

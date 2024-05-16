@@ -25,6 +25,7 @@ export default function Index() {
         <main className={`landing-page`} id = "main">
 
             <Head>
+                <link rel = "icon" href = "/assets/icon.png"/>
                 <title>Databases</title>
             </Head>
             

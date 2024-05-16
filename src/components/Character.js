@@ -1,10 +1,9 @@
 import * as PIXI from 'pixi.js';
 
-
 const Character = {
 
     /**
-     * Create a Sprite
+     * # Create a Sprite
      * @param {PIXI_APPLICATION} app - Pixi Application
      * @param {*} texture - Image of the character
      * @returns Pixi Sprite
@@ -33,45 +32,49 @@ const Character = {
         return character;
     },
     
-
     /**
-     * Move the character
-     * @param {*} keyController 
-     * @param {*} character 
-     * @param {*} hut 
+     * # Move the character using keyboard
+     * @param {*} app - Pixi Application
+     * @param {*} keyController - Key Controller
+     * @param {*} character - Pixi Sprite
+     * @param {*} hut - Hut object
      */
     move (app, keyController, character) {
 
-        const newX = character.x + 3
-        const newY = character.y + 3
+        const newXPosition = character.x + 3
+        const newYPosition = character.y + 3
     
-        // Get the dimensions of the screen
         const screenWidth = app.screen.width;
         const screenHeight = app.screen.height;
     
         // Calculate the boundaries of the screen
-        const minX = character.width / 2; // Left boundary
-        const maxX = screenWidth - character.width / 2; // Right boundary
-        const minY = character.height / 2; // Top boundary
-        const maxY = screenHeight - character.height / 2; // Bottom boundary
+        const minWidth = character.width / 2; // Left boundary
+        const maxWidth = screenWidth - character.width / 2; // Right boundary
+
+        const minHeight = character.height / 2; // Top boundary
+        const maxHeight = screenHeight - character.height / 2; // Bottom boundary
 
         if (keyController.keys.left.pressed) {
-            if (newX >= minX)
+
+            if (newXPosition >= minWidth)
                 character.x -= 3;
-    
         }
+
         else if (keyController.keys.right.pressed) {
-            if (newX <= maxX)
+
+            if (newXPosition <= maxWidth)
                 character.x += 3;
         }
+
         else if (keyController.keys.up.pressed) {
-            if (newY >= minY)
+
+            if (newYPosition >= minHeight)
                 character.y -= 3;
-            else
-            alert("UNDE FUGI???")
         }
+        
         else if (keyController.keys.down.pressed) {
-            if (newY < maxY)
+
+            if (newYPosition < maxHeight)
                 character.y += 3;
         }
 
