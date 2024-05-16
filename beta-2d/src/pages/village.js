@@ -2,113 +2,134 @@ import Head from 'next/head';
 import Link from 'next/link';
 import '../app/globals.css';
 import {Controller} from '../components/Controller';
-import {Character} from '../components/Character';
 import * as PIXI from 'pixi.js';
-import { useEffect } from 'react';
 
+// Interaction distance between the character and the huts
+
+const INTERACTION_DISTANCE = 100;
+const CLICK_INTERACTION_DISTANCE = 300;
 
 export default function Village() {
 
     const app = new PIXI.Application();
 
     (async () => {
-        app
-        .init({hello: true, backgroundAlpha: 0, resizeTo: window})
-        .then(async () => {
-            
-            const mainContainer = document.getElementById("main");
-            mainContainer.appendChild(app.canvas)
 
-            // Create character's texture and the character itself
+        await app.init({hello: true, backgroundAlpha: 0, resizeTo: window})
+        
 
-            const characterTexture = await PIXI.Assets.load('/assets/character3.png');
-            const character = PIXI.Sprite.from(characterTexture);
-    
-            character.texture.source.scaleMode = "nearest";
+        const mainContainer = document.getElementById("main");
+        mainContainer.appendChild(app.canvas)
 
-            // Set the position of the character
-            character.anchor.set(0.5);
+        // Create character's texture and the character itself
 
-            character.position.set(
-                app.renderer.screen.width / 2,
-                app.renderer.screen.height / 2
-            );
+        const characterTexture = await PIXI.Assets.load('/assets/character3.png');
+        const character = createCharacter(app, characterTexture);
 
-            // Create the huts
+        // Create the huts
 
-            const hutTexture = await PIXI.Assets.load('/assets/hut.png');
-            const hut = new PIXI.Sprite(hutTexture);
+        const hutTexture = await PIXI.Assets.load('/assets/hut.png');
 
-            const style = new PIXI.TextStyle({
-                fontFamily: 'monospace',
-                fontSize: 16,
-                fill: '#ffffff'
-            });
+        let hut = createHut(app, "AI and Robotics", hutTexture, {x: 400, y: 400});
 
-            const hutTitle = new PIXI.Text({text: "AI and Robotics", style: style});
+        // Move the character
 
-            // Set the position of the hut and the size
+        const keyController = new Controller();
+        
+        app.ticker.add(() => {
 
-            hutTitle.position.set((app.screen.width - 450) / 2, (app.screen.height - 450) / 2);
-            hut.position.set((app.screen.width - 400) / 2, (app.screen.height - 400) / 2);
-            hut.width = 100;
-            hut.height = 100;
-            
-            // Check if the player has left-clicked and the user is in the proximity of the hut
-            // This has to be done properly, it is just a test
+            moveCharacter(keyController, character, hut);
 
-            hut.interactive = true;
-            hut.buttonMode = true;
-            
-            // Move the character
-
-            const keyController = new Controller();
-            
-            app.ticker.add(() => {
-
-                if (keyController.keys.left.pressed)
-                    character.x -= 3;
-                else if (keyController.keys.right.pressed)
-                    character.x += 3;
-                else if (keyController.keys.up.pressed)
-                    character.y -= 3;
-                else if (keyController.keys.down.pressed)
-                    character.y += 3;
-
-                if (distanceBetweenTwoPoints(hut, character) < 100)
-                    window.location.href = '/huts/ai-robotics';
-
-
-            
-            });
-
-            hut.on('pointerdown', () => {
-                if (distanceBetweenTwoPoints(hut, character) < 2500)
-                    window.location.href = '/huts/ai-robotics'; 
-            });
-
-            // Add the objects to the container
-            app.stage.addChild(character);
-            app.stage.addChild(hut);
-            app.stage.addChild(hutTitle);
         });
+
+        hut.on('pointerdown', () => {
+            handleHutClick(hut, character);
+        });
+
     })();
 
-    const createCharacter = (app) => {
-        const characterTexture = PIXI.Assets.load('/assets/character3.png');
-        const character = PIXI.Sprite.from(characterTexture);
+    const createCharacter = (app, texture) => {
+        
+        const character = PIXI.Sprite.from(texture);
+
+        // Increase the resolution of the texture
 
         character.texture.source.scaleMode = "nearest";
 
         // Set the position of the character
+        
         character.anchor.set(0.5);
 
         character.position.set(
             app.renderer.screen.width / 2,
             app.renderer.screen.height / 2
         );
+
+        // Add the component to the app
+
+        app.stage.addChild(character);
+        
         return character;
     }
+
+    const createHut = (app, name, texture, position) => {
+        
+        const hut = new PIXI.Sprite(texture);
+
+        const titleStyle = new PIXI.TextStyle({
+            fontFamily: 'monospace',
+            fontSize: 15,
+            fill: '#ffffff'
+        });
+
+        const hutTitle = new PIXI.Text({text: name, style: titleStyle});
+
+        // Set the position of the hut
+
+        hutTitle.position.set((app.screen.width - position.x - 50) / 2, (app.screen.height - position.y - 50) / 2);
+        hut.position.set((app.screen.width - position.x) / 2, (app.screen.height - position.y) / 2);
+        
+        // Set the size of the hut
+
+        hut.width = 100;
+        hut.height = 100;
+        
+        // Make the hut interactive to be able to access the page
+
+        hut.interactive = true;
+        hut.buttonMode = true;
+
+        // Add the components to the app
+
+        app.stage.addChild(hut);
+        app.stage.addChild(hutTitle);
+
+        return hut
+    }
+
+    const moveCharacter = (keyController, character, hut) => {
+
+        if (keyController.keys.left.pressed)
+            character.x -= 3;
+
+        else if (keyController.keys.right.pressed)
+            character.x += 3;
+
+        else if (keyController.keys.up.pressed)
+            character.y -= 3;
+
+        else if (keyController.keys.down.pressed)
+            character.y += 3;
+
+        if (distanceBetweenTwoPoints(hut, character) < INTERACTION_DISTANCE)
+            window.location.href = '/huts/ai-robotics';
+    }
+
+    const handleHutClick = (hut, character) => {
+        if (distanceBetweenTwoPoints(hut, character) < CLICK_INTERACTION_DISTANCE)
+            window.location.href = 'huts/ai-robotics';
+    }
+
     function distanceBetweenTwoPoints(p1, p2) {
         const a = p1.x - p2.x;
         const b = p1.y - p2.y;
