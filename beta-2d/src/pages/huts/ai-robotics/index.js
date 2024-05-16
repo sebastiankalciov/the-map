@@ -22,8 +22,8 @@ export default function Index() {
                 <title>AI & Robotics</title>
             </Head>
             
-            <Link href = "/">
-                    <button className="redirect-button top-right">Return home</button>
+            <Link href = "/village">
+                    <button className="redirect-button top-right">Return to Village</button>
             </Link>
             
         </main>
