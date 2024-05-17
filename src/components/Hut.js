@@ -11,11 +11,12 @@ const Hut = {
      * @returns 
      */
     create(app, name, texture, position) {
-        
+
         const hut = new PIXI.Sprite(texture);
 
+
         const titleStyle = new PIXI.TextStyle({
-            fontFamily: "\"Courier New\", Courier, monospace",
+            fontFamily: "Pixellari",
             fontSize: 20,
             fontVariant: "small-caps",
             fontWeight: "bold",
@@ -24,15 +25,15 @@ const Hut = {
 
         const hutTitle = new PIXI.Text({text: name, style: titleStyle});
 
-
+        hutTitle.resolution = 3;
         // Set the position of the hut
-        hutTitle.position.set((app.screen.width - position.x - 20) / 2, (app.screen.height - position.y - 30) / 2);
+        hutTitle.position.set((app.screen.width - position.x - 4 * name.length) / 2, (app.screen.height - position.y - 30) / 2);
         hut.position.set((app.screen.width - position.x) / 2, (app.screen.height - position.y) / 2);
         
         // Set the size of the hut
 
-        hut.width = 100;
-        hut.height = 100;
+        hut.width = 75;
+        hut.height = 75;
         
         // Make the hut interactive to be able to access it
 
