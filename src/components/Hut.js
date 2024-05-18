@@ -14,10 +14,9 @@ const Hut = {
 
         const hut = new PIXI.Sprite(texture);
 
-
         const titleStyle = new PIXI.TextStyle({
             fontFamily: "Pixellari",
-            fontSize: 20,
+            fontSize: 25,
             fontVariant: "small-caps",
             fontWeight: "bold",
             fill: '#ffffff'
@@ -26,8 +25,9 @@ const Hut = {
         const hutTitle = new PIXI.Text({text: name, style: titleStyle});
 
         hutTitle.resolution = 3;
+
         // Set the position of the hut
-        hutTitle.position.set((app.screen.width - position.x - 4 * name.length) / 2, (app.screen.height - position.y - 30) / 2);
+        hutTitle.position.set((app.screen.width - position.x - 4 * name.length) / 2, (app.screen.height - position.y - 50) / 2);
         hut.position.set((app.screen.width - position.x) / 2, (app.screen.height - position.y) / 2);
         
         // Set the size of the hut

@@ -16,7 +16,7 @@ export default function Index() {
 
     return (
 
-        <main className={`landing-page`} id = "main">
+        <main className={`domain-page`} id = "main">
 
             <Head>
                 <link rel = "icon" href = "/assets/icon.png"/>

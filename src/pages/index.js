@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import '../app/globals.css';
+import {useEffect, useState} from "react";
 
 
 export default function Home() {

@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@font-face {
+    font-family: "minecraft";
+    src: url('../../public/assets/titleFont.TTF');
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -43,7 +46,6 @@ body {
   }
 }
 
-
 .landing-page {
   display: flex;
   flex-direction: column;
@@ -57,6 +59,19 @@ body {
   text-align: center;
   padding: 0 20px;
   
+}
+.domain-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../../public/assets/house-floor3.png');
+    background-size: repeat;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .redirect-button {
