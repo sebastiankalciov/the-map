@@ -64,7 +64,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../../public/assets/background/backgroundLandingPage.png');
+    background-image: url('../../public/assets/background/grass.png');
     background-size: repeat;
     height: 100vh;
     color: white;
@@ -77,22 +77,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background-image: url('../../public/assets/background/house-floor3.png');
+    background-image: url('../../public/assets/background/wooden.png');
     background-size: repeat;
     height: 100vh;
     color: white;
     text-align: center;
     padding: 0 20px;
 }
-/**
-    colors (green):
-    background-color: #0faa3e;
-    border: 1px solid #14bd47;
-
-    box-shadow: 0px 6px 0px #0b802e;
-    box-shadow: 0px 2px 0px #0b802e;
- */
 
 .redirect-button-landingPage {
     color: #ecf0f1;
@@ -109,13 +100,13 @@ body {
 .redirect-button {
     color: #ecf0f1;
     font-size: 17px;
-    background-color: #0faa3e;
-    border: 1px solid #14bd47;
+    background-color: #409459;
+    border: 1px solid #51aa6b;
     border-radius: 10px;
     cursor: pointer;
     padding: 10px;
     margin-top: 20px;
-    box-shadow: 0px 2px 0px #0b802e;
+    box-shadow: 0px 3px 0px #3a8350;
     transition: all 0.1s;
 }
   

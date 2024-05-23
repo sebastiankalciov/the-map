@@ -1,17 +1,16 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import RootLayout from "@/app/layout";
-import '../app/globals.css';
-import {Controller} from '../components/Controller';
-import Utils from '../components/Utils';
-import Character from '../components/Character';
-import Hut from '../components/Hut';
+import '@/app/globals.css';
+import {Controller} from '@/components/Controller';
+import Utils from '@/components/Utils';
+import Character from '@/components/Character';
+import Hut from '@/components/Hut';
 import * as PIXI from 'pixi.js';
 
 // Interaction distances between the character and the huts
-
 const INTERACTION_DISTANCE = 75;
 const CLICK_INTERACTION_DISTANCE = 200;
+
 
 export default function Village() {
 
@@ -26,9 +25,8 @@ export default function Village() {
         const mainContainer = document.getElementById("main");
         mainContainer.appendChild(app.canvas)
 
-        // Add the fountain of Turing
-
-        const fountainTexture = await PIXI.Assets.load('/assets/background/fountain_of_turing.png');
+        // Add the fountain of Turing (T0-DO: Create function to generate the fountain)
+        const fountainTexture = await PIXI.Assets.load('/assets/background/tree.png');
         const fountainObject = PIXI.Sprite.from(fountainTexture);
 
         fountainObject.width = 300;
@@ -42,21 +40,47 @@ export default function Village() {
             app.renderer.screen.height / 2
         );
 
+        // Add trees - TO DO
+
+        const treeTexture = await PIXI.Assets.load('/assets/background/tree.png');
+        const tree1 = PIXI.Sprite.from(treeTexture);
+        const tree2 = PIXI.Sprite.from(treeTexture);
+        tree1.width = 75;
+        tree1.height = 75;
+        tree1.texture.source.scaleMode = "nearest";
+
+        tree1.anchor.set(0.5);
+
+        tree1.position.set(
+            0.4 * app.renderer.screen.width,
+            0.2 * app.renderer.screen.height
+        );
+        tree2.width = 75;
+        tree2.height = 75;
+        tree2.texture.source.scaleMode = "nearest";
+
+        tree2.anchor.set(0.5);
+
+        tree2.position.set(
+            0.7 * app.renderer.screen.width,
+            0.5 * app.renderer.screen.height
+        );
+
         // Add the component to the app
-        app.stage.addChild(fountainObject);
+        app.stage.addChild(tree1);
+        app.stage.addChild(tree2);
 
         const characterTexture = await PIXI.Assets.load('/assets/character/characterTexture.png');
         const character = Character.create(app, characterTexture);
 
         // Create the huts
-
         const hutTexture = await PIXI.Assets.load('/assets/huts/house-texture2.png');
         await PIXI.Assets.load('/assets/fonts/OpenSans.ttf');
 
         const screenWidth = window.innerWidth;
         const screenHeight = window.innerHeight;
 
-        let ai_robotics = Hut.create(app, "AI and Robotics", hutTexture, {x: -0.5 * screenWidth, y: -0.3 * screenHeight});
+        let ai_robotics = Hut.create(app, "AI and Robotics", hutTexture,{x: -0.5 * screenWidth, y: -0.3 * screenHeight});
         let algorithms = Hut.create(app, "Algorithms and Data Structures", hutTexture, {x: -0.3 * screenWidth, y: -0.67 * screenHeight});
 
         let architecture = Hut.create(app, "Architecture", hutTexture, {x: 0.7 * screenWidth, y: -0.6 * screenHeight});
@@ -79,7 +103,6 @@ export default function Village() {
             {sprite: ai_robotics, location: "ai-robotics"},
             {sprite: databases, location: "databases"},
             {sprite: algorithms, location: "algorithms"},
-
             {sprite: architecture, location: "architecture"},
             {sprite: bioinformatics, location: "bioinformatics"},
             {sprite: computational_science, location: "computational-science"},

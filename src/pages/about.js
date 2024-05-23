@@ -5,7 +5,7 @@ import '../app/globals.css';
 import RootLayout from "@/app/layout";
 
 
-export default function Home() {
+export default function About() {
 
     return (
         <RootLayout>

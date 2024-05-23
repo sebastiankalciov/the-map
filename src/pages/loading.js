@@ -1,12 +1,8 @@
-import Head from 'next/head';
 import Link from 'next/link';
-
-import '../app/globals.css';
-import {useEffect, useState} from "react";
+import '@/app/globals.css';
 import RootLayout from "@/app/layout";
 
-
-export default function Home() {
+export default function Loading() {
 
     return (
 
@@ -23,7 +19,7 @@ export default function Home() {
                         are unraveled through the elegance of code.
                         <br/>
                         <br/>
-                        <a className="text-cyan-100">Inspired</a>
+                        <a className="text-cyan-100">Inspired </a>
                         by this dynamic world, we, a group of passionate
                         students, have created an
                         interactive map to guide you through the captivating landscapes of Computer Science.
@@ -41,7 +37,7 @@ export default function Home() {
                         <br/>
                         <br/>
 
-                        <a className="text-cyan-100">Click the button</a>
+                        <a className="text-cyan-100">Click the button </a>
                         below to start your adventure and
                         unlock the secrets of this amazing field!
                     </p>
@@ -54,6 +50,5 @@ export default function Home() {
             </div>
 
         </RootLayout>
-
     );
 }

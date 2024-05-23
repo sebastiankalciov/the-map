@@ -1,3 +1,5 @@
+/* Source: Pixi.js*/
+
 // Map keyboard key codes to controller's state keys
 const keyMap = {
     Space: 'space',

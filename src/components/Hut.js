@@ -4,10 +4,10 @@ const Hut = {
 
     /**
      * # Create a hut for a domain.
-     * @param {PIXI_APPLICATION} app - Pixi Application
+     * @param {*} app - Pixi Application
      * @param {string} name - Name of the domain
-     * @param {PIXI_TEXTURE} texture - Image of the hut
-     * @param {[x, y]} position - Position for where the hut should be placed
+     * @param {*} texture - Image of the hut
+     * @param {{x: number, y: number}} position - Position for where the hut should be placed
      * @returns 
      */
     create(app, name, texture, position) {
@@ -28,7 +28,7 @@ const Hut = {
 
         // Set the position of the hut
 
-        hutTitle.position.set((app.screen.width - position.x - 4 * name.length) / 2, (app.screen.height - position.y - 50) / 2);
+        hutTitle.position.set((app.screen.width - position.x - 4 * name.length) / 2, (app.screen.height - position.y - 60) / 2);
         hut.position.set((app.screen.width - position.x) / 2, (app.screen.height - position.y) / 2);
         
         // Set the size of the hut
