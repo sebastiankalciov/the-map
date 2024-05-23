@@ -46,6 +46,18 @@ body {
         transform: translateY(-20px);
     }
 }
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../public/assets/background/backgroundMainPage.jpg');
+    background-size: repeat;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    //padding: 0 20px;
+}
 
 .default-page {
     display: flex;
@@ -58,7 +70,6 @@ body {
     color: white;
     text-align: center;
     padding: 0 20px;
-  
 }
 
 .domain-page {
@@ -74,7 +85,27 @@ body {
     text-align: center;
     padding: 0 20px;
 }
+/**
+    colors (green):
+    background-color: #0faa3e;
+    border: 1px solid #14bd47;
 
+    box-shadow: 0px 6px 0px #0b802e;
+    box-shadow: 0px 2px 0px #0b802e;
+ */
+
+.redirect-button-landingPage {
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: #1463b4;
+    border: 1px solid #247cd5;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 6px 0px #135ca6;
+    transition: all 0.1s;
+}
 .redirect-button {
     color: #ecf0f1;
     font-size: 17px;
@@ -84,7 +115,7 @@ body {
     cursor: pointer;
     padding: 10px;
     margin-top: 20px;
-    box-shadow: 0px 6px 0px #0b802e;
+    box-shadow: 0px 2px 0px #0b802e;
     transition: all 0.1s;
 }
   
@@ -94,7 +125,7 @@ body {
 }
 
 .title {
-    margin-bottom: 50px;
+    padding-bottom: 100px;
     animation: bounce 2s ease-in-out infinite;
 }
 
@@ -103,3 +134,25 @@ body {
     top: 10px;
     right: 20px;
 }
+.storyContainer {
+    background-color: rgba(25, 63, 95, 0.3);
+    width: 110vh;
+    border-radius: 20px;
+    animation: fadeIn 5s forwards;
+
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.storyText {
+    font-size: 1.2em;
+    margin: 20px auto;
+    max-width: 100vh;
+}
+

@@ -16,7 +16,7 @@ const Hut = {
 
         const titleStyle = new PIXI.TextStyle({
             fontFamily: "OpenSans",
-            fontSize: 25,
+            fontSize: 22,
             //fontVariant: "small-caps",
             fontWeight: "bold",
             fill: '#ffffff'

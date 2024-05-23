@@ -112,11 +112,6 @@ export default function Village() {
             <Link href = "/" id = "redirect-button">
                 <button className="redirect-button top-right">Return home</button>
             </Link>
-
-            <Head>
-                <title>Village</title>
-            </Head>
-
         </RootLayout>
     );
 }
