@@ -15,9 +15,9 @@ const Hut = {
         const hut = new PIXI.Sprite(texture);
 
         const titleStyle = new PIXI.TextStyle({
-            fontFamily: "Pixellari",
+            fontFamily: "OpenSans",
             fontSize: 25,
-            fontVariant: "small-caps",
+            //fontVariant: "small-caps",
             fontWeight: "bold",
             fill: '#ffffff'
         });
@@ -27,13 +27,14 @@ const Hut = {
         hutTitle.resolution = 3;
 
         // Set the position of the hut
+
         hutTitle.position.set((app.screen.width - position.x - 4 * name.length) / 2, (app.screen.height - position.y - 50) / 2);
         hut.position.set((app.screen.width - position.x) / 2, (app.screen.height - position.y) / 2);
         
         // Set the size of the hut
 
-        hut.width = 75;
-        hut.height = 75;
+        hut.width = 100;
+        hut.height = 100;
         
         // Make the hut interactive to be able to access it
 
