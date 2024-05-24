@@ -64,7 +64,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../../public/assets/background/grass.png');
+    background-image: url('../../public/assets/background/grass-type2.png');
     background-size: repeat;
     height: 100vh;
     color: white;

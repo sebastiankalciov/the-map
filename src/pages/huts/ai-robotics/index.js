@@ -3,6 +3,7 @@ import RootLayout from "@/app/layout";
 import '@/app/globals.css';
 import {Controller} from '@/components/Controller';
 import Character from '@/components/Character';
+import Hut from "@/components/Hut";
 import * as PIXI from 'pixi.js';
 
 export default function AIRobotics() {
@@ -18,36 +19,23 @@ export default function AIRobotics() {
         const mainContainer = document.getElementById("main");
         mainContainer.appendChild(app.canvas)
 
-        // Add trees (TO-D0: Add function to generate trees
+        // Create objects
+        const screenWidth = app.renderer.screen.width;
+        const screenHeight = app.renderer.screen.height;
 
-        const treeTexture = await PIXI.Assets.load('/assets/background/tree.png');
-        const tree1 = PIXI.Sprite.from(treeTexture);
-        const tree2 = PIXI.Sprite.from(treeTexture);
-        tree1.width = 75;
-        tree1.height = 75;
-        tree1.texture.source.scaleMode = "nearest";
+        await PIXI.Assets.load('/assets/fonts/OpenSans.ttf');
 
-        tree1.anchor.set(0.5);
+        const deskTexture = await PIXI.Assets.load('/assets/objects/desk.png');
 
-        tree1.position.set(
-            0.4 * app.renderer.screen.width,
-            0.2 * app.renderer.screen.height
-        );
+        const theoryObject = Hut.createObject(app, "Activities", deskTexture, {x: 0.4 * screenWidth, y: 0.5 * screenHeight})
+        const experimentObject = Hut.createObject(app, "Experiments", deskTexture, {x: 0.1 * screenWidth, y: 0.7 * screenHeight})
+        const problemsObject = Hut.createObject(app, "Problems", deskTexture, {x: -0.4 * screenWidth, y: -0.5 * screenHeight})
+        const designObject = Hut.createObject(app, "Design", deskTexture, {x: -0.6 * screenWidth, y: 0.5 * screenHeight})
+        const connectionsObject = Hut.createObject(app, "Connections", deskTexture, {x: 0.8 * screenWidth, y: -0.5 * screenHeight})
+        const peopleObject = Hut.createObject(app, "Important people", deskTexture, {x: 0.3 * screenWidth, y: -0.5 * screenHeight})
+        const uvtRelationshipObject = Hut.createObject(app, "AI & Robotics at UVT", deskTexture, {x: 0.6 * screenWidth, y: 0.6 * screenHeight})
+        const venuesObject = Hut.createObject(app, "Venues", deskTexture, {x: 0.4 * screenWidth, y: 0.5 * screenHeight})
 
-        tree2.width = 75;
-        tree2.height = 75;
-        tree2.texture.source.scaleMode = "nearest";
-
-        tree2.anchor.set(0.5);
-
-        tree2.position.set(
-            0.7 * app.renderer.screen.width,
-            0.2 * app.renderer.screen.height
-        );
-
-        // Add the components to the app
-        app.stage.addChild(tree1);
-        app.stage.addChild(tree2);
 
         // Create character
 

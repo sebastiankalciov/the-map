@@ -1,10 +1,6 @@
-import Head from 'next/head';
 import Link from 'next/link';
-
-import '../app/globals.css';
-import {useEffect, useState} from "react";
+import '@/app/globals.css';
 import RootLayout from "@/app/layout";
-
 
 export default function Home() {
 

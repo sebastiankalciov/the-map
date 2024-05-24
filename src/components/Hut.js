@@ -3,16 +3,16 @@ import * as PIXI from 'pixi.js';
 const Hut = {
 
     /**
-     * # Create a hut for a domain.
+     * # Create an object
      * @param {*} app - Pixi Application
-     * @param {string} name - Name of the domain
-     * @param {*} texture - Image of the hut
-     * @param {{x: number, y: number}} position - Position for where the hut should be placed
-     * @returns 
+     * @param {string} title - Name of the object
+     * @param {*} texture - Image of the object
+     * @param {{x: number, y: number}} position - Position for where the object should be placed
+     * @returns
      */
-    create(app, name, texture, position) {
+    createObject(app, title = "", texture, position) {
 
-        const hut = new PIXI.Sprite(texture);
+        const object = new PIXI.Sprite(texture);
 
         const titleStyle = new PIXI.TextStyle({
             fontFamily: "OpenSans",
@@ -22,31 +22,31 @@ const Hut = {
             fill: '#ffffff'
         });
 
-        const hutTitle = new PIXI.Text({text: name, style: titleStyle});
+        const objectTitle = new PIXI.Text({text: title, style: titleStyle});
 
-        hutTitle.resolution = 3;
+        objectTitle.resolution = 3;
+        object.texture.source.scaleMode = "nearest";
+        // Set the position of the object
 
-        // Set the position of the hut
+        objectTitle.position.set((app.renderer.screen.width - position.x - 4 * title.length) / 2, (app.renderer.screen.height - position.y - 60) / 2);
+        object.position.set((app.renderer.screen.width - position.x) / 2, (app.renderer.screen.height - position.y) / 2);
 
-        hutTitle.position.set((app.screen.width - position.x - 4 * name.length) / 2, (app.screen.height - position.y - 60) / 2);
-        hut.position.set((app.screen.width - position.x) / 2, (app.screen.height - position.y) / 2);
-        
-        // Set the size of the hut
+        // Set the size of the object
 
-        hut.width = 100;
-        hut.height = 100;
-        
-        // Make the hut interactive to be able to access it
+        object.width = 100;
+        object.height = 100;
 
-        hut.interactive = true;
-        hut.buttonMode = true;
+        // Make the object interactive to be able to access it
+
+        object.interactive = true;
+        object.buttonMode = true;
 
         // Add the components to the app
 
-        app.stage.addChild(hut);
-        app.stage.addChild(hutTitle);
+        app.stage.addChild(object);
+        app.stage.addChild(objectTitle);
 
-        return hut;
+        return object;
     }
 };
 
