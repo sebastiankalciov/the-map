@@ -55,6 +55,22 @@ const Utils = {
             lastInteractionTime = currentTime;
             return;
         }
+    },
+
+    handleObjectClick(app, object, book, character, clickInteractionDistance) {
+
+        const currentTime = Date.now();
+
+        if (currentTime - lastInteractionTime < 1000) {
+            return;
+        }
+
+        object.on('pointerdown', () => {
+            if (distanceBetweenTwoPoints(object, character) < clickInteractionDistance) {
+                book.visible = true;
+                return;
+            }
+        });
     }
 };
 

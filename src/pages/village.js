@@ -35,8 +35,8 @@ export default function Village() {
 
         const treeTexture = await PIXI.Assets.load('/assets/background/tree.png');
 
-        Hut.createObject(app,"" ,treeTexture, {x: 0.2 * screenWidth, y: 0.3 * screenHeight});
-        Hut.createObject(app,"" ,treeTexture, {x: 0.7 * screenWidth, y: 0.5 * screenHeight});
+        Hut.createObject(app,"" , treeTexture, {x: 0.2 * screenWidth, y: 0.3 * screenHeight});
+        Hut.createObject(app,"" , treeTexture, {x: 0.7 * screenWidth, y: 0.5 * screenHeight});
 
         // Create huts
         const hutTexture = await PIXI.Assets.load('/assets/huts/house-texture2.png');

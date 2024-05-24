@@ -109,7 +109,18 @@ body {
     box-shadow: 0px 3px 0px #3a8350;
     transition: all 0.1s;
 }
-  
+.redirect-button-hut {
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: #58412d;
+    border: 1px solid #715237;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 3px 0px #413122;
+    transition: all 0.1s;
+}
 .redirect-button:active {
     box-shadow: 0px 2px 0px #0b802e;
     top: 2px;
