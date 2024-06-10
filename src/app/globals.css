@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "minecraft";
+    src: url('../../public/assets/fonts/titleFont.TTF');
+}
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
 
@@ -30,62 +34,149 @@ body {
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../public/assets/background/backgroundMainPage.jpg');
+    background-size: repeat;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    //padding: 0 20px;
 }
 
+.default-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../public/assets/background/grass-type2.png');
+    background-size: repeat;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
 
-.landing-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.domain-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../public/assets/background/wooden.png');
+    background-size: repeat;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
 
-  background-image: url('../../public/assets/backgroundLandingPage.png');
-  background-size: repeat;
-  height: 100vh;
-  color: white;
-  text-align: center;
-  padding: 0 20px;
-  
+.redirect-button-landingPage {
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: #1463b4;
+    border: 1px solid #247cd5;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 6px 0px #135ca6;
+    transition: all 0.1s;
 }
 
 .redirect-button {
     color: #ecf0f1;
     font-size: 17px;
-    background-color: #0faa3e;
-    border: 1px solid #14bd47;
+    background-color: #409459;
+    border: 1px solid #51aa6b;
     border-radius: 10px;
     cursor: pointer;
     padding: 10px;
     margin-top: 20px;
-    box-shadow: 0px 6px 0px #0b802e;
+    box-shadow: 0px 3px 0px #3a8350;
     transition: all 0.1s;
-  }
-  
-  .redirect-button:active {
+}
+
+.redirect-button-hut {
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: #58412d;
+    border: 1px solid #715237;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 3px 0px #413122;
+    transition: all 0.1s;
+}
+.redirect-button:active {
     box-shadow: 0px 2px 0px #0b802e;
-    
     top: 2px;
-  }
+}
 
 .title {
-  margin-bottom: 50px;
-  animation: bounce 2s ease-in-out infinite;
+    padding-bottom: 100px;
+    animation: bounce 2s ease-in-out infinite;
 }
 
 .top-right{
-  position: absolute;
-  top: 10px;
-  right: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.storyContainer {
+    background-color: rgba(25, 63, 95, 0.3);
+    width: 110vh;
+    border-radius: 20px;
+    animation: fadeIn 5s forwards;
 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.storyText {
+    font-size: 1.2em;
+    margin: 20px auto;
+    max-width: 100vh;
+}
+
+.papyrus-container {
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-image: url("../../public/assets/objects/papyrusTexture2.png");
+    background-repeat: repeat;
+    padding: -20px;
+    box-sizing: border-box;
+    position: fixed;
+    right: 50vh;
+    top: 1vh;
+}
+.papyrus-container::-webkit-scrollbar {
+    display: none;
+}
+.content {
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
 }

@@ -3,49 +3,52 @@ import * as PIXI from 'pixi.js';
 const Hut = {
 
     /**
-     * # Create a hut for a domain.
-     * @param {PIXI_APPLICATION} app - Pixi Application
-     * @param {string} name - Name of the domain
-     * @param {PIXI_TEXTURE} texture - Image of the hut
-     * @param {[x, y]} position - Position for where the hut should be placed
-     * @returns 
+     * # Create a PIXI object
+     * @param {*} app - Pixi Application
+     * @param {string} title - Name of the object
+     * @param {*} texture - Image of the object
+     * @param {{x: number, y: number}} position - Position for where the object should be placed
+     * @returns
      */
-    create(app, name, texture, position) {
-        
-        const hut = new PIXI.Sprite(texture);
+    createObject(app, title = "", texture, position, size = {width: 100, height: 100}) {
+
+        const object = new PIXI.Sprite(texture);
 
         const titleStyle = new PIXI.TextStyle({
-            fontFamily: "\"Courier New\", Courier, monospace",
-            fontSize: 20,
-            fontVariant: "small-caps",
+            fontFamily: "OpenSans",
+            fontSize: 22,
             fontWeight: "bold",
             fill: '#ffffff'
         });
 
-        const hutTitle = new PIXI.Text({text: name, style: titleStyle});
+        const objectTitle = new PIXI.Text({text: title, style: titleStyle});
 
+        objectTitle.resolution = 3;
+        object.texture.source.scaleMode = "nearest";
 
-        // Set the position of the hut
-        hutTitle.position.set((app.screen.width - position.x - 20) / 2, (app.screen.height - position.y - 30) / 2);
-        hut.position.set((app.screen.width - position.x) / 2, (app.screen.height - position.y) / 2);
-        
-        // Set the size of the hut
+        // Set the position of the object
 
-        hut.width = 100;
-        hut.height = 100;
-        
-        // Make the hut interactive to be able to access it
+        objectTitle.position.set((app.renderer.screen.width - position.x - .5 * title.length) / 2, (app.renderer.screen.height - position.y - 60) / 2);
+        object.position.set((app.renderer.screen.width - position.x) / 2, (app.renderer.screen.height - position.y) / 2);
 
-        hut.interactive = true;
-        hut.buttonMode = true;
+        // Set the size of the object
+
+        object.width = size.width;
+        object.height = size.height;
+
+        // Make the object interactive to be able to access it
+
+        object.interactive = true;
+        object.buttonMode = true;
 
         // Add the components to the app
 
-        app.stage.addChild(hut);
-        app.stage.addChild(hutTitle);
+        app.stage.addChild(object);
+        app.stage.addChild(objectTitle);
 
-        return hut;
+        return object;
     }
+
 };
 
 export default Hut;

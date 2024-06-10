@@ -1,3 +1,5 @@
+/* Source: Pixi.js*/
+
 // Map keyboard key codes to controller's state keys
 const keyMap = {
     Space: 'space',
@@ -9,6 +11,7 @@ const keyMap = {
     ArrowDown: 'down',
     KeyD: 'right',
     ArrowRight: 'right',
+    Escape: 'escape'
 };
 
 /**
@@ -25,6 +28,7 @@ export class Controller {
             down: { pressed: false, doubleTap: false, timestamp: 0 },
             right: { pressed: false, doubleTap: false, timestamp: 0 },
             space: { pressed: false, doubleTap: false, timestamp: 0 },
+            escape: { pressed: false, doubleTap: false, timestamp: 0 },
         };
 
         // Register event listeners for keydown and keyup events.

@@ -1,17 +1,25 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+/**
+ * ## Standard layout for pages
+ * @param children
+ * @param {string} style - Style class
+ * @returns {JSX.Element}
+ * @constructor
+ */
+export default function RootLayout({ children, style = "default-page"}) {
+    return (
+        <main id = "main" className={style}>
 
-export const metadata = {
-  title: "Computer Science - The Map",
-  description: "An interactive 2D Map",
-};
+            <Head>
+                <link rel="icon" href="/assets/icon.png"/>
+                <title>Computer Science - The Map</title>
+            </Head>
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+            {children}
+
+        </main>
+    );
 }

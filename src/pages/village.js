@@ -1,14 +1,14 @@
-import Head from 'next/head';
 import Link from 'next/link';
-import '../app/globals.css';
-import {Controller} from '../components/Controller';
-import Character from '../components/Character';
-import Hut from '../components/Hut';
+import RootLayout from "@/app/layout";
+import '@/app/globals.css';
+import {Controller} from '@/components/Controller';
+import Utils from '@/components/Utils';
+import Character from '@/components/Character';
+import Hut from '@/components/Hut';
 import * as PIXI from 'pixi.js';
 
 // Interaction distances between the character and the huts
-
-const INTERACTION_DISTANCE = 100;
+const INTERACTION_DISTANCE = 75;
 const CLICK_INTERACTION_DISTANCE = 200;
 
 export default function Village() {
@@ -17,28 +17,77 @@ export default function Village() {
 
     (async () => {
 
-        await app.init({hello: true, backgroundAlpha: 0, resizeTo: window})
-        
+        if (typeof window == "undefined") return;
+
+        await app.init({hello: true, backgroundAlpha: 0, resizeTo: window, resolution: window.devicePixelRatio || 1})
+
         const mainContainer = document.getElementById("main");
         mainContainer.appendChild(app.canvas)
 
-        // Create character's texture and the character itself
+        const screenWidth = app.renderer.screen.width;
+        const screenHeight = app.renderer.screen.height;
 
-        const characterTexture = await PIXI.Assets.load('/assets/characterTexture.png');
+        // Create character object
+        const characterTexture = await PIXI.Assets.load('/assets/character/characterTexture.png');
         const character = Character.create(app, characterTexture);
 
-        // Create the huts
+        // Create huts
+        const hutTexture = await PIXI.Assets.load('/assets/huts/house-texture2.png');
+        await PIXI.Assets.load('/assets/fonts/OpenSans.ttf');
 
-        const hutTexture = await PIXI.Assets.load('/assets/hut.png');
+		const hutsInfo = [
+			{id: "ai-robotics", name: "AI and Robotics", texture: hutTexture, position: {x: -0.5 * screenWidth, y: -0.3 * screenHeight}},
+			{id: "algorithms", name: "Algorithms and Data Structures", texture: hutTexture, position: {x: -0.2 * screenWidth, y: -0.64 * screenHeight}},
+			{id: "architecture", name: "Architecture", texture: hutTexture, position: {x: 0.7 * screenWidth, y: -0.6 * screenHeight}},
+			{id: "bioinformatics", name: "Bioinformatics", texture: hutTexture, position: {x: 0.16 * screenWidth, y: -0.5 * screenHeight}},
+			{id: "computational-science", name: "Computational Science", texture: hutTexture, position: {x: 0.6 * screenWidth, y: -0.1 * screenHeight}},
+			{id: "databases", name: "Databases and Information Retrieval", texture: hutTexture, position: {x: 0.81 * screenWidth, y: 0.3 * screenHeight}},
+			{id: "graphics", name: "Graphics", texture: hutTexture, position: {x: 0.7 * screenWidth, y: 0.8 * screenHeight}},
+			{id: "human-computer", name: "Human Computer Interaction", texture: hutTexture, position: {x: -0.5 * screenWidth, y: 0.1 * screenHeight}},
+			{id: "organizational-informatics", name: "Organizational Informatics", texture: hutTexture, position: {x: -0.50 * screenWidth, y: 0.55 * screenHeight}},
+			{id: "os", name: "OS and Networks", texture: hutTexture, position: {x: 0.4 * screenWidth, y: 0.7 * screenHeight}},
+			{id: "programming-languages", name: "Programming Languages", texture: hutTexture, position: {x: -0.2 * screenWidth, y: 0.7 * screenHeight}},
+			{id: "software-engineering", name: "Software Engineering", texture: hutTexture, position: {x: 0.1 * screenWidth, y: 0.56 * screenHeight}},
+		]
 
-        let ai_robotics = Hut.create(app, "AI and Robotics", hutTexture, {x: 400, y: 400});
-        let databases = Hut.create(app, "Databases", hutTexture, {x: -300, y: 200});
-        let algorithms = Hut.create(app, "Algorithms", hutTexture, {x: 440, y: -200});
+		// Create hut objects
+		const hutObjects = {};
+
+		hutsInfo.forEach(object => {
+			hutObjects[object.id] = Hut.createObject(app, object.name, object.texture, object.position);
+		});
+
+        let ai_robotics = hutObjects["ai-robotics"]
+        let algorithms = hutObjects["algorithms"]
+
+        let architecture = hutObjects["architecture"]
+        let bioinformatics = hutObjects["bioinformatics"]
+
+        let computational_science = hutObjects["computational-science"]
+        let databases = hutObjects["databases"]
+
+        let graphics = hutObjects["graphics"]
+        let human_computer = hutObjects["human-computer"]
+
+        let organizational_informatics = hutObjects["organizational-informatics"]
+        let os = hutObjects["os"]
+
+        let programming_languages = hutObjects["programming-languages"]
+        let software_engineering = hutObjects["software-engineering"]
 
         const listOfHuts = [
             {sprite: ai_robotics, location: "ai-robotics"},
             {sprite: databases, location: "databases"},
-            {sprite: algorithms, location: "algorithms"}
+            {sprite: algorithms, location: "algorithms"},
+            {sprite: architecture, location: "architecture"},
+            {sprite: bioinformatics, location: "bioinformatics"},
+            {sprite: computational_science, location: "computational-science"},
+            {sprite: graphics, location: "graphics"},
+            {sprite: human_computer, location: "human_computer"},
+            {sprite: organizational_informatics, location: "organizational-informatics"},
+            {sprite: os, location: "os"},
+            {sprite: programming_languages, location: "programming-languages"},
+            {sprite: software_engineering, location: "software-engineering"},
         ]
 
         const keyController = new Controller();
@@ -50,71 +99,19 @@ export default function Village() {
 
             // Add listeners for interaction with huts
             for (let i = 0; i < listOfHuts.length; i++) {
-                handleHutInteraction(listOfHuts[i], character);
-                handleHutClickListener(listOfHuts[i], character);
+
+                Utils.handleHutInteraction(listOfHuts[i], character, INTERACTION_DISTANCE);
+                Utils.handleHutClick(listOfHuts[i], character, CLICK_INTERACTION_DISTANCE);
             
             }
-        
         });
-
     })();
 
-    let lastInteractionTime = 0; 
-
-    const handleHutClickListener = (hut, character) => {
-
-        const currentTime = Date.now(); 
-
-        if (currentTime - lastInteractionTime < 1000) {
-            return;
-        }
-
-        hut.sprite.on('pointerdown', () => {
-            if (distanceBetweenTwoPoints(hut.sprite, character) < CLICK_INTERACTION_DISTANCE) {
-                window.location.href = `huts/${hut.location}`;
-                lastInteractionTime = currentTime;
-                return;
-            }
-        });
-    };
-
-
-    const handleHutInteraction = (hut, character) => {
-
-        const currentTime = Date.now(); 
-
-        if (currentTime - lastInteractionTime < 1000) {
-            return;
-        }
-        
-        if (distanceBetweenTwoPoints(hut.sprite, character) < INTERACTION_DISTANCE) {
-            window.location.href = `huts/${hut.location}`;
-            lastInteractionTime = currentTime;
-            return;
-        };
-    };
-
-    function distanceBetweenTwoPoints (p1, p2) {
-
-        const a = p1.x - p2.x;
-        const b = p1.y - p2.y;
-
-        return Math.hypot(a, b);
-    };
-
     return (
-
-        <main className={`landing-page`} id = "main">
-
-            <Head>
-                <link rel = "icon" href = "/assets/icon.png"/>
-                <title>Village</title>
-            </Head>
-            
-            <Link href = "/">
-                    <button className="redirect-button top-right">Return home</button>
+        <RootLayout>
+            <Link href = "/" id = "redirect-button">
+                <button className="redirect-button top-right">Return home</button>
             </Link>
-            
-        </main>
+        </RootLayout>
     );
 }

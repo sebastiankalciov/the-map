@@ -13,7 +13,8 @@ const Character = {
         const character = PIXI.Sprite.from(texture);
 
         // Increase the resolution of the texture
-
+        character.width = 75;
+        character.height = 75;
         character.texture.source.scaleMode = "nearest";
 
         // Set the position of the character
@@ -54,28 +55,37 @@ const Character = {
         const minHeight = character.height / 2; // Top boundary
         const maxHeight = screenHeight - character.height / 2; // Bottom boundary
 
+        // Check for every key pressed if the new position is still inside the screen
         if (keyController.keys.left.pressed) {
 
-            if (newXPosition >= minWidth)
+            if (newXPosition >= minWidth) {
                 character.x -= 3;
+
+            }
         }
 
         else if (keyController.keys.right.pressed) {
 
-            if (newXPosition <= maxWidth)
+            if (newXPosition <= maxWidth) {
                 character.x += 3;
+
+            }
         }
 
         else if (keyController.keys.up.pressed) {
 
-            if (newYPosition >= minHeight)
+            if (newYPosition >= minHeight) {
                 character.y -= 3;
+
+            }
         }
         
         else if (keyController.keys.down.pressed) {
 
-            if (newYPosition < maxHeight)
+            if (newYPosition < maxHeight) {
                 character.y += 3;
+
+            }
         }
 
     }
