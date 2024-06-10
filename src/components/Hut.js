@@ -48,61 +48,26 @@ const Hut = {
 
         return object;
     },
-    createBook(app, {left: textLeftPart, right: textRightPart}, texture, position) {
+
+    createBookObject(app, texture, position) {
 
         const book = new PIXI.Sprite(texture);
 
-        // Add text
-        const textStyle = new PIXI.TextStyle({
-            fontFamily: "OpenSans",
-            fontSize: 15,
-            fontWeight: "bold",
-            wordWrap: true,
-            wordWrapWidth: 390,
-            fill: '#161616'
-        });
-
-        let textLeftObject = new PIXI.Text({
-            text: textLeftPart,
-            style: textStyle
-        });
-
-        let textRightObject = new PIXI.Text({
-            text: textRightPart,
-            style: textStyle
-        });
-
-        // Set the resolution of the text
-        textLeftObject.resolution = 3;
-        textRightObject.resolution = 3;
-
-        // Set the position of the text
-        textLeftObject.position.set((app.renderer.screen.width - position.x) / 2 + 55, (app.renderer.screen.height - position.y) / 2 + 20);
-        textRightObject.position.set((app.renderer.screen.width + position.x) / 2 - 420, (app.renderer.screen.height - position.y) / 2 + 20);
-
-        // Set the position of the book
         book.position.set((app.renderer.screen.width - position.x) / 2, (app.renderer.screen.height - position.y) / 2);
-
-        // Set the size of the book
         book.texture.source.scaleMode = "nearest";
+
         book.width = 1000;
         book.height = 700;
-
-        // Make the book interactive to be able to access it
 
         book.interactive = true;
         book.buttonMode = true;
 
-        // Add the components to the app
         book.visible = false;
-        //textLeftObject.visible = false;
-        //textRightObject.visible = false;
 
         app.stage.addChild(book);
-        app.stage.addChild(textLeftObject);
-        app.stage.addChild(textRightObject);
         return book;
     },
+
 
 };
 

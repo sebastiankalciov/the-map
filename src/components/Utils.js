@@ -1,3 +1,5 @@
+import {showPapyrusContainer} from "@/pages/huts/ai-robotics/PapyrusContainer.js";
+
 let lastInteractionTime = 0;
 const distanceBetweenTwoPoints  = (p1, p2) => {
 
@@ -57,7 +59,7 @@ const Utils = {
         }
     },
 
-    handleObjectClick(app, object, book, character, clickInteractionDistance) {
+    handleObjectClick(app, object, papyrus, character, clickInteractionDistance) {
 
         const currentTime = Date.now();
 
@@ -67,11 +69,12 @@ const Utils = {
 
         object.on('pointerdown', () => {
             if (distanceBetweenTwoPoints(object, character) < clickInteractionDistance) {
-                book.visible = true;
+                showPapyrusContainer(papyrus);
                 return;
             }
         });
     }
+
 };
 
 export default Utils;

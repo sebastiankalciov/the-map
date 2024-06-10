@@ -1,0 +1,83 @@
+{
+  "theory": {
+    "book1": {
+      "left": "",
+      "right": ""
+    },
+    "book2": {
+      "left": "",
+      "right": ""
+    }
+  },
+  "experiments": {
+    "book1": {
+      "left": "",
+      "right": ""
+    },
+    "book2": {
+      "left": "",
+      "right": ""
+    }
+  },
+  "uvt": {
+    "book1": {
+      "left": "",
+      "right": ""
+    },
+    "book2": {
+      "left": "",
+      "right": ""
+    }
+  },
+  "venues": {
+    "book1": {
+      "left": "",
+      "right": ""
+    },
+    "book2": {
+      "left": "",
+      "right": ""
+    }
+  },
+  "design": {
+    "book1": {
+      "left": "",
+      "right": ""
+    },
+    "book2": {
+      "left": "",
+      "right": ""
+    }
+  },
+  "connections": {
+    "book1": {
+      "left": "",
+      "right": ""
+    },
+    "book2": {
+      "left": "",
+      "right": ""
+    }
+  },
+  "important-people": {
+    "book1": {
+      "left": "",
+      "right": ""
+    },
+    "book2": {
+      "left": "",
+      "right": ""
+    }
+  },
+  "problems": {
+    "book1": {
+      "left": "",
+      "right": ""
+    },
+    "book2": {
+      "left": "",
+      "right": ""
+    }
+  }
+
+}
