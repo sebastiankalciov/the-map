@@ -3,7 +3,7 @@ import * as PIXI from 'pixi.js';
 const Hut = {
 
     /**
-     * # Create an object
+     * # Create a PIXI object
      * @param {*} app - Pixi Application
      * @param {string} title - Name of the object
      * @param {*} texture - Image of the object
@@ -17,7 +17,6 @@ const Hut = {
         const titleStyle = new PIXI.TextStyle({
             fontFamily: "OpenSans",
             fontSize: 22,
-            //fontVariant: "small-caps",
             fontWeight: "bold",
             fill: '#ffffff'
         });
@@ -26,6 +25,7 @@ const Hut = {
 
         objectTitle.resolution = 3;
         object.texture.source.scaleMode = "nearest";
+
         // Set the position of the object
 
         objectTitle.position.set((app.renderer.screen.width - position.x - .5 * title.length) / 2, (app.renderer.screen.height - position.y - 60) / 2);
@@ -47,27 +47,7 @@ const Hut = {
         app.stage.addChild(objectTitle);
 
         return object;
-    },
-
-    createBookObject(app, texture, position) {
-
-        const book = new PIXI.Sprite(texture);
-
-        book.position.set((app.renderer.screen.width - position.x) / 2, (app.renderer.screen.height - position.y) / 2);
-        book.texture.source.scaleMode = "nearest";
-
-        book.width = 1000;
-        book.height = 700;
-
-        book.interactive = true;
-        book.buttonMode = true;
-
-        book.visible = false;
-
-        app.stage.addChild(book);
-        return book;
-    },
-
+    }
 
 };
 

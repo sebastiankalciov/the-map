@@ -27,38 +27,53 @@ export default function Village() {
         const screenWidth = app.renderer.screen.width;
         const screenHeight = app.renderer.screen.height;
 
-        // Create the character
+        // Create character object
         const characterTexture = await PIXI.Assets.load('/assets/character/characterTexture.png');
         const character = Character.create(app, characterTexture);
-
-        // Create trees
-
-        const treeTexture = await PIXI.Assets.load('/assets/background/tree.png');
-
-        Hut.createObject(app,"" , treeTexture, {x: 0.2 * screenWidth, y: 0.3 * screenHeight});
-        Hut.createObject(app,"" , treeTexture, {x: 0.7 * screenWidth, y: 0.5 * screenHeight});
 
         // Create huts
         const hutTexture = await PIXI.Assets.load('/assets/huts/house-texture2.png');
         await PIXI.Assets.load('/assets/fonts/OpenSans.ttf');
 
-        let ai_robotics = Hut.createObject(app, "AI and Robotics", hutTexture,{x: -0.5 * screenWidth, y: -0.3 * screenHeight});
-        let algorithms = Hut.createObject(app, "Algorithms and Data Structures", hutTexture, {x: -0.3 * screenWidth, y: -0.67 * screenHeight});
+		const hutsInfo = [
+			{id: "ai-robotics", name: "AI and Robotics", texture: hutTexture, position: {x: -0.5 * screenWidth, y: -0.3 * screenHeight}},
+			{id: "algorithms", name: "Algorithms and Data Structures", texture: hutTexture, position: {x: -0.2 * screenWidth, y: -0.64 * screenHeight}},
+			{id: "architecture", name: "Architecture", texture: hutTexture, position: {x: 0.7 * screenWidth, y: -0.6 * screenHeight}},
+			{id: "bioinformatics", name: "Bioinformatics", texture: hutTexture, position: {x: 0.16 * screenWidth, y: -0.5 * screenHeight}},
+			{id: "computational-science", name: "Computational Science", texture: hutTexture, position: {x: 0.6 * screenWidth, y: -0.1 * screenHeight}},
+			{id: "databases", name: "Databases and Information Retrieval", texture: hutTexture, position: {x: 0.81 * screenWidth, y: 0.3 * screenHeight}},
+			{id: "graphics", name: "Graphics", texture: hutTexture, position: {x: 0.7 * screenWidth, y: 0.8 * screenHeight}},
+			{id: "human-computer", name: "Human Computer Interaction", texture: hutTexture, position: {x: -0.5 * screenWidth, y: 0.1 * screenHeight}},
+			{id: "organizational-informatics", name: "Organizational Informatics", texture: hutTexture, position: {x: -0.50 * screenWidth, y: 0.55 * screenHeight}},
+			{id: "os", name: "OS and Networks", texture: hutTexture, position: {x: 0.4 * screenWidth, y: 0.7 * screenHeight}},
+			{id: "programming-languages", name: "Programming Languages", texture: hutTexture, position: {x: -0.2 * screenWidth, y: 0.7 * screenHeight}},
+			{id: "software-engineering", name: "Software Engineering", texture: hutTexture, position: {x: 0.1 * screenWidth, y: 0.56 * screenHeight}},
+		]
 
-        let architecture = Hut.createObject(app, "Architecture", hutTexture, {x: 0.7 * screenWidth, y: -0.6 * screenHeight});
-        let bioinformatics = Hut.createObject(app, "Bioinformatics", hutTexture, {x: 0.16 * screenWidth, y: -0.5 * screenHeight});
+		// Create hut objects
+		const hutObjects = {};
 
-        let computational_science = Hut.createObject(app, "Computational Science", hutTexture, {x: 0.6 * screenWidth, y: -0.1 * screenHeight});
-        let databases = Hut.createObject(app, "Databases and Information Retrieval", hutTexture, {x: 0.81 * screenWidth, y: 0.3 * screenHeight});
+		hutsInfo.forEach(object => {
+			hutObjects[object.id] = Hut.createObject(app, object.name, object.texture, object.position);
+		});
 
-        let graphics = Hut.createObject(app, "Graphics", hutTexture, {x: 0.7 * screenWidth, y: 0.8 * screenHeight});
-        let human_computer = Hut.createObject(app, "Human Computer Interaction", hutTexture, {x: -0.5 * screenWidth, y: 0.1 * screenHeight});
+        let ai_robotics = hutObjects["ai-robotics"]
+        let algorithms = hutObjects["algorithms"]
 
-        let organizational_informatics = Hut.createObject(app, "Organizational Informatics", hutTexture, {x: -0.6 * screenWidth, y: 0.6 * screenHeight});
-        let os = Hut.createObject(app, "OS and Networks", hutTexture, {x: 0.4 * screenWidth, y: 0.7 * screenHeight});
+        let architecture = hutObjects["architecture"]
+        let bioinformatics = hutObjects["bioinformatics"]
 
-        let programming_languages = Hut.createObject(app, "Programming Languages", hutTexture, {x: -0.3 * screenWidth, y: 0.7 * screenHeight});
-        let software_engineering = Hut.createObject(app, "Software Engineering", hutTexture, {x: 0 * screenWidth, y: 0.56 * screenHeight});
+        let computational_science = hutObjects["computational-science"]
+        let databases = hutObjects["databases"]
+
+        let graphics = hutObjects["graphics"]
+        let human_computer = hutObjects["human-computer"]
+
+        let organizational_informatics = hutObjects["organizational-informatics"]
+        let os = hutObjects["os"]
+
+        let programming_languages = hutObjects["programming-languages"]
+        let software_engineering = hutObjects["software-engineering"]
 
         const listOfHuts = [
             {sprite: ai_robotics, location: "ai-robotics"},
@@ -84,6 +99,7 @@ export default function Village() {
 
             // Add listeners for interaction with huts
             for (let i = 0; i < listOfHuts.length; i++) {
+
                 Utils.handleHutInteraction(listOfHuts[i], character, INTERACTION_DISTANCE);
                 Utils.handleHutClick(listOfHuts[i], character, CLICK_INTERACTION_DISTANCE);
             

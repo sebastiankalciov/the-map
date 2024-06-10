@@ -5,7 +5,7 @@ import {Controller} from '@/components/Controller';
 import Character from '@/components/Character';
 import Hut from "@/components/Hut";
 import * as PIXI from 'pixi.js';
-import {createPapyrusContainer, showPapyrusContainer, hidePapyrusContainer, isVisible} from './PapyrusContainer.js';
+import {createPapyrusContainer, hidePapyrusContainer, isVisible} from '@/components/PapyrusContainer.js';
 import Utils from "@/components/Utils.js";
 
 const CLICK_INTERACTION_DISTANCE = 200;
@@ -31,7 +31,7 @@ export default function AIRobotics() {
 
         if (typeof window == "undefined") return;
 
-        await app.init({hello: true, backgroundAlpha: 0, resizeTo: window, resolution: window.devicePixelRatio || 1})
+        await app.init({backgroundAlpha: 0, resizeTo: window, resolution: window.devicePixelRatio || 1})
 
         const mainContainer = document.getElementById("main");
 
@@ -49,82 +49,73 @@ export default function AIRobotics() {
         const problemsTexture = await PIXI.Assets.load('/assets/objects/problems.png');
 
 		// Create objects
-        const theoryObject = Hut.createObject(app, "Theory", theoryTexture, {x: 0.4 * screenWidth, y: 0.5 * screenHeight})
-        const experimentObject = Hut.createObject(app, "Experiments", experimentTexture, {x: 0.1 * screenWidth, y: 0.7 * screenHeight})
-        const problemsObject = Hut.createObject(app, "Problems", problemsTexture, {x: -0.4 * screenWidth, y: -0.5 * screenHeight})
-        const designObject = Hut.createObject(app, "Design", designTexture, {x: -0.6 * screenWidth, y: 0.1 * screenHeight})
-        const connectionsObject = Hut.createObject(app, "Connections", globeTexture, {x: 0.8 * screenWidth, y: -0.5 * screenHeight})
-        const peopleObject = Hut.createObject(app, "Important people", peopleTexture, {x: 0.3 * screenWidth, y: -0.5 * screenHeight})
-        const uvtRelationshipObject = Hut.createObject(app, "AI & Robotics at UVT", uvtTexture, {x: 0.8 * screenWidth, y: 0.6 * screenHeight})
-        const venuesObject = Hut.createObject(app, "Venues", theoryTexture, {x: -0.5 * screenWidth, y: 0.8 * screenHeight})
-
-		// Create a papyrus for each object (a lot of duplicated code, needs serious rework)
-
-		const theoryPapyrusTextPageResponse = await fetch(objectPagesPathList.theory);
-		const theoryPapyrusTextPageContent = await theoryPapyrusTextPageResponse.text();
-
-		const experimentPapyrusTextPageResponse = await fetch(objectPagesPathList.experiment);
-		const experimentPapyrusTextPageContent = await experimentPapyrusTextPageResponse.text();
-
-		const problemsPapyrusTextPageResponse = await fetch(objectPagesPathList.problems);
-		const problemsPapyrusTextPageContent = await problemsPapyrusTextPageResponse.text();
-
-		const designPapyrusTextPageResponse = await fetch(objectPagesPathList.design);
-		const designPapyrusTextPageContent = await designPapyrusTextPageResponse.text();
-
-		const connectionsPapyrusTextPageResponse = await fetch(objectPagesPathList.connections);
-		const connectionsPapyrusTextPageContent = await connectionsPapyrusTextPageResponse.text();
-
-		const peoplePapyrusTextPageResponse = await fetch(objectPagesPathList.people);
-		const peoplePapyrusTextPageContent = await peoplePapyrusTextPageResponse.text();
-
-		const uvtRelationshipTextPageResponse = await fetch(objectPagesPathList.uvtRelationship);
-		const uvtRelationshipTextPageContent = await uvtRelationshipTextPageResponse.text();
-
-		const venuesTextPageResponse = await fetch(objectPagesPathList.venues);
-		const venuesTextPageContent = await venuesTextPageResponse.text();
-
-		const theoryPapyrus = createPapyrusContainer(document, theoryPapyrusTextPageContent);
-		const experimentPapyrus = createPapyrusContainer(document, experimentPapyrusTextPageContent);
-		const problemsPapyrus = createPapyrusContainer(document, problemsPapyrusTextPageContent);
-		const designPapyrus = createPapyrusContainer(document, designPapyrusTextPageContent);
-		const connectionsPapyrus = createPapyrusContainer(document, connectionsPapyrusTextPageContent);
-		const peoplePapyrus = createPapyrusContainer(document, peoplePapyrusTextPageContent);
-		const uvtRelationshipPapyrus = createPapyrusContainer(document, uvtRelationshipTextPageContent);
-		const venuesPapyrus = createPapyrusContainer(document, venuesTextPageContent);
-
-		const objects = [
-			{sprite: theoryObject, papyrus: theoryPapyrus},
-			{sprite: experimentObject, papyrus: experimentPapyrus},
-			{sprite: problemsObject, papyrus: problemsPapyrus},
-			{sprite: designObject, papyrus: designPapyrus},
-			{sprite: connectionsObject, papyrus: connectionsPapyrus},
-			{sprite: peopleObject, papyrus: peoplePapyrus},
-			{sprite: uvtRelationshipObject, papyrus: uvtRelationshipPapyrus},
-			{sprite: venuesObject, papyrus: venuesPapyrus},
+		const objectsInfo = [
+			{ id: "theory", name: "Theory", texture: theoryTexture, position: { x: 0.4 * screenWidth, y: 0.5 * screenHeight } },
+			{ id: "experiment", name: "Experiments", texture: experimentTexture, position: { x: 0.1 * screenWidth, y: 0.7 * screenHeight } },
+			{ id: "problems", name: "Problems", texture: problemsTexture, position: { x: -0.4 * screenWidth, y: -0.5 * screenHeight } },
+			{ id: "design", name: "Design", texture: designTexture, position: { x: -0.6 * screenWidth, y: 0.1 * screenHeight } },
+			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.8 * screenWidth, y: -0.5 * screenHeight } },
+			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.3 * screenWidth, y: -0.5 * screenHeight } },
+			{ id: "uvtRelationship", name: "AI & Robotics at UVT", texture: uvtTexture, position: { x: 0.8 * screenWidth, y: 0.6 * screenHeight } },
+			{ id: "venues", name: "Venues", texture: theoryTexture, position: { x: -0.5 * screenWidth, y: 0.8 * screenHeight } }
 		]
 
-        // Create character
+		const hutObjects = {};
 
+		objectsInfo.forEach(object => {
+			hutObjects[object.id] = Hut.createObject(app, object.name, object.texture, object.position);
+		});
+
+		const theoryObject = hutObjects["theory"];
+		const experimentObject = hutObjects["experiment"];
+		const problemsObject = hutObjects["problems"];
+		const designObject = hutObjects["design"];
+		const connectionsObject = hutObjects["connections"];
+		const peopleObject = hutObjects["people"];
+		const uvtRelationshipObject = hutObjects["uvtRelationship"];
+		const venuesObject = hutObjects["venues"];
+
+		// Create papyrus objects
+		const papyrusContainers = {};
+
+		for (const [key, value] of Object.entries(objectPagesPathList)) {
+			const response = await fetch(value);
+			const content = await response.text();
+			papyrusContainers[key] = createPapyrusContainer(document, content);
+
+		}
+
+		const listOfObjects = [
+			{sprite: theoryObject, papyrus: papyrusContainers['theory']},
+			{sprite: experimentObject, papyrus: papyrusContainers['experiment']},
+			{sprite: problemsObject, papyrus: papyrusContainers['problems']},
+			{sprite: designObject, papyrus: papyrusContainers['design']},
+			{sprite: connectionsObject, papyrus: papyrusContainers['connections']},
+			{sprite: peopleObject, papyrus: papyrusContainers['people']},
+			{sprite: uvtRelationshipObject, papyrus: papyrusContainers['uvtRelationship']},
+			{sprite: venuesObject, papyrus: papyrusContainers['venues']},
+		]
+
+		// Create character object
         const characterTexture = await PIXI.Assets.load('/assets/character/characterTexture.png');
         const character = Character.create(app, characterTexture);
-
-        // Create books
 
         const keyController = new Controller();
 
         app.ticker.add(() => {
 
-            if (keyController.keys.escape.pressed) {
-				for (let i = 0; i < objects.length; i++) {
-					if (isVisible(objects[i].papyrus)) {
-						hidePapyrusContainer(objects[i].papyrus);
+			// Add listener for exiting a papyrus
+			if (keyController.keys.escape.pressed) {
+				for (let i = 0; i < listOfObjects.length; i++) {
+					if (isVisible(listOfObjects[i].papyrus)) {
+						hidePapyrusContainer(listOfObjects[i].papyrus);
 					}
 				}
-            }
+			}
 
-			for (let i = 0; i < objects.length; i++) {
-				Utils.handleObjectClick(app, objects[i].sprite, objects[i].papyrus, character, CLICK_INTERACTION_DISTANCE);
+			// Add listener for objects
+			for (let i = 0; i < listOfObjects.length; i++) {
+				Utils.handleObjectClick(app, listOfObjects[i].sprite, listOfObjects[i].papyrus, character, CLICK_INTERACTION_DISTANCE);
 
 			}
 
@@ -133,8 +124,9 @@ export default function AIRobotics() {
 
         });
 
-		for (let i = 0; i < objects.length; i++) {
-			document.body.appendChild(objects[i].papyrus);
+
+		for (let i = 0; i < listOfObjects.length; i++) {
+			document.body.appendChild(listOfObjects[i].papyrus);
 		}
 
 		mainContainer.appendChild(app.canvas)
@@ -146,7 +138,6 @@ export default function AIRobotics() {
             <Link href = "/village" id = "redirect-button">
                 <button className="redirect-button-hut top-right">Return to Village</button>
             </Link>
-
         </RootLayout>
     );
 }
