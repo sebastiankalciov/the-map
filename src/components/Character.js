@@ -13,8 +13,8 @@ const Character = {
         const character = PIXI.Sprite.from(texture);
 
         // Increase the resolution of the texture
-        character.width = 75;
-        character.height = 75;
+        character.width = 105;
+        character.height = 105;
         character.texture.source.scaleMode = "nearest";
 
         // Set the position of the character

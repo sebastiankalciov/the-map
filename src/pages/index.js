@@ -23,13 +23,13 @@ export default function Home() {
                 </p>
 
                 <Link href = "/loading">
-                    <button className="redirect-button-landingPage">Start</button>
+                    <button className="start-button">Start</button>
                 </Link>
 
             </div>
 
             <Link href = "/about">
-                <button className="redirect-button-landingPage top-right">About us</button>
+                <button className="start-button top-right">Info</button>
             </Link>
 
         </RootLayout>
