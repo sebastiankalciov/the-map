@@ -19,16 +19,16 @@ export default function Village() {
 
         if (typeof window == "undefined") return;
 
-        await app.init({hello: true, backgroundAlpha: 0, resizeTo: window, resolution: window.devicePixelRatio || 1})
+        await app.init({hello: true, backgroundAlpha: 0, resizeTo: window, resolution: window.devicePixelRatio || 1, autoResize: true})
 
         const mainContainer = document.getElementById("main");
         mainContainer.appendChild(app.canvas)
 
-        const screenWidth = app.renderer.screen.width;
-        const screenHeight = app.renderer.screen.height;
+        const screenWidth = app.renderer.screen.width / app.renderer.resolution;
+        const screenHeight = app.renderer.screen.height / app.renderer.resolution;
 
         // Create character object
-        const characterTexture = await PIXI.Assets.load('/assets/character/characterTexture.png');
+        const characterTexture = await PIXI.Assets.load('/assets/character/character-texture2.png');
         const character = Character.create(app, characterTexture);
 
         // Create huts
@@ -36,18 +36,18 @@ export default function Village() {
         await PIXI.Assets.load('/assets/fonts/OpenSans.ttf');
 
 		const hutsInfo = [
-			{id: "ai-robotics", name: "AI and Robotics", texture: hutTexture, position: {x: -0.5 * screenWidth, y: -0.3 * screenHeight}},
-			{id: "algorithms", name: "Algorithms and Data Structures", texture: hutTexture, position: {x: -0.2 * screenWidth, y: -0.64 * screenHeight}},
-			{id: "architecture", name: "Architecture", texture: hutTexture, position: {x: 0.7 * screenWidth, y: -0.6 * screenHeight}},
-			{id: "bioinformatics", name: "Bioinformatics", texture: hutTexture, position: {x: 0.16 * screenWidth, y: -0.5 * screenHeight}},
-			{id: "computational-science", name: "Computational Science", texture: hutTexture, position: {x: 0.6 * screenWidth, y: -0.1 * screenHeight}},
-			{id: "databases", name: "Databases and Information Retrieval", texture: hutTexture, position: {x: 0.81 * screenWidth, y: 0.3 * screenHeight}},
-			{id: "graphics", name: "Graphics", texture: hutTexture, position: {x: 0.7 * screenWidth, y: 0.8 * screenHeight}},
-			{id: "human-computer", name: "Human Computer Interaction", texture: hutTexture, position: {x: -0.5 * screenWidth, y: 0.1 * screenHeight}},
-			{id: "organizational-informatics", name: "Organizational Informatics", texture: hutTexture, position: {x: -0.50 * screenWidth, y: 0.55 * screenHeight}},
+			{id: "ai-robotics", name: "AI and Robotics", texture: hutTexture, position: {x: -0.5 * screenWidth, y: -0.35 * screenHeight}},
+			{id: "algorithms", name: "Algorithms and Data Structures", texture: hutTexture, position: {x: -0.48 * screenWidth, y: -0.78 * screenHeight}},
+			{id: "architecture", name: "Architecture", texture: hutTexture, position: {x: 0.85 * screenWidth, y: -0.7 * screenHeight}},
+			{id: "bioinformatics", name: "Bioinformatics", texture: hutTexture, position: {x: 0.14 * screenWidth, y: -0.65 * screenHeight}},
+			{id: "computational-science", name: "Computational Science", texture: hutTexture, position: {x: 0.7 * screenWidth, y: -0.22 * screenHeight}},
+			{id: "databases", name: "Databases and Information Retrieval", texture: hutTexture, position: {x: 0.85 * screenWidth, y: 0.3 * screenHeight}},
+			{id: "graphics", name: "Graphics", texture: hutTexture, position: {x: 0.73 * screenWidth, y: 0.8 * screenHeight}},
+			{id: "human-computer", name: "Human Computer Interaction", texture: hutTexture, position: {x: -0.60 * screenWidth, y: 0.1 * screenHeight}},
+			{id: "organizational-informatics", name: "Organizational Informatics", texture: hutTexture, position: {x: -0.60 * screenWidth, y: 0.55 * screenHeight}},
 			{id: "os", name: "OS and Networks", texture: hutTexture, position: {x: 0.4 * screenWidth, y: 0.7 * screenHeight}},
-			{id: "programming-languages", name: "Programming Languages", texture: hutTexture, position: {x: -0.2 * screenWidth, y: 0.7 * screenHeight}},
-			{id: "software-engineering", name: "Software Engineering", texture: hutTexture, position: {x: 0.1 * screenWidth, y: 0.56 * screenHeight}},
+			{id: "programming-languages", name: "Programming Languages", texture: hutTexture, position: {x: -0.27 * screenWidth, y: 0.7 * screenHeight}},
+			{id: "software-engineering", name: "Software Engineering", texture: hutTexture, position: {x: 0.06 * screenWidth, y: 0.56 * screenHeight}},
 		]
 
 		// Create hut objects

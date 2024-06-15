@@ -8,47 +8,39 @@ export default function Loading() {
 
         <RootLayout style = {"landing-page"}>
 
-            <div className="pb-60">
+            <div className="overlay"> </div>
+			<div className="content text-lg">
+				<h1 className="text-4xl text-slate-50 intro">Computer Science</h1>
+				<p className="text-slate-50 intro">is an endlessly fascinating field, teeming with creativity, logic, and
+					innovation.</p>
+				<br/>
+				<p className="text-slate-50 leading-8">It’s a realm
+					where imagination meets precision, and complex problems are unraveled through the elegance of
+					code.
 
-                <div className = "storyContainer">
-                    <p className="storyText">
+				</p>
+				<br/>
+				<p className="text-slate-50 leading-8">Inspired by this dynamic world, we, a group of passionate students, have
+					created an interactive
+					map to guide you through the captivating landscapes of Computer Science.</p>
 
-                        <a className="text-2xl text-cyan-100">Computer Science </a>
-                        is an endlessly fascinating field, teeming with creativity,
-                        logic, and innovation. It’s a realm where imagination meets precision, and complex problems
-                        are unraveled through the elegance of code.
-                        <br/>
-                        <br/>
-                        <a className="text-cyan-100">Inspired </a>
-                        by this dynamic world, we, a group of passionate
-                        students, have created an
-                        interactive map to guide you through the captivating landscapes of Computer Science.
-                        <br/>
-                        <br/>
+				<p className="text-slate-50 leading-8">From the fundamentals of programming to the marvels of Artificial
+					Intelligence, our journey will
+					help you understand the main ideas and new developments in this constantly changing field.</p>
+				<br/>
+				<p className="text-slate-50 leading-8">So, are you ready to dive in and explore the wonders of Computer Science
+					with us?</p>
 
-                        <a className="text-cyan-100">From the fundamentals </a>
-                        of programming to the marvels of Artificial Intelligence,
-                        our journey
-                        will take you through the key concepts and exciting frontiers of this ever-evolving domain.
+				<br/>
+				<p className="text-slate-50">Click the button below to start your adventure and unlock the secrets of
+					this amazing field!</p>
+				<br/>
+				<Link href="/village">
+					<button className="start-button">Start the journey</button>
+				</Link>
+			</div>
 
-                        <br/>
-                        <br/>
-                        So, are you ready to dive in and explore the wonders of Computer Science with us?
-                        <br/>
-                        <br/>
 
-                        <a className="text-cyan-100">Click the button </a>
-                        below to start your adventure and
-                        unlock the secrets of this amazing field!
-                    </p>
-                </div>
-
-                <Link href="/village">
-                    <button className="redirect-button-landingPage">Start the journey</button>
-                </Link>
-
-            </div>
-
-        </RootLayout>
-    );
+		</RootLayout>
+	);
 }
