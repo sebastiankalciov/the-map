@@ -28,13 +28,16 @@ const Hut = {
 
         // Set the position of the object
 
-        objectTitle.position.set((app.renderer.screen.width - position.x - .5 * title.length) / 2, (app.renderer.screen.height - position.y - 60) / 2);
-        object.position.set((app.renderer.screen.width - position.x) / 2, (app.renderer.screen.height - position.y) / 2);
+        objectTitle.position.set((app.renderer.screen.width * position.x - .5 * title.length), (app.renderer.screen.height * position.y - 35));
+        object.position.set((app.renderer.screen.width * position.x), (app.renderer.screen.height * position.y));
 
         // Set the size of the object
+		const maxHutSize = 100;
+		const minHutSize = 50;
+		const baseScale = Math.min(app.renderer.screen.width, app.renderer.screen.height) * 0.1;
+		object.width = Math.max(minHutSize, baseScale);
+		object.height = Math.max(minHutSize, baseScale);
 
-        object.width = size.width;
-        object.height = size.height;
 
         // Make the object interactive to be able to access it
 

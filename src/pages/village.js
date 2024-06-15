@@ -36,18 +36,18 @@ export default function Village() {
         await PIXI.Assets.load('/assets/fonts/OpenSans.ttf');
 
 		const hutsInfo = [
-			{id: "ai-robotics", name: "AI and Robotics", texture: hutTexture, position: {x: -0.5 * screenWidth, y: -0.35 * screenHeight}},
-			{id: "algorithms", name: "Algorithms and Data Structures", texture: hutTexture, position: {x: -0.48 * screenWidth, y: -0.78 * screenHeight}},
-			{id: "architecture", name: "Architecture", texture: hutTexture, position: {x: 0.85 * screenWidth, y: -0.7 * screenHeight}},
-			{id: "bioinformatics", name: "Bioinformatics", texture: hutTexture, position: {x: 0.14 * screenWidth, y: -0.65 * screenHeight}},
-			{id: "computational-science", name: "Computational Science", texture: hutTexture, position: {x: 0.7 * screenWidth, y: -0.22 * screenHeight}},
-			{id: "databases", name: "Databases and Information Retrieval", texture: hutTexture, position: {x: 0.85 * screenWidth, y: 0.3 * screenHeight}},
-			{id: "graphics", name: "Graphics", texture: hutTexture, position: {x: 0.73 * screenWidth, y: 0.8 * screenHeight}},
-			{id: "human-computer", name: "Human Computer Interaction", texture: hutTexture, position: {x: -0.60 * screenWidth, y: 0.1 * screenHeight}},
-			{id: "organizational-informatics", name: "Organizational Informatics", texture: hutTexture, position: {x: -0.60 * screenWidth, y: 0.55 * screenHeight}},
-			{id: "os", name: "OS and Networks", texture: hutTexture, position: {x: 0.4 * screenWidth, y: 0.7 * screenHeight}},
-			{id: "programming-languages", name: "Programming Languages", texture: hutTexture, position: {x: -0.27 * screenWidth, y: 0.7 * screenHeight}},
-			{id: "software-engineering", name: "Software Engineering", texture: hutTexture, position: {x: 0.06 * screenWidth, y: 0.56 * screenHeight}},
+			{id: "ai-robotics", name: "AI and Robotics", texture: hutTexture, position: {x: 0.76, y: 0.70}},
+			{id: "algorithms", name: "Algorithms and Data Structures", texture: hutTexture, position: {x: 0.74, y: 0.89}},
+			{id: "architecture", name: "Architecture", texture: hutTexture, position: {x: 0.1, y: 0.85}},
+			{id: "bioinformatics", name: "Bioinformatics", texture: hutTexture, position: {x: 0.43, y: 0.8}},
+			{id: "computational-science", name: "Computational Science", texture: hutTexture, position: {x: 0.7, y: -0.22}},
+			{id: "databases", name: "Databases and Information Retrieval", texture: hutTexture, position: {x: 0.07, y: 0.34}},
+			{id: "graphics", name: "Graphics", texture: hutTexture, position: {x: 0.13, y: 0.07}},
+			{id: "human-computer", name: "Human Computer Interaction", texture: hutTexture, position: {x: 0.82, y: 0.45}},
+			{id: "organizational-informatics", name: "Organizational Informatics", texture: hutTexture, position: {x: 0.82, y: 0.20}},
+			{id: "os", name: "OS and Networks", texture: hutTexture, position: {x: 0.30, y: 0.13}},
+			{id: "programming-languages", name: "Programming Languages", texture: hutTexture, position: {x: 0.64, y: 0.12}},
+			{id: "software-engineering", name: "Software Engineering", texture: hutTexture, position: {x: 0.47, y: 0.21}},
 		]
 
 		// Create hut objects
@@ -105,6 +105,26 @@ export default function Village() {
             
             }
         });
+
+		function updateLayout() {
+			const screenWidth = app.renderer.screen.width;
+			const screenHeight = app.renderer.screen.height;
+
+			for (let i = 0; i < listOfHuts.length; i++) {
+				const hut = listOfHuts[i].sprite;
+				hut.position.set(screenWidth * hutsInfo[i].position.x, screenHeight * hutsInfo[i].position.y);
+				const maxHutSize = 100;
+				const minHutSize = 50;
+				const baseScale = Math.min(app.renderer.screen.width, app.renderer.screen.height) * 0.1;
+
+				hut.width = Math.max(minHutSize, Math.min(maxHutSize, baseScale));
+				hut.height = Math.max(minHutSize, Math.min(maxHutSize, baseScale));
+			}
+		}
+
+		window.addEventListener('resize', () => {
+			app.renderer.resize(window.innerWidth, window.innerHeight);
+		});
     })();
 
     return (
