@@ -19,14 +19,11 @@ export default function Village() {
 
         if (typeof window == "undefined") return;
 
-        await app.init({hello: true, backgroundAlpha: 0, resizeTo: window, resolution: window.devicePixelRatio || 1, autoResize: true})
+        await app.init({hello: true, backgroundAlpha: 0, resizeTo: window, autoResize: true})
 
         const mainContainer = document.getElementById("main");
         mainContainer.appendChild(app.canvas)
-
-        const screenWidth = app.renderer.screen.width / app.renderer.resolution;
-        const screenHeight = app.renderer.screen.height / app.renderer.resolution;
-
+		
         // Create character object
         const characterTexture = await PIXI.Assets.load('/assets/character/character-texture2.png');
         const character = Character.create(app, characterTexture);
@@ -106,25 +103,10 @@ export default function Village() {
             }
         });
 
-		function updateLayout() {
-			const screenWidth = app.renderer.screen.width;
-			const screenHeight = app.renderer.screen.height;
-
-			for (let i = 0; i < listOfHuts.length; i++) {
-				const hut = listOfHuts[i].sprite;
-				hut.position.set(screenWidth * hutsInfo[i].position.x, screenHeight * hutsInfo[i].position.y);
-				const maxHutSize = 100;
-				const minHutSize = 50;
-				const baseScale = Math.min(app.renderer.screen.width, app.renderer.screen.height) * 0.1;
-
-				hut.width = Math.max(minHutSize, Math.min(maxHutSize, baseScale));
-				hut.height = Math.max(minHutSize, Math.min(maxHutSize, baseScale));
-			}
-		}
-
 		window.addEventListener('resize', () => {
 			app.renderer.resize(window.innerWidth, window.innerHeight);
 		});
+
     })();
 
     return (

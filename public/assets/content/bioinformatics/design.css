@@ -1,0 +1,133 @@
+
+.base {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url('https://i.imgur.com/qlb7gqc.png');*/
+    background-image: url('https://e0.pxfuel.com/wallpapers/161/850/desktop-wallpaper-library-cozy-library.jpg');
+    background-size: repeat;
+    height: 100vh;
+    padding: 0 20px;
+
+}
+.papyrus-container {
+    width: 65%;
+    height: 100vh;
+    overflow-y: scroll;
+    /*background-image: url("https://i.imgur.com/E6I9A3t.png");*/
+    /*background-image: url("https://t3.ftcdn.net/jpg/01/11/68/14/360_F_111681470_4cbcBkssDSYcoX9XbblZAHGBZVf45Cw0.jpg");*/
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPMf_yw1zzCS1eXRW1qrDBz8-jmUk9HBMAKg&s');
+    background-repeat: repeat;
+    padding: -20px;
+    box-sizing: border-box;
+    position: fixed;
+    right: 50vh;
+    top: 1vh;
+    /*font-family: 'Jacquard 12';*/
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    /*font-family: 'Cinzel';*/
+}
+
+.papyrus-container::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    color: black;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Megrim';
+    text-align: center;
+    color: #21180b;
+}
+
+  .design {
+    animation: 2s anim-lineUp ease-out;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  .design {
+    text-align: center;
+    background-color: black;
+    opacity: 0.8;
+    color: beige;
+    padding: 5%;
+  }
+
+  .leftbox {
+    float: left;
+    width: 33%;
+    background-color: black;
+}
+
+.middlebox {
+    float: left;
+    width: 34%;
+    background-color: rgb(46, 42, 37);
+    margin-bottom: 50px;
+}
+
+.rightbox {
+    float: right;
+    background-color: black;
+    width: 33%;
+    margin-bottom: 50px;
+}
+
+h1 span{
+    transition: .5s linear
+  }
+  h1:hover span:nth-child(1){
+    margin-right: 5px
+  }
+  h1:hover span:nth-child(2){
+    margin-left: 30px
+  }
+  h1:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff, 
+                 0 0 40px #fff;
+  }
+
+  .main-text:hover + .extra-text {
+    display: block;
+}
+
+.extra-text {
+    background-color: black;
+    margin-top: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: none;
+    text-align: center;
+}
+
+.problems {
+  text-align: center;
+  
+}

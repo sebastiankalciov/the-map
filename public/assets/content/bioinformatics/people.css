@@ -1,0 +1,123 @@
+
+.base {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url('https://i.imgur.com/qlb7gqc.png');*/
+    background-image: url('https://e0.pxfuel.com/wallpapers/161/850/desktop-wallpaper-library-cozy-library.jpg');
+    background-size: repeat;
+    height: 100vh;
+    padding: 0 20px;
+
+}
+.papyrus-container {
+    width: 65%;
+    height: 100vh;
+    overflow-y: scroll;
+    /*background-image: url("https://i.imgur.com/E6I9A3t.png");*/
+    /*background-image: url("https://t3.ftcdn.net/jpg/01/11/68/14/360_F_111681470_4cbcBkssDSYcoX9XbblZAHGBZVf45Cw0.jpg");*/
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPMf_yw1zzCS1eXRW1qrDBz8-jmUk9HBMAKg&s');
+    background-repeat: repeat;
+    padding: -20px;
+    box-sizing: border-box;
+    position: fixed;
+    right: 50vh;
+    top: 1vh;
+    /*font-family: 'Jacquard 12';*/
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    /*font-family: 'Cinzel';*/
+}
+
+.papyrus-container::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    color: black;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+summary {
+    list-style-position: outside;
+    margin-left: 30px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 5px;
+    font-family: 'Jacquard 12';
+    font-size: 22px;
+  }
+
+h3, h1 {
+    font-family: 'Megrim';
+    text-align: center;
+    color: #21180b;
+}
+  
+  details[open] summary {
+    border-radius: 5px 5px 0 0;
+}
+  
+  details.left {
+    background: #1c140c;
+    border-radius: 5px;
+    color: rgb(196, 181, 150);
+    padding: 2%;
+    margin: auto;
+    bottom: 8%;
+    opacity: 0.9;
+  }
+
+  details.right {
+    background: #21180b;
+    border-radius: 5px;
+    color: rgb(196, 181, 150);
+    padding: 2%;
+    text-align: right;
+    margin: auto;
+    bottom: 8%;
+    opacity: 0.8;
+  }
+
+  details.left img {
+    float: right;
+  }
+
+  details.right img {
+    float: left;
+  }
+
+  tr:hover {
+    background-color: #2c2b2b;
+}
+
+  table {
+    background-color: black;
+    opacity: 0.85;
+    border-radius: 1%;
+    padding: 10%;
+    color:rgb(196, 181, 150);
+  }
+
+  .lineUp {
+    animation: 2s anim-lineUp ease-out;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
