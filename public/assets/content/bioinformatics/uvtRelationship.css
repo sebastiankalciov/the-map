@@ -1,0 +1,60 @@
+.papyrus-container {
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-image: url("../../objects/papyrusTexture2.png");
+    background-repeat: repeat;
+    padding: -20px;
+    box-sizing: border-box;
+    position: fixed;
+    right: 50vh;
+    top: 1vh;
+}
+
+.papyrus-container::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    color: black;
+    padding: 0px;
+    border-radius: 10px;
+    margin-left: 7vh;
+}
+
+  .lineUp {
+    animation: 2s anim-lineUp ease-out;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  .theory {
+    background-color: black;
+    color: bisque;
+    opacity: 0.8;
+    right: 0;
+    left: 0;
+    padding: 10%;
+    text-align: center;
+  }
+
+  input[type=checkbox]:checked + label.strikethrough{
+    text-decoration: line-through;
+    color: brown;
+  }
+

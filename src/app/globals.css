@@ -46,6 +46,7 @@ body {
         transform: translateY(-20px);
     }
 }
+
 .landing-page {
     position: relative;
     background-image: url('../../public/assets/background/backgroundMainPage.jpg');
@@ -74,6 +75,8 @@ body {
     padding: 0 20px;
 }
 
+/** Hut */
+
 .domain-page {
     display: flex;
     flex-direction: column;
@@ -101,12 +104,14 @@ body {
     background: linear-gradient(90deg, #e6a16b, #ff7e5f);
     transform: scale(1.05);
 }
+
 .intro {
     display: inline;
     vertical-align: bottom;
     margin: 0;
     margin-right: 10px;
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -115,6 +120,7 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.6); /* Dark overlay */
 }
+
 .content {
     position: relative;
     z-index: 1;
@@ -176,12 +182,13 @@ body {
     right: 20px;
 }
 
+/** Papyrus */
+
 .papyrus-container {
     width: 50%;
     height: 100vh;
     overflow-y: scroll;
-    background-image: url("../../public/assets/objects/papyrusTexture2.png");
-    background-repeat: repeat;
+    background-image: url('../../public/assets/objects/papyrusTexture2.png');
     padding: -20px;
     box-sizing: border-box;
     position: fixed;
@@ -197,6 +204,7 @@ body {
     border-radius: 10px;
 }
 
+/** Display keyboard images in line (wasd) */
 
 .keyboard-layout {
     display: inline-block;

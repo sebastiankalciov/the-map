@@ -28,7 +28,7 @@ const Hut = {
 
         // Set the position of the object
 
-        objectTitle.position.set((app.renderer.screen.width * position.x - .5 * title.length), (app.renderer.screen.height * position.y - 35));
+        objectTitle.position.set((app.renderer.screen.width * position.x - 2 * title.length), (app.renderer.screen.height * position.y - 35));
         object.position.set((app.renderer.screen.width * position.x), (app.renderer.screen.height * position.y));
 
         // Set the size of the object

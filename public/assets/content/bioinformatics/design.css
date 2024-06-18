@@ -1,0 +1,107 @@
+.papyrus-container {
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-image: url("../../objects/papyrusTexture2.png");
+    background-repeat: repeat;
+    padding: -20px;
+    box-sizing: border-box;
+    position: fixed;
+    right: 50vh;
+    top: 1vh;
+}
+
+.papyrus-container::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    color: black;
+    padding: 0px;
+    border-radius: 10px;
+    margin-left: 7vh;
+}
+
+.design {
+    animation: 2s anim-lineUp ease-out;
+}
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.design {
+    text-align: center;
+    background-color: black;
+    opacity: 0.8;
+    color: beige;
+    padding: 5%;
+}
+
+.leftbox {
+    float: left;
+    width: 33%;
+    background-color: black;
+}
+
+.middlebox {
+    float: left;
+    width: 34%;
+    background-color: rgb(46, 42, 37);
+    margin-bottom: 50px;
+}
+
+.rightbox {
+    float: right;
+    background-color: black;
+    width: 33%;
+    margin-bottom: 50px;
+}
+
+h1 span{
+    transition: .5s linear
+  }
+h1:hover span:nth-child(1){
+    margin-right: 5px
+}
+h1:hover span:nth-child(2){
+    margin-left: 30px
+}
+h1:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #fff;
+}
+
+.main-text:hover + .extra-text {
+    display: block;
+}
+
+.extra-text {
+    background-color: black;
+    margin-top: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: none;
+    text-align: center;
+}
+
+.problems {
+  text-align: center;
+}

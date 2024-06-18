@@ -8,7 +8,7 @@ import Utils from "@/components/Utils.js";
 
 const CLICK_INTERACTION_DISTANCE = 200;
 
-export default function PageLayout(PAGE_NAME) {
+export default function PageLayout(PAGE_NAME, objects) {
 
 	const objectPagesPathList = {
 		theory: `/assets/content/${PAGE_NAME}/theory.html`,
@@ -31,9 +31,6 @@ export default function PageLayout(PAGE_NAME) {
 
 		const mainContainer = document.getElementById("main");
 
-		const screenWidth = app.renderer.screen.width;
-		const screenHeight = app.renderer.screen.height;
-
 		// Load textures for each object
 		await PIXI.Assets.load('/assets/fonts/OpenSans.ttf');
 		const theoryTexture = await PIXI.Assets.load('/assets/objects/desk.png');
@@ -46,14 +43,14 @@ export default function PageLayout(PAGE_NAME) {
 
 		// Create objects
 		const objectsInfo = [
-			{ id: "theory", name: "Theory", texture: theoryTexture, position: { x: 0.4 * screenWidth, y: 0.5 * screenHeight } },
-			{ id: "experiment", name: "Experiments", texture: experimentTexture, position: { x: 0.1 * screenWidth, y: 0.7 * screenHeight } },
-			{ id: "problems", name: "Problems", texture: problemsTexture, position: { x: -0.4 * screenWidth, y: -0.5 * screenHeight } },
-			{ id: "design", name: "Design", texture: designTexture, position: { x: -0.6 * screenWidth, y: 0.1 * screenHeight } },
-			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.8 * screenWidth, y: -0.5 * screenHeight } },
-			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.3 * screenWidth, y: -0.5 * screenHeight } },
-			{ id: "uvtRelationship", name: "AI & Robotics at UVT", texture: uvtTexture, position: { x: 0.8 * screenWidth, y: 0.6 * screenHeight } },
-			{ id: "venues", name: "Venues", texture: theoryTexture, position: { x: -0.5 * screenWidth, y: 0.8 * screenHeight } }
+			{ id: "theory", name: "Theory", texture: theoryTexture, position: { x: 0.4, y: 0.2 } },
+			{ id: "experiment", name: "Experiments", texture: experimentTexture, position: { x: 0.1, y: 0.5 } },
+			{ id: "problems", name: "Problems", texture: problemsTexture, position: { x: 0.3, y: 0.7 } },
+			{ id: "design", name: "Design", texture: designTexture, position: { x: 0.6, y: 0.1 } },
+			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
+			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
+			{ id: "uvtRelationship", name: "AI & Robotics at UVT", texture: uvtTexture, position: { x: 0.6, y: 0.7 } },
+			{ id: "venues", name: "Venues", texture: theoryTexture, position: { x: 0.8, y: 0.25 } }
 		]
 
 		const hutObjects = {};
