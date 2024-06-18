@@ -1,34 +1,14 @@
-
-.base {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /*background-image: url('https://i.imgur.com/qlb7gqc.png');*/
-    background-image: url('https://e0.pxfuel.com/wallpapers/161/850/desktop-wallpaper-library-cozy-library.jpg');
-    background-size: repeat;
-    height: 100vh;
-    padding: 0 20px;
-
-}
 .papyrus-container {
-    width: 65%;
+    width: 50%;
     height: 100vh;
     overflow-y: scroll;
-    /*background-image: url("https://i.imgur.com/E6I9A3t.png");*/
-    /*background-image: url("https://t3.ftcdn.net/jpg/01/11/68/14/360_F_111681470_4cbcBkssDSYcoX9XbblZAHGBZVf45Cw0.jpg");*/
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPMf_yw1zzCS1eXRW1qrDBz8-jmUk9HBMAKg&s');
+    background-image: url("../../objects/papyrusTexture2.png");
     background-repeat: repeat;
     padding: -20px;
     box-sizing: border-box;
     position: fixed;
     right: 50vh;
     top: 1vh;
-    /*font-family: 'Jacquard 12';*/
-    font-family: 'Comfortaa';
-    font-size: 15px;
-    /*font-family: 'Cinzel';*/
 }
 
 .papyrus-container::-webkit-scrollbar {
@@ -39,8 +19,8 @@
     color: black;
     padding: 0px;
     border-radius: 10px;
+    margin-left: 7vh;
 }
-
 summary {
     list-style-position: outside;
     margin-left: 30px;

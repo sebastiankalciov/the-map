@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'cmu_serifroman';
+    src: url('../../content/software-engineering/cmunrm-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cmu_serifbold';
+    src: url('../../content/software-engineering/cmunbx-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cmu_typewriter_textregular';
+    src: url('cmuntt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alagard';
+    src: url('Alagard.woff2') format('woff2'),
+        url('Alagard.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+code {
+    font-family: 'cmu_typewriter_textregular', Courier, monospace;
+}
+
+.par-title {
+    font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
+    margin-right: 2.5%;
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.par-with-title {
+    margin: 20px 0;
+}
+
+.line {
+    height: 1px;
+    background: black;
+    margin: 5% 0;
+}
+
+.base {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.imgur.com/qlb7gqc.png');
+    /*background-size: repeat;*/
+    height: 100vh;
+    padding: 0 20px;
+
+}
+
+/*.papyrus-container {*/
+/*    width: 50%;*/
+/*    height: 100vh;*/
+/*    overflow-y: scroll;*/
+/*    background-color: red;*/
+/*    !*background-image: url("https://i.imgur.com/E6I9A3t.png");*!*/
+/*    !*background-repeat: repeat;*!*/
+/*    padding: -20px;*/
+/*    box-sizing: border-box;*/
+/*    position: fixed;*/
+/*    right: 50vh;*/
+/*    top: 1vh;*/
+/*}*/
+
+.papyrus-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.content {
+    /*top: 50%;*/
+    color: black;
+    font-size: 1.3vw;
+    font-family: 'cmu_serifroman' , Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 25px;
+    margin: 0 auto;
+    /*padding-left: 30%;*/
+}
+
+/* people.html styling */
+.figure-block {
+    display: block;
+    margin: 5% 0;
+    background-color: grey;
+}
+
+.figure-image img {
+    margin: 2.5%;
+    width: 30%;
+    height: auto;
+    float: right;
+    border: 15px double #662f1b;
+    background: #86452d;
+}
+
+.scholar-image img {
+    margin: 2.5%;
+    width: 30%;
+    height: auto;
+    float: left;
+
+    border: 15px double #a0a0a0;
+    background: #c9c9c9;
+}
+
+.figure-name {
+    font-family: 'Alagard', Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    text-align: left;
+}
+
+.important-figure > div {
+    padding-left: 2%;
+    text-align: justify;
+}
+
+.important-figure > div:not(:first-child):not(:last-child) {
+    margin: 5% 0;
+}
+
+.important-figure > div:first-child {
+    padding-top: 2.5%;
+}
+
+.important-figure > div:last-child {
+    padding-bottom: 2.5%;
+}
+
+.important-figure > div:last-child {
+    font-family: 'cmu_typewriter_textregular', Courier, monospace;
+    text-align: center;
+}
+
+/* venues.html (table) styling */
+table {
+    border: 6px double #a0a0a0;
+    background: #c9c9c939;
+    border-collapse: collapse;
+
+    font-family: 'cmu_serifroman' , Arial, Helvetica, sans-serif;
+    font-weight: 600;
+
+    text-align: center;
+    font-size: large;
+}
+
+tr:not(:first-child) {
+    border: 1px solid #2b2b2b;
+}
+
+tr > *:first-child {
+    padding: 3%;
+}
+
+li:not(:first-child):not(:last-child) {
+    margin: 10px 0;
+}
+
+/* connections.html styling */
+b {
+    font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+li {
+    text-align: justify;
+}
+

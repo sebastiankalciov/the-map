@@ -1,3 +1,110 @@
 <html>
-bau
+    <head>
+        <link rel="stylesheet" href="../assets/content/software-engineering/styles.css">
+    </head>
+    <body>
+        <div class = "content">
+
+            <p>
+                [<a href="#wikiversityUnsolvedProblems">2</a>] lists a few open problems in the field of software engineering:
+            </p>
+            <ul>
+                <li>
+                    <b style="text-decoration: underline;">Is it possible to simulate a human mind? Can a machine become conscious?</b>
+                    <br>
+                    Simulations are not a rare thing in software engineering, as they are used in research. Simulating a human mind is not as trivial, though. The motivation for this problem dates back to the 1950s, with the <a href="https://en.wikipedia.org/wiki/Turing_test">Turing test</a>.
+                    Since then, many attempts have been made, which in turn motivated many advancements in fields such as artificial intelligence in combination with software engineering. With the many chatbots available today based on large language models, one can only wonder how close we are to achieving a <em>full</em> simulation of the human mind.
+                </li>
+                <li>
+                    <b style="text-decoration: underline;">Systematic detection and prediction of software system defects.</b>
+                    <br>
+                    This problem focuses on inventing tools which facilitate early software defect prediction. While there already exist such tools (<em>program linters, code analyzers, etc.</em>), the many types of errors that happen in the process of software engineering, <em>that are not necessarily exclusive to the software development stage</em>, lead to the demand for solutions, to avoid errors in the final release of the product.
+                    <br>
+                    The field of artificial intelligence has brought advancements at exponential rates in the past few years, and the industry seeks to implement such powerful capabilities in the software engineering process. Such tools are already available and popular in the software development community (e.g. AI coding assistants), however studies are being made to implement artificial intelligence in the more formal, theoretical parts of software engineering (design, architecture, project management, etc.), see for example [<a href="#PACHOULY2022104773">10</a>].
+                </li>
+                <li>
+                    <b style="text-decoration: underline;">Software testing cannot always be formally proven<sup>[<a href="#linkedinTestingUnsolvedProblem">11</a>]</sup>.</b>
+                    <br>
+                    Turing et al. proposed the <a href="https://en.wikipedia.org/wiki/Halting_problem#:~:text=In%20computability%20theory%2C%20the%20halting,or%20continue%20to%20run%20forever">Halting problem</a>, proving that, given a set of program instructions and an input, there is no algorithm which can determine if a program will stop (i.e. <em>halt</em>) given that input.
+                    <br>
+                    Furthermore, Gödel proved with his <a href="https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems">incompleteness theorems</a> that a set of axioms, that define a set of rules and logic (i.e. an <em>algorithm</em>) can contain contradicting axioms, or axioms which cannot be proved.
+                    <br>
+                    Essentially, even if one uses formal logic and formal methods to prove program corectness, there is no guarantee that the program is correct under <em>each and every case</em>.
+                    <br>
+                    Therefore, software testers only have their human intuitions to verify the corectness of a program. Human intuition is based on experience, meaning that, the more experience one has, the easier it gets to recognize mistakes and fix them while they can.
+                    <br>
+                    The problem of software testing will likely remain unsolved. One cannot rely on formal methods to test any type of program, as this has been mathematically proven to be unreliable. The search for less human-intensive software testing methods remains ongoing.
+                </li>
+            </ul>
+            <div class="line"></div>
+            <!-- References -->
+            <p id="denning2000computer">
+                [2]: P. J. Denning, 
+                "<i>
+                    Computer science: The discipline
+                </i>"
+            </p>
+            <p id="hannaysestematic">
+                [3]: J. Hannay, D. Sjøberg, and T. Dybå, 
+                "<i>
+                A systematic review of theory use in software engineering experiments
+                </i>"
+            </p>
+            <p id="glass2002research">
+                [4]: R. L. Glass, I. Vessey, and V. Ramesh, 
+                "<i>
+                    Research in software engineering: An analysis of the literature
+                </i>"
+            </p>
+            <p id="glass1994software">
+                [5]: R. L. Glass 
+                "<i>
+                    The software-research crisis
+                </i>"
+            </p>
+            <p id="wohlin2012experimentation">
+                [6]: C. Wohlin, P. Runeson, M. Höst, M. Ohlsson, B. Regnell, and A. Wesslén,
+                "<i>
+                    Experimentation in Software Engineering
+                </i>"
+            </p>
+            <p id="Taylor2019">
+                [7]: R. N. Taylor,
+                "<i>
+                    Software architecture and design
+                </i>"
+            </p>
+            <p id="imbWhatSoftware">
+                [8]: 
+                "<i>
+                    What Is Software Development?
+                </i>"
+                (<a href="https://www.ibm.com/topics/software-development"><code>www.ibm.com/topics/software-development</code></a>)
+            </p>
+            <p id="wikiversityUnsolvedProblems">
+                [9]: 
+                "<i>
+                    Unsolved problems in software engineering
+                </i>"
+                (<a href="https://www.ibm.com/topics/software-development"><code>https://en.wikiversity.
+                    org/wiki/Unsolved_problems_in_software_engineering</code></a>)
+            </p>
+            <p id="PACHOULY2022104773">
+                [10]: J. Pachouly, S. Ahirrao, K. Kotecha, G. Selvachandran, and A. Abraham,
+                "<i>
+                    A systematic literature review on software defect prediction using artificial
+                    intelligence: Datasets, data validation methods, approaches, and tools
+                </i>"
+            </p>
+            <p id="linkedinTestingUnsolvedProblem">
+                [11]:
+                "<i>
+                    Testing is an Unsolved Problem
+                </i>"
+                (<a href="https://www.linkedin.com/pulse/testing-unsolvedproblem-jason-arbon/"><code>https://www.linkedin.com/pulse/testing-unsolvedproblem-jason-arbon/</code></a>)
+            </p>
+            
+        </div>
+    </body>
 </html>
+

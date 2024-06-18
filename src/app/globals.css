@@ -188,8 +188,7 @@ body {
     width: 50%;
     height: 100vh;
     overflow-y: scroll;
-    background-image: url("../../public/assets/objects/papyrusTexture2.png");
-    background-repeat: repeat;
+    background-image: url('../../public/assets/objects/papyrusTexture2.png');
     padding: -20px;
     box-sizing: border-box;
     position: fixed;

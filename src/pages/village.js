@@ -80,7 +80,7 @@ export default function Village() {
             {sprite: bioinformatics, location: "bioinformatics"},
             {sprite: computational_science, location: "computational-science"},
             {sprite: graphics, location: "graphics"},
-            {sprite: human_computer, location: "human_computer"},
+            {sprite: human_computer, location: "human-computer"},
             {sprite: organizational_informatics, location: "organizational-informatics"},
             {sprite: os, location: "os"},
             {sprite: programming_languages, location: "programming-languages"},

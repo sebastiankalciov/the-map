@@ -8,7 +8,6 @@ export function createPapyrusContainer(document, content, PAGE_NAME) {
 
 	const papyrusContainer = document.createElement('div');
 	papyrusContainer.className = 'papyrus-container';
-	papyrusContainer.script
 	const contentDiv = document.createElement('div');
 	contentDiv.className = 'content';
 
