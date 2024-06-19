@@ -1,79 +1,47 @@
 
-        .base {
+.papyrus-container::-webkit-scrollbar {
+    display: none;
+}
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            /*background-image: url('https://i.imgur.com/qlb7gqc.png');*/
-            background-image: url('https://e0.pxfuel.com/wallpapers/161/850/desktop-wallpaper-library-cozy-library.jpg');
-            background-size: repeat;
-            height: 100vh;
-            padding: 0 20px;
+.content {
+    color: black;
+    padding: 0px;
+    border-radius: 10px;
+}
 
-        }
-        .papyrus-container {
-            width: 65%;
-            height: 100vh;
-            overflow-y: scroll;
-            /*background-image: url("https://i.imgur.com/E6I9A3t.png");*/
-            /*background-image: url("https://t3.ftcdn.net/jpg/01/11/68/14/360_F_111681470_4cbcBkssDSYcoX9XbblZAHGBZVf45Cw0.jpg");*/
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPMf_yw1zzCS1eXRW1qrDBz8-jmUk9HBMAKg&s');
-            background-repeat: repeat;
-            padding: -20px;
-            box-sizing: border-box;
-            position: fixed;
-            right: 50vh;
-            top: 1vh;
-            font-family: 'Comfortaa';
-            font-size: 15px;
-            /*font-family: 'Cinzel';*/
-        }
-        
-        .papyrus-container::-webkit-scrollbar {
-            display: none;
-        }
+h3, h1 {
+    text-align: center;
 
-        .content {
-            color: black;
-            padding: 0px;
-            border-radius: 10px;
-        }
+}
 
-        h3, h1 {
-            font-family: 'Megrim';
-            text-align: center;
-            color: #21180b;
-        }
+  .lineUp {
+    animation: 2s anim-lineUp ease-out;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 
-          .lineUp {
-            animation: 2s anim-lineUp ease-out;
-          }
-          @keyframes anim-lineUp {
-            0% {
-              opacity: 0;
-              transform: translateY(80%);
-            }
-            20% {
-              opacity: 0;
-            }
-            50% {
-              opacity: 1;
-              transform: translateY(0%);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0%);
-            }
-          }
-
-          .theory {
-            background-color: black;
-            color: bisque;
-            opacity: 0.8;
-            right: 0;
-            left: 0;
-            padding: 10%;
-            text-align: center;
-          }
+  .theory {
+    background-color: black;
+    color: bisque;
+    opacity: 0.8;
+    right: 0;
+    left: 0;
+    padding: 10%;
+    text-align: center;
+  }
 

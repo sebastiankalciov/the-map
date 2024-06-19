@@ -1,3 +1,122 @@
-<html>
-bau
+<!DOCTYPE html>
+<html class="base">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <title>Theory</title>
+  </head>
+  <body>
+    <div class="papyrus-container">
+      <div class="content text-justify">
+        <h1 class="text-6xl font-bold font-serif">Theory</h1>
+        <br />
+
+        <h2 class="text-2xl font-semibold">What Is an Operating System?</h2>
+        <p class="indent-6">
+          In the 1960s, the definition of an operating system might have been
+          the software that controls the hardware. But the landscape of computer
+          systems has evolved significantly since then, requiring a richer
+          definition. An operating system is software that enables applications
+          to interact with a computer's hardware. The software that contains the
+          core components of the operating system is called the kernel.
+        </p>
+        <p class="indent-6">
+          Operating systems can be found in devices ranging from cell phones and
+          automobiles to personal and mainframe computers. In most computer
+          systems, a user requests that the computer perform an action (e.g.,
+          execute an application or print a document) and the operating system
+          manages the software and hardware to produce the desired result.
+        </p>
+        <p class="indent-6">
+          Time-sharing operating systems schedule tasks for efficient use of the
+          system and may also include accounting software for cost allocation of
+          processor time, mass storage, peripherals, and other resources. For
+          hardware functions such as input and output and memory allocation, the
+          operating system acts as an intermediary between programs and the
+          computer hardware, although the application code is usually executed
+          directly by the hardware and frequently makes system calls to an OS
+          function or is interrupted by it.
+        </p>
+        <br />
+
+        <h3 class="text-2xl font-semibold">Topics of Theory research</h3>
+        <p class="indent-6">
+          This area deals with control mechanisms that allow multiple resources
+          to be efficiently coordinated in computations distributed over many
+          computer systems connected by local and wide-area networks.
+          Fundamental questions include: How can interfaces be organized so that
+          users deal only with abstract versions of resources and not with
+          physical details of hardware? What are the principles by which systems
+          can be extended in function by repeated application of a small number
+          of construction rules? How should distributed computations be
+          organized, with the details of network protocols, host locations,
+          bandwidths, and resource naming being mostly invisible?
+        </p>
+        <p class="indent-6">
+          Major elements of theory in operating systems include: concurrency
+          theory (synchronization, determinacy, and deadlocks); scheduling
+          theory; program behavior and memory management theory; network flow
+          theory; performance modeling and analysis. Supporting mathematics
+          include bin packing, probability, queueing theory, queueing networks,
+          communication and information theory, temporal logic, and
+          cryptography.
+        </p>
+        <p class="indent-6">
+          Operating systems and networking has always been, first and foremost,
+          a field of design. This field has yielded efficient standard methods
+          including time sharing systems, automatic storage allocators,
+          multilevel schedulers, memory managers, hierarchical file systems. It
+          has yielded well-known operating systems such as Unix, Multics, Mach,
+          VMS, MacOS, OS/2, MS-DOS, and Windows NT. It has produced standard
+          utilities including editors, document formatters, compilers, linkers,
+          and device drivers. It has produced standard approaches to files and
+          file systems. It has produced queueing network modeling and simulation
+          packages for evaluating performance of real systems; network
+          architectures such as Ethernet, FDDI, token ring nets, SNA, and
+          DECNET. It has produced protocol techniques embodied in the US
+          Department of Defense protocol suite (TCP/IP), virtual circuit
+          protocols, Internet, real time conferencing, and X.25. It has devoted
+          considerable attention to security and privacy issues in the Internet.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+
+  <style>
+    .base {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://i.imgur.com/qlb7gqc.png");
+      background-size: repeat;
+      height: 100vh;
+      padding: 0 20px;
+    }
+    .papyrus-container {
+      width: 50%;
+      height: 100vh;
+      overflow-y: scroll;
+      background-image: url("https://i.imgur.com/E6I9A3t.png");
+      background-repeat: repeat;
+      padding: -20px;
+      box-sizing: border-box;
+      position: fixed;
+      right: 50vh;
+      top: 1vh;
+    }
+
+    .papyrus-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .content {
+      color: black;
+      padding: 17px;
+      border-radius: 10px;
+    }
+  </style>
 </html>

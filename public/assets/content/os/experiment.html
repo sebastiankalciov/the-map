@@ -1,3 +1,167 @@
-<html>
-bau
+<!DOCTYPE html>
+<html class="base">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment</title>
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="papyrus-container">
+      <div class="content text-justify">
+        <h1 class="text-6xl font-bold font-serif">Experiment</h1>
+
+        <br />
+
+        <p class="indent-6">
+          There exists a general need in the development of software/systems to
+          ensure that the finished product is sufficiently tested prior to its
+          release to the public. Such testing is performed to detect programming
+          errors/flaws. Corrections are formulated and then incorporated into
+          subsequent versions of the software. There are various levels of
+          testing thoroughness. The more thorough software is tested prior to
+          release of the software to users, the less likely bugs will be exposed
+          in the subsequent use of the released software. Testing new OS poses a
+          unique set of challenges that demand a comprehensive understanding of
+          the system and innovative problem-solving approaches.
+        </p>
+        <br />
+
+        <h2 class="text-xl font-medium">The Problems of Testing a New OS:</h2>
+        <ol class="list-decimal ps-16">
+          <li>
+            Unpredictability: A new OS is an intricate web of features,
+            functions, and interactions. Testing such an ecosystem is
+            unpredictable due to the many variables at play. One minor change
+            can cause a ripple effect leading to unexpected behaviors elsewhere
+            in the system.
+          </li>
+          <li>
+            Complexity: Testing a new OS isn't just about verifying individual
+            features. It requires assessing how these features work together,
+            interact with different hardware, and stand up to varying user
+            scenarios. This complexity makes it challenging to create
+            comprehensive test scenarios and identify potential weaknesses.
+          </li>
+          <li>
+            Resource Constraints: Time and resources are often limited. Every
+            added feature or patch needs testing and achieving full coverage
+            within constraints is an uphill task.
+          </li>
+          <li>
+            Versioning and Compatibility: The frequent release of updates and
+            patches can introduce new bugs and compatibility issues, making it a
+            constant chase to ensure the OS remains bug-free and functional.
+          </li>
+        </ol>
+        <br />
+
+        <p class="indent-6">
+          An application program interface of an operating system comprises a
+          set of methods defining entry points by applications into the
+          functionality (e.g., retrieving/opening files, launching executable
+          programs, printing, etc.) Supported/provided by the operating system.
+          Furthermore, the functionality of the operating system comprises
+          groups of related functions referred to herein as components. In the
+          Microsoft Windows.(R) operating system, examples of components
+          include: bundled items such as Media Player and Shell (which includes
+          multiple subcomponents such as Active Desktop. Address Bar, Common
+          Dialogs, Control Panel, Desktop Folder, Explorer, File Association,
+          etc.). Application program interface (API) testing ensures that
+          operating system components (e.g., printing, shell, etc.). when called
+          upon by application programs, execute in an intended manner. During
+          API testing, an application program calls a set of methods included in
+          the operating system API. The calls are modified during the course of
+          testing to include various combinations of passed parameter values.
+          The behavior of the called method is observed for each of the
+          application calls.
+        </p>
+        <p class="indent-6">
+          API testing to ensure that an operating system will operate as
+          intended, when properly performed, is both extensive and exhaustive.
+          Such testing is extremely time consuming with regard to programming
+          the calls to the API methods and with regard to the Subsequent
+          analysis of the operating system responses to the test calls. By way
+          of example, API testing comprises Submitting various combinations of
+          values via an API to operating system components under test. In many,
+          if not most, cases a large number of input parameters, and the many
+          different potential values assignable to each of those input
+          parameters discourages complete testing of the interaction between
+          applications and the operating system program code via the API. As a
+          result, previous methods for testing operating system components
+          generally settled for less than complete coverage of the potential
+          interactions between all application programs and the components of
+          the operating system accessed through the operating system API.
+        </p>
+        <p class="indent-6">
+          One general technique for testing operating system components involves
+          writing applications to directly call and test operating system
+          components via their specified API methods. In such case, the
+          application programs are written for the sole purpose of exercising
+          the operating system component(s) under test. Such approach provides a
+          high level of control over testing. By directly programming the calls
+          themselves, a tester is able to tailor a test to include specific
+          inputs to APIs under specific contexts. On the other hand, testing
+          cannot be performed until the test program has been rendered.
+        </p>
+        <p class="indent-6">
+          Another general technique for testing an operating system API avoids
+          the need to write a particular program to act as the caller to the
+          components under test. This alterna tive approach involves running
+          application programs and observing their operation (and errors/fault)
+          with regard to the various called components of the operating system
+          via the API. This approach avoids the need to author an appli cation
+          to Submit calls to the operating system components. Furthermore, this
+          approach ensures that at least the appli cation used to perform the
+          testing operates properly with regard to the particular operating
+          system API. A potential shortcoming of this approach is the wide
+          variety of appli cations that execute on an operating system and call
+          upon its functionality through the API.
+        </p>
+        <p class="indent-6">
+          The above-described approaches to API testing, while offering
+          particular advantages, also exhibit shortcom ings including either an
+          inability to exhaustively test an API or alternatively perform such
+          exhaustive testing at a very high price in testing time and resources.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+
+  <style>
+    .base {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://i.imgur.com/qlb7gqc.png");
+      background-size: repeat;
+      height: 100vh;
+      padding: 0 20px;
+    }
+    .papyrus-container {
+      width: 50%;
+      height: 100vh;
+      overflow-y: scroll;
+      background-image: url("https://i.imgur.com/E6I9A3t.png");
+      background-repeat: repeat;
+      padding: -20px;
+      box-sizing: border-box;
+      position: fixed;
+      right: 50vh;
+      top: 1vh;
+    }
+
+    .papyrus-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .content {
+      color: black;
+      padding: 17px;
+      border-radius: 10px;
+    }
+  </style>
 </html>
