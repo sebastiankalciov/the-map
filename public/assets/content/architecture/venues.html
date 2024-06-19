@@ -1,3 +1,90 @@
-<html>
-bau
+<html class="base">
+    <div class="papyrus-container">
+        <div class="content">
+    
+            <!--
+                Everything in this divs (papyrus container, content) can be modified
+                You can use the tailwindcss (See https://tailwindcss.com/docs/)
+
+                Please do NOT modify anything from the style attribute from this file
+                In the actual project, this file does not contain the style and script attributes, this is just a template.
+
+                Naming convention:
+                    folder_names: [ai-robotics, algorithms, architecture, bioinformatics, computational-science,
+                    databases, graphics, human-computer, organizational-informatics, os, programming-languages, software engineering]
+
+                    sections: [connections, design, experiment, people, problems, theory, uvtRelationship, venues]
+                
+                Each folder contains the sections mentioned before.
+
+                Each section is a different html file.
+
+                Please try to structure your research in this manner.
+            -->
+
+            <h1 class="text-6xl">Important Venues</h1>
+
+            <br>
+            <h3 class="text-3xl mt-4">Conferences</h3>
+            <br>
+            <ul class="list-disc pl-5">
+                <li><strong>International Symposium on Computer Architecture (ISCA):</strong> This is a premier conference for presenting and discussing the latest research on computer architecture. It covers a wide range of topics, including processor design, memory systems, storage systems, and networking. <a href="https://www.iscaconf.org/isca2022/" target="_blank">(link)</a></li>
+                <li><strong>IEEE/ACM International Symposium on Microarchitecture:</strong> This conference focuses on the design and implementation of microprocessors and other computing systems. It covers topics such as instruction set architecture, pipeline design, cache design, and power management. <a href="https://en.wikipedia.org/wiki/International_Symposium_on_Microarchitecture" target="_blank">(link)</a></li>
+                <li><strong>IEEE/ACM International Symposium on Microarchitecture HPCA:</strong> The International Symposium on High-Performance Computer Architecture: This conference covers research on high-performance computer architectures, including vector processors, multiprocessors, and GPUs. <a href="https://hpca-conf.org/" target="_blank">(link)</a></li>
+            </ul>
+
+            <h3 class="text-3xl mt-4">Journals</h3>
+            <br>
+            <ul class="list-disc pl-5">
+                <li><strong>IEEE Transactions on Computers:</strong> This journal publishes a broad range of research on computer science and engineering, including computer architecture. <a href="https://www.computer.org/csdl/journal/tc" target="_blank">(link)</a></li>
+                <li><strong>The Journal of Supercomputing:</strong> This journal focuses on research on high-performance computing systems, including computer architecture. <a href="https://www.springerprofessional.de/en/the-journal-of-supercomputing/11065860" target="_blank">(link)</a></li>
+                <li><strong>Microprocessor Report:</strong> This is a monthly magazine that covers the latest news and trends in computer architecture. <a href="https://architek.ai/en/page/2/" target="_blank">(link)</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.imgur.com/qlb7gqc.png');
+            background-size: repeat;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        .papyrus-container {
+            width: 50%;
+            height: 100vh;
+            overflow-y: scroll;
+            background-image: url("https://i.imgur.com/E6I9A3t.png");
+            background-repeat: repeat;
+            padding: -20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 50vh;
+            top: 1vh;
+        }
+        
+        .papyrus-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .content {
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+
 </html>

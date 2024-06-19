@@ -1,3 +1,93 @@
-<html>
-bau
+<html class="base">
+    <div class="papyrus-container">
+        <div class="content">
+
+            <h1 class="text-6xl">Experiments</h1>
+
+            <br>
+            <p>
+                One of the widely-studied parts of computer engineering is designing energy-efficient and 
+                productive CPUs and GPUs, working at multicore levels. Some of the current projects like Apple's M-series chips 
+                involve heterogeneous computing principles, that allow combining different types of cores (CPUs and GPUs) 
+                within one small chip. This approach allows for better optimization of performance and power efficiency 
+                for specific workloads.
+            </p>
+            <br>
+            <p>
+                Another good example of current design trends is life-support devices or spectrum analyzing machines 
+                for medical discoveries and healthcare. IBM Summit Supercomputer for COVID-19 Research is specifically 
+                designed for high-performance computing, featuring over 27,000 NVIDIA GPUs and IBM Power9 CPUs interconnected 
+                with high-speed links. The computer architecture of Summit enables it to perform complex simulations and data 
+                analysis tasks required for medical research.
+            </p>
+            <br>
+            <p>
+                Tesla, an electric vehicle manufacturer, has developed its own custom-designed Full Self-Driving (FSD) computer, 
+                which is at the heart of its autonomous driving technology. 
+                Designed with automotive-grade reliability and energy efficiency in mind, the Tesla FSD 
+                computer integrates multiple processing cores, hardware accelerators for AI inference, 
+                and specialized I/O interfaces for sensor data fusion.
+            </p>
+            <br>
+            <p>
+                In the field of bioinformatics, the development of specialized processors for DNA sequencing 
+                has been a significant advancement. These processors are designed to handle the vast amounts 
+                of data generated during sequencing and to perform complex computations quickly. For example, 
+                the NVIDIA Clara Parabricks platform leverages GPUs to accelerate genomic analysis, reducing 
+                the time required for tasks such as variant calling and genome assembly.
+            </p>
+            <br>
+            <p>
+                Algorithms play a crucial role in optimizing computer architecture and organization. 
+                Techniques such as parallel computing and distributed systems are extensively researched 
+                to improve the performance of large-scale computations. The use of machine learning algorithms 
+                to predict and manage workloads in data centers is another cutting-edge area. Google's Tensor 
+                Processing Units (TPUs) are custom-designed accelerators for machine learning workloads, 
+                showcasing the intersection of algorithm design and specialized hardware.
+            </p>
+            <br>
+            <p>
+                In computational science, experiments with quantum computing are pushing the boundaries of traditional 
+                computer architecture. Quantum computers use quantum bits (qubits) and leverage principles of 
+                quantum mechanics to perform computations at unprecedented speeds for specific problems. 
+                Companies like IBM and Google are leading the way in developing quantum processors, which have 
+                the potential to revolutionize fields such as cryptography, material science, and complex system simulations.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.imgur.com/qlb7gqc.png');
+            background-size: repeat;
+            height: 100vh;
+            padding: 0 20px;
+        }
+        .papyrus-container {
+            width: 50%;
+            height: 100vh;
+            overflow-y: scroll;
+            background-image: url("https://i.imgur.com/E6I9A3t.png");
+            background-repeat: repeat;
+            padding: -20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 50vh;
+            top: 1vh;
+        }
+        .papyrus-container::-webkit-scrollbar {
+            display: none;
+        }
+        .content {
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
 </html>

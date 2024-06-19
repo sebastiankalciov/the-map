@@ -1,3 +1,87 @@
-<html>
-bau
+<html class="base">
+    <div class="papyrus-container">
+        <div class="content">
+    
+            <!--
+                Everything in this divs (papyrus container, content) can be modified
+                You can use the tailwindcss (See https://tailwindcss.com/docs/)
+
+                Please do NOT modify anything from the style attribute from this file
+                In the actual project, this file does not contain the style and script attributes, this is just a template.
+
+                Naming convention:
+                    folder_names: [ai-robotics, algorithms, architecture, bioinformatics, computational-science,
+                    databases, graphics, human-computer, organizational-informatics, os, programming-languages, software engineering]
+
+                    sections: [connections, design, experiment, people, problems, theory, uvtRelationship, venues]
+                
+                Each folder contains the sections mentioned before.
+
+                Each section is a different html file.
+
+                Please try to structure your research in this manner.
+            -->
+
+            <h1 class="text-6xl">Connections</h1>
+
+            <br>
+            <ul>
+                <li><strong>Programming Languages:</strong> CAO designs influence how programming languages like Python or C++ are optimized to run efficiently on hardware. Conversely, language features and demands, such as parallelism or memory management, may shape hardware designs to accommodate specific language requirements.</li>
+                <li><strong>Bioinformatics:</strong> CAO enables the rapid processing of vast biological datasets, crucial in fields like genomics. Insights from bioinformatics, such as algorithms for DNA sequencing, inform the development of specialized hardware tailored to handle these computational tasks efficiently.</li>
+                <li><strong>Algorithms:</strong> CAO impacts the performance of algorithms by providing hardware support for key operations. For instance, hardware accelerators for matrix multiplication benefit machine learning algorithms. Similarly, algorithmic innovations, like new sorting techniques, may drive the need for hardware optimizations to execute these algorithms more efficiently.</li>
+                <li><strong>Operating Systems and Networks:</strong> CAO provides the foundation for operating systems and network infrastructure. Hardware features like memory management units and network interface controllers are essential for OS and network functionality. Conversely, the demands of operating systems and network protocols may influence hardware designs to prioritize features such as low-latency communication or virtualization support.</li>
+                <li><strong>Software Engineering:</strong> CAO influences software design by providing the underlying hardware platform. Software engineers optimize code to take advantage of hardware features like caching or vectorization. Conversely, software engineering practices, such as modularization or abstraction, may influence hardware designs to support efficient software execution.</li>
+                <li><strong>Databases:</strong> CAO supports the efficient processing of database queries by providing hardware features like optimized memory access or parallel processing capabilities. Database requirements, such as fast disk I/O or efficient indexing, may drive hardware designs to prioritize these features.</li>
+                <li><strong>AI and Robotics:</strong> CAO provides the computational horsepower needed for AI tasks like neural network training or robotic control. Advances in AI and robotics drive the demand for specialized hardware accelerators optimized for these tasks, such as GPUs for deep learning or sensor fusion.</li>
+                <li><strong>Graphics:</strong> CAO powers graphics processing units (GPUs) used in rendering realistic graphics and visual effects. Demands from graphics-intensive applications, such as gaming or 3D modeling, may drive hardware designs to prioritize features like shader performance or texture compression.</li>
+                <li><strong>Human-Computer Interaction:</strong> CAO enables responsive user interfaces by providing hardware support for input/output devices and display rendering. Human-computer interaction research drives demands for hardware features that enhance user experience, such as touch sensitivity or gesture recognition.</li>
+                <li><strong>Computational Science:</strong> CAO supports scientific computing tasks, such as simulations or data analysis, by providing high-performance computing resources. Demands from computational science, such as large-scale parallelism or fast floating-point calculations, may influence hardware designs to prioritize these capabilities.</li>
+                <li><strong>Organizational Informatics:</strong> CAO provides the hardware infrastructure for organizational systems, such as servers or data centers. Requirements from organizational informatics, such as reliability or scalability, may influence hardware designs to meet the needs of enterprise-level computing.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.imgur.com/qlb7gqc.png');
+            background-size: repeat;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        .papyrus-container {
+            width: 50%;
+            height: 100vh;
+            overflow-y: scroll;
+            background-image: url("https://i.imgur.com/E6I9A3t.png");
+            background-repeat: repeat;
+            padding: -20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 50vh;
+            top: 1vh;
+        }
+        
+        .papyrus-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .content {
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+
 </html>

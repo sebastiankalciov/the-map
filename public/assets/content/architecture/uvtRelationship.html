@@ -1,3 +1,90 @@
-<html>
-bau
+<html class="base">
+    <div class="papyrus-container">
+        <div class="content">
+    
+            <!--
+                Everything in this divs (papyrus container, content) can be modified
+                You can use the tailwindcss (See https://tailwindcss.com/docs/)
+
+                Please do NOT modify anything from the style attribute from this file
+                In the actual project, this file does not contain the style and script attributes, this is just a template.
+
+                Naming convention:
+                    folder_names: [ai-robotics, algorithms, architecture, bioinformatics, computational-science,
+                    databases, graphics, human-computer, organizational-informatics, os, programming-languages, software engineering]
+
+                    sections: [connections, design, experiment, people, problems, theory, uvtRelationship, venues]
+                
+                Each folder contains the sections mentioned before.
+
+                Each section is a different html file.
+
+                Please try to structure your research in this manner.
+            -->
+
+            <h1 class="text-6xl">UVT Relationship</h1>
+
+            <br>
+
+            <p>Currently, West University of Timisoara features several related courses: CA (Computer Architecture), 
+                FLAT (Formal Languages and Automata Theory), and many more related to the field disciplines. 
+                See <a href="https://info.uvt.ro/programe-licenta/informatica-engleza/" class="custom-link" target="_blank"><em>Curriculum</em>
+                </a>The subjects examined at the university deeply cover many logical and practical subtleties, 
+                allowing graduates to attain high-level skills and competencies. As a 1st-year student who finished the CA course taught 
+                by professor Cristian Cira, the theoretical material and practical labs (CTF challenges) introduced 
+                me and my colleagues to this versatile field, 
+                emphasizing main concepts and contemporary design features. It gave a good grasp for a newcomer student, 
+                eager to work in the embedded systems domain.</p>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.imgur.com/qlb7gqc.png');
+            background-size: repeat;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        .papyrus-container {
+            width: 50%;
+            height: 100vh;
+            overflow-y: scroll;
+            background-image: url("https://i.imgur.com/E6I9A3t.png");
+            background-repeat: repeat;
+            padding: -20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 50vh;
+            top: 1vh;
+        }
+        
+        .papyrus-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .content {
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .custom-link {
+            color: #D4A017; /* Yellow-brown color */
+            text-decoration: underline;
+        }
+
+        .custom-link:hover {
+            color: #A87C00; /* Darker yellow-brown on hover */
+        }
+    </style>
+
 </html>
+

@@ -1,3 +1,123 @@
-<html>
-bau
+<html class="base">
+    <div class="papyrus-container">
+        <div class="content">
+    
+            <!--
+                Everything in this divs (papyrus container, content) can be modified
+                You can use the tailwindcss (See https://tailwindcss.com/docs/)
+
+                Please do NOT modify anything from the style attribute from this file
+                In the actual project, this file does not contain the style and script attributes, this is just a template.
+
+                Naming convention:
+                    folder_names: [ai-robotics, algorithms, architecture, bioinformatics, computational-science,
+                    databases, graphics, human-computer, organizational-informatics, os, programming-languages, software engineering]
+
+                    sections: [connections, design, experiment, people, problems, theory, uvtRelationship, venues]
+                
+                Each folder contains the sections mentioned before.
+
+                Each section is a different html file.
+
+                Please try to structure your research in this manner.
+            -->
+
+            <h1 class="text-6xl">People</h1>
+
+            <br>
+
+            <h3 class="text-3xl mt-4">John von Neumann</h3>
+            <p>
+                The von Neumann architecture—also known as the von Neumann model or Princeton architecture—is a 
+                computer architecture based on a 1945 description by John von Neumann, and by others, 
+                in the First Draft of a Report on the EDVAC. The document describes a design architecture for 
+                an electronic digital computer with these components:
+            </p>
+            <ul class="list-disc pl-5">
+                <li>A processing unit with both an arithmetic logic unit and processor registers</li>
+                <li>A control unit that includes an instruction register and a program counter</li>
+                <li>Memory that stores data and instructions</li>
+                <li>Input and output mechanisms</li>
+            </ul>
+
+            <h3 class="text-3xl mt-4">Gordon Moore</h3>
+            <p>
+                The observation that the number of transistors on computer chips 
+                doubles approximately every two years is known as Moore’s Law. 
+                Moore’s Law is not a law of nature, but an observation of a long-term 
+                trend in how technology is changing. The law was first described by 
+                Gordon E. Moore, the co-founder of Intel, in 1965.
+            </p>
+
+            <h3 class="text-3xl mt-4">Walter Brattain, John Bardeen, and William Shockley</h3>
+            <p>
+                The invention of the transistor marked a significant milestone in electronics, 
+                paving the way for modern electronic devices and earning the trio the Nobel Prize in Physics in 1956.
+                Walter Brattain, John Bardeen, and William Shockley were the inventors of the transistor, 
+                a revolutionary solid-state device.
+                A spokesman claimed that "it may have far-reaching significance in electronics and 
+                electrical communication." 
+                Despite its delicate mechanical construction, many thousands of units were 
+                produced in a metal cartridge package as the Bell Labs "Type A" transistor. 
+            </p>
+
+            <h3 class="text-3xl mt-4">John Hannesy</h3>
+            <p>
+                A pioneer of reduced instruction set computing (RISC) architecture. He co-authored the 
+                influential textbook "Computer Architecture: A Quantitative Approach" with 
+                David Patterson and later served as the President of Stanford University.
+            </p>
+
+            <h3 class="text-3xl mt-4">Seymour Cray</h3>
+            <p>
+                Known as the "father of supercomputing," he founded Cray Research and 
+                designed a series of innovative supercomputers that set performance records for decades.
+            </p>
+            <br>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.imgur.com/qlb7gqc.png');
+            background-size: repeat;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        .papyrus-container {
+            width: 50%;
+            height: 100vh;
+            overflow-y: scroll;
+            background-image: url("https://i.imgur.com/E6I9A3t.png");
+            background-repeat: repeat;
+            padding: -20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 50vh;
+            top: 1vh;
+        }
+        
+        .papyrus-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .content {
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+
 </html>

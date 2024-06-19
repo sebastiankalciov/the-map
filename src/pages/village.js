@@ -35,9 +35,9 @@ export default function Village() {
 		const hutsInfo = [
 			{id: "ai-robotics", name: "AI and Robotics", texture: hutTexture, position: {x: 0.76, y: 0.70}},
 			{id: "algorithms", name: "Algorithms and Data Structures", texture: hutTexture, position: {x: 0.74, y: 0.89}},
-			{id: "architecture", name: "Architecture", texture: hutTexture, position: {x: 0.1, y: 0.85}},
+			{id: "architecture", name: "Computer Architecture and Organization", texture: hutTexture, position: {x: 0.1, y: 0.85}},
 			{id: "bioinformatics", name: "Bioinformatics", texture: hutTexture, position: {x: 0.43, y: 0.8}},
-			{id: "computational-science", name: "Computational Science", texture: hutTexture, position: {x: 0.7, y: -0.22}},
+			{id: "computational-science", name: "Computational Science", texture: hutTexture, position: {x: 0.16, y: 0.63}},
 			{id: "databases", name: "Databases and Information Retrieval", texture: hutTexture, position: {x: 0.07, y: 0.34}},
 			{id: "graphics", name: "Graphics", texture: hutTexture, position: {x: 0.13, y: 0.07}},
 			{id: "human-computer", name: "Human Computer Interaction", texture: hutTexture, position: {x: 0.82, y: 0.45}},

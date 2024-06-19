@@ -8,9 +8,9 @@ import Character from "@/components/Character.js";
 import {Controller} from "@/components/Controller.js";
 import Utils from "@/components/Utils.js";
 
-const PAGE_NAME = "databases";
+const PAGE_NAME = "os";
 const CLICK_INTERACTION_DISTANCE = 200;
-export default function Databases() {
+export default function OS() {
 
 	const objectPagesPathList = {
 		theory: `/assets/content/${PAGE_NAME}/theory.html`,
@@ -51,7 +51,7 @@ export default function Databases() {
 			{ id: "design", name: "Design", texture: designTexture, position: { x: 0.6, y: 0.1 } },
 			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
 			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
-			{ id: "uvtRelationship", name: "Databases and Information Retrieval at UVT", texture: uvtTexture, position: { x: 0.6, y: 0.7 } },
+			{ id: "uvtRelationship", name: "Operating Systems at UVT", texture: uvtTexture, position: { x: 0.6, y: 0.7 } },
 			{ id: "venues", name: "Venues", texture: theoryTexture, position: { x: 0.8, y: 0.25 } }
 		]
 
@@ -127,11 +127,11 @@ export default function Databases() {
 
 	})();
 
-	return (
-		<RootLayout style = "domain-page">
-			<Link href = "/village" id = "redirect-button">
-				<button className="redirect-button-hut top-right">Return to Village</button>
-			</Link>
-		</RootLayout>
-	);
+    return (
+        <RootLayout style = "domain-page">
+            <Link href = "/village" id = "redirect-button">
+                <button className="redirect-button-hut top-right">Return to Village</button>
+            </Link>
+        </RootLayout>
+    );
 }
