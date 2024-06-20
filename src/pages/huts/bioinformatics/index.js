@@ -51,7 +51,7 @@ export default function Bioinformatics() {
 			{ id: "design", name: "Design", texture: designTexture, position: { x: 0.6, y: 0.1 } },
 			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
 			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
-			{ id: "uvtRelationship", name: "AI & Robotics at UVT", texture: uvtTexture, position: { x: 0.6, y: 0.7 } },
+			{ id: "uvtRelationship", name: "Bioinformatics at UVT", texture: uvtTexture, position: { x: 0.6, y: 0.7 } },
 			{ id: "venues", name: "Venues", texture: theoryTexture, position: { x: 0.8, y: 0.25 } }
 		]
 

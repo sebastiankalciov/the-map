@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'cmu_serifroman';
+    src: url('../../content/ai-robotics/cmunrm-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cmu_serifbold';
+    src: url('../../content/ai-robotics/cmunbx-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cmu_typewriter_textregular';
+    src: url('../../content/ai-robotics/cmuntt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alagard';
+    src: url('../../content/ai-robotics/Alagard.woff2') format('woff2'),
+        url('../../content/ai-robotics/Alagard.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+code {
+    font-family: 'cmu_typewriter_textregular', Courier, monospace;
+}
+
+.par-with-title {
+    margin: 20px 0;
+}
+
+.par-title {
+    font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
+    margin-right: 2.5%;
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.line {
+    height: 1px;
+    background: black;
+    margin: 5% 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    color: black;
+    font-size: 1.3vw;
+    font-family: 'cmu_serifroman' , Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+/* Important people section styling */
+.figure-block {
+    display: block;
+    margin: 5% 0;
+    background-color: grey;
+}
+
+.figure-image img {
+    margin: 2.5%;
+    width: 30%;
+    height: auto;
+    float: right;
+    border: 15px ridge #542d1f;
+}
+
+.scholar-image img {
+    margin: 2.5%;
+    width: 30%;
+    height: auto;
+    float: left;
+
+    border: 15px ridge #c9c9c9;
+}
+
+.figure-name {
+    font-family: 'Alagard', Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    text-align: left;
+}
+
+.important-figure > div {
+    padding-left: 2%;
+    text-align: justify;
+}
+
+.important-figure > div:not(:first-child):not(:last-child) {
+    margin: 5% 0;
+}
+
+.important-figure > div:first-child {
+    padding-top: 2.5%;
+}
+
+.important-figure > div:last-child {
+    padding-bottom: 2.5%;
+}
+
+/* Styling for figure contact info */
+.important-figure > div:last-child {
+    font-family: 'cmu_typewriter_textregular', Courier, monospace;
+    text-align: center;
+}
+
+/* General table styling */
+table {
+    width: 100%;
+    margin: 3% 0;
+    border: 3px solid black;
+    text-align: center;
+    font-size: large;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 3%;
+    border: 3px solid black;
+    white-space: nowrap;
+}
+
+table tr th {
+    border-bottom: 4px solid black;
+}
+
+b {
+    font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+li {
+    text-align: justify;
+}
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+/* Image centering */
+.img-center {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+}
+
+.img-center img {
+    max-width: 80%;
+    border: 2px solid black;
+}

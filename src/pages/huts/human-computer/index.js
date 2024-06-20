@@ -10,7 +10,7 @@ import Utils from "@/components/Utils.js";
 
 const PAGE_NAME = "human-computer";
 const CLICK_INTERACTION_DISTANCE = 200;
-export default function AIRobotics() {
+export default function HumanComputer() {
 
 	const objectPagesPathList = {
 		theory: `/assets/content/${PAGE_NAME}/theory.html`,

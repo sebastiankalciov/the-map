@@ -32,6 +32,33 @@ export function createPapyrusContainer(document, content, PAGE_NAME) {
 
 		papyrusContainer.appendChild(script);
 	}
+	if (PAGE_NAME === "ai-robotics") {
+		const script = document.createElement('script');
+		script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+		script.async = true;
+
+		script.onload = () => {
+			console.log('Script loaded successfuly');
+
+		};
+		script.onerror = () => {
+			console.log('Error occurred while loading script');
+		};
+
+		const script1 = document.createElement('script');
+		script1.src = 'https://polyfill.io/v3/polyfill.min.js?features=es6';
+		script1.async = true;
+
+		script1.onload = () => {
+			console.log('Script loaded successfuly');
+
+		};
+		script1.onerror = () => {
+			console.log('Error occurred while loading script');
+		};
+		papyrusContainer.appendChild(script);
+		papyrusContainer.appendChild(script1);
+	}
 	papyrusContainer.appendChild(contentDiv);
 
 	return papyrusContainer;

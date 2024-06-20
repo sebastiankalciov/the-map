@@ -1,58 +1,76 @@
 <html>
     <head>
-
-        <link rel="stylesheet" href="../assets/content/bioinformatics/design.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
-
+        <style>
+            h1 {
+                font-size: 2.5em;
+                color: #333;
+                text-align: center;
+            }
+            h4 {
+                color: #555;
+                margin-top: 20px;
+            }
+            .design {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .design div {
+                flex: 1;
+                margin: 10px;
+                padding: 20px;
+                background-color: #cecece;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            .design div p {
+                color: #333;
+            }
+            .design div p scan {
+                color: brown;
+            }
+            .problems {
+                margin-top: 40px;
+            }
+            .problems h3 {
+                color: brown;
+                text-align: center;
+            }
+        </style>
     </head>
-    <div class = "papyrus-container">
-        <div class = "content">
-
-            <h1 class="text-6xl"><b>Problems in Bioinformatics</b></h1>
-            <br>
-            <br>
-
+    <div class="papyrus-container">
+        <div class="content">
+            <h1><b>Problems in Bioinformatics</b></h1>
             <div class="design">
-
-                <p>Integrating artificial intelligence (AI) and machine learning (ML) into bioinformatics tools and workflows is revolutionising the field. These technologies are helping to address some of the most pressing challenges in bioinformatics:</p>
-        
                 <div class="leftbox">
-                <h4>Data Integration</h4>
-                <p><scan style="color: brown;">Diverse Data Sources: </scan> Bioinformatics involves the analysis of data from various sources, including genomics, transcriptomics, proteomics, metabolomics, and more. Each of these data types often comes with its own unique challenges, such as differences in data formats, scales, and levels of granularity.</p>
-                <p><scan style="color: brown;">Interoperability: </scan>  Ensuring interoperability between different data sources and platforms is challenging. Integrating diverse datasets requires developing methods to harmonise data, accounting for variations in experimental techniques, and normalising data to a common scale.</p>
-                <p><scan style="color: brown;">Biological Complexity: </scan>  Biological systems are inherently complex, and the integration of data across multiple levels (e.g., genes, proteins, metabolites) requires sophisticated computational models to capture the intricate relationships and dependencies within the data.</p>
-               
-            </div>
-
+                    <h4>Data Integration</h4>
+                    <p><scan>Diverse Data Sources: </scan> Bioinformatics involves the analysis of data from various sources, including genomics, transcriptomics, proteomics, metabolomics, and more. Each of these data types often comes with its own unique challenges, such as differences in data formats, scales, and levels of granularity.</p>
+                    <br>
+                    <p><scan>Interoperability: </scan> Ensuring interoperability between different data sources and platforms is challenging. Integrating diverse datasets requires developing methods to harmonize data, accounting for variations in experimental techniques, and normalizing data to a common scale.</p>
+                    <br>
+                    <p><scan>Biological Complexity: </scan> Biological systems are inherently complex, and the integration of data across multiple levels (e.g., genes, proteins, metabolites) requires sophisticated computational models to capture the intricate relationships and dependencies within the data.</p>
+                </div>
                 <div class="middlebox">
-                <h4>Scalability</h4>
-                <p><scan style="color: brown;">Explosive Growth of Data: </scan> Advances in high-throughput technologies have led to an exponential increase in biological data generation. Dealing with large-scale datasets, such as those from next-generation sequencing or high-throughput screening, poses challenges in terms of storage, processing speed, and computational resources.</p>
-                <p><scan style="color: brown;">Algorithmic Efficiency: </scan> As datasets grow, the efficiency of algorithms becomes crucial. Traditional algorithms may become impractical for large datasets, necessitating the development of scalable algorithms capable of handling big data efficiently.</p>
-                <p><scan style="color: brown;">Parallel Computing: </scan> To address scalability issues, the implementation of parallel and distributed computing approaches becomes essential. Utilising cloud computing and parallel processing architectures helps in efficiently analysing vast amounts of biological data.</p>
-               </div>
-
+                    <h4>Scalability</h4>
+                    <p><scan>Explosive Growth of Data: </scan> Advances in high-throughput technologies have led to an exponential increase in biological data generation. Dealing with large-scale datasets, such as those from next-generation sequencing or high-throughput screening, poses challenges in terms of storage, processing speed, and computational resources.</p>
+                    <br>
+                    <p><scan>Algorithmic Efficiency: </scan> As datasets grow, the efficiency of algorithms becomes crucial. Traditional algorithms may become impractical for large datasets, necessitating the development of scalable algorithms capable of handling big data efficiently.</p>
+                    <br>
+                    <p><scan>Parallel Computing: </scan> To address scalability issues, the implementation of parallel and distributed computing approaches becomes essential. Utilizing cloud computing and parallel processing architectures helps in efficiently analyzing vast amounts of biological data.</p>
+                </div>
                 <div class="rightbox">
-                <h4>Standardisation</h4>
-                <p><scan style="color: brown;">Data Formats and Protocols: </scan> The lack of standardised formats and protocols for data representation, storage, and sharing hinders seamless collaboration between research groups and institutions. Standardisation challenges are particularly evident in diverse omics data, where each platform may have its own proprietary format.</p>
-                <p><scan style="color: brown;">Metadata Standards: </scan>  Metadata, crucial for understanding the context and quality of biological data, often lack standardised definitions and formats. Inconsistent metadata can complicate data integration efforts and lead to misinterpretations.</p>
-                <p><scan style="color: brown;">Analysis Pipeline: </scan> Standardisation extends to the methods and workflows used in bioinformatics analyses. Establishing common frameworks for analysis pipelines allows for better reproducibility and comparability of results across different studies.</p>
-               </div>
-
-               <br>
-
-               <div class="problems">
-               <h3 style="color: brown;">The future of bioinformatics</h3>
-
-               <p>The late 20th century witnessed the emergence of computers in biology. Their use, along with continuously improving laboratory technology, has permitted increasingly complex research endeavors. Whereas sequencing a single protein or gene could have been the subject of a doctoral thesis up to the early 1990s, a PhD student may now analyze the collective genome of many microbial communities during his/her graduate studies. Whereas determining the primary structure of a protein was complex back then, one can now identify the whole proteome of a sample. Biology has now embraced a holistic approach, but within distinct macromolecular classes (e.g. genomics, proteomics and glycomics) with little crosstalk between each subdiscipline.
-                </p>
-
+                    <h4>Standardization</h4>
+                    <p><scan>Data Formats and Protocols: </scan> The lack of standardized formats and protocols for data representation, storage, and sharing hinders seamless collaboration between research groups and institutions. Standardization challenges are particularly evident in diverse omics data, where each platform may have its own proprietary format.</p>
+                    <br>
+                    <p><scan>Metadata Standards: </scan> Metadata, crucial for understanding the context and quality of biological data, often lack standardized definitions and formats. Inconsistent metadata can complicate data integration efforts and lead to misinterpretations.</p>
+                    <br>
+                    <p><scan>Analysis Pipeline: </scan> Standardization extends to the methods and workflows used in bioinformatics analyses. Establishing common frameworks for analysis pipelines allows for better reproducibility and comparability of results across different studies.</p>
+                </div>
+            </div>
+            <div class="problems">
+                <h3>The Future of Bioinformatics</h3>
+                <p>The late 20th century witnessed the emergence of computers in biology. Their use, along with continuously improving laboratory technology, has permitted increasingly complex research endeavors. Whereas sequencing a single protein or gene could have been the subject of a doctoral thesis up to the early 1990s, a PhD student may now analyze the collective genome of many microbial communities during his/her graduate studies. Whereas determining the primary structure of a protein was complex back then, one can now identify the whole proteome of a sample. Biology has now embraced a holistic approach, but within distinct macromolecular classes (e.g. genomics, proteomics and glycomics) with little crosstalk between each subdiscipline.</p>
                 <p>One may anticipate the next leap: instead of independently investigating whole genomes, whole transcriptomes or whole metabolomes, whole living organisms and their environments will be computationally modeled, with all molecular categories taken into account simultaneously. In fact, this feat has already been achieved in a whole cell model of Mycoplasma genitalium, in which all its genes, their products and their known metabolic interactions have been reconstructed in silico. Perhaps we will soon witness an in silico model of a whole pluricellular organism. Even though this might seem unfeasible to model millions to trillions of cells, one must keep in mind that we are now achieving research exploits that would have been deemed as computationally or technically impossible even 10 years ago.</p>
-               </div>
             </div>
         </div>
     </div>

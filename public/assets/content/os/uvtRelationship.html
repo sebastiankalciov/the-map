@@ -1,3 +1,163 @@
-<html>
-bau
+<!DOCTYPE html>
+<html class="base">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <title>uvtRelationships</title>
+  </head>
+  <body>
+    <div class="papyrus-container">
+      <div class="content text-justify">
+        <h1 class="text-6xl font-bold font-serif">Local studies in UVT</h1>
+        <br />
+
+        <p class="indent-6">
+          The university's curriculum is meticulously designed to provide a
+          comprehensive education in key areas of computer science, including
+          operating systems and networks. These two fields are foundational to
+          the discipline, underpinning much of the technology and systems used
+          in modern computing. By integrating dedicated courses, practical labs,
+          and project-based learning, the university ensures that students gain
+          both theoretical knowledge and practical skills essential for their
+          professional development.
+        </p>
+
+        <h3 class="text-xl font-semibold pt-3">Operating Systems</h3>
+        <ol class="list-decimal ps-10">
+          <li>
+            Core Curriculum Inclusion:
+            <ul class="list-disc ps-7">
+              <li>
+                The inclusion of "Operating Systems I" and "Operating Systems
+                II" in the curriculum ensures that all students receive a
+                thorough grounding in this critical area. These courses are
+                structured to build progressively, starting with fundamental
+                concepts and advancing to more complex topics.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Comprehensive Coverage:
+            <ul class="list-disc ps-7">
+              <li>
+                Operating Systems I: This course covers essential topics such as
+                process management, memory management, and file systems. These
+                basics are crucial for understanding the operations and
+                architecture of modern operating systems.
+              </li>
+              <li>
+                Operating Systems II: This course advances to topics such as
+                concurrency, advanced memory management techniques, and system
+                security, providing a deeper understanding necessary for more
+                complex system management and development.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Practical Application:
+            <ul class="list-disc ps-7">
+              <li>
+                Practical lab sessions in both courses allow students to apply
+                theoretical knowledge to real-world scenarios, such as
+                configuring and managing operating systems. This hands-on
+                experience is critical for cementing their understanding and
+                skills.
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <h3 class="text-2xl font-semibold pt-3">Networks</h3>
+        <ol class="list-decimal ps-10">
+          <li>
+            Focused Coursework:
+            <ul class="list-disc ps-7">
+              <li>
+                With specific courses like "Computer Networks" and "Network
+                Administration," the curriculum addresses networking
+                comprehensively. These courses cover a wide range of topics from
+                basic principles to advanced network management and security.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Depth and Breadth:
+            <ul class="list-disc ps-7">
+              <li>
+                Computer Networks: This course covers fundamental networking
+                concepts including the OSI model, TCP/IP protocols, IP
+                addressing, and subnetting, which are essential for
+                understanding how network components interact.
+              </li>
+              <li>
+                Network Administration: This course delves into advanced topics
+                such as network security, wireless networks, and the Internet of
+                Things (IoT), preparing students for complex networking tasks.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Hands-On Labs:
+            <ul class="list-disc ps-7">
+              <li>
+                Laboratory sessions in these courses allow students to engage in
+                practical tasks such as configuring routers, analyzing network
+                traffic with tools like Wireshark, and implementing
+                client-server models. This ensures students can apply their
+                theoretical knowledge in real-world settings.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p class="indent-6 pt-3">
+          The university's curriculum effectively covers the topics of operating
+          systems and networks through a well-structured blend of coursework,
+          practical labs, and project-based learning. By ensuring that students
+          receive a solid foundation in these essential areas, the curriculum
+          prepares them for the demands of the IT industry. This comprehensive
+          approach not only enhances their theoretical understanding but also
+          equips them with the practical skills necessary to excel in their
+          professional careers.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+
+  <style>
+    .base {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://i.imgur.com/qlb7gqc.png");
+      background-size: repeat;
+      height: 100vh;
+      padding: 0 20px;
+    }
+    .papyrus-container {
+      width: 50%;
+      height: 100vh;
+      overflow-y: scroll;
+      background-image: url("https://i.imgur.com/E6I9A3t.png");
+      background-repeat: repeat;
+      padding: -20px;
+      box-sizing: border-box;
+      position: fixed;
+      right: 50vh;
+      top: 1vh;
+    }
+
+    .papyrus-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .content {
+      color: black;
+      padding: 17px;
+      border-radius: 10px;
+    }
+  </style>
 </html>

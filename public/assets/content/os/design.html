@@ -1,3 +1,287 @@
-<html>
-bau
+<!DOCTYPE html>
+<html class="base">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design</title>
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="papyrus-container">
+      <div class="content text-justify">
+        <h1 class="text-6xl font-bold font-serif">Design</h1>
+        <br />
+
+        <h2 class="text-xl font-semibold">Operating System Components</h2>
+        <p class="indent-6">
+          A user interacts with the operating system via one or more user
+          applications, and often through a special application called a shell,
+          or command interpreter. The software that contains the core components
+          of the operating system is referred to as the kernel. Typical
+          operating system components include the processor scheduler, memory
+          manager, I/O manager, interprocess communication (IPC) manager, and
+          file system manager. Almost all modern operating systems support a
+          multiprogrammed environment in which multiple applications can execute
+          concurrently. The kernel manages the execution of processes. Program
+          components, which execute independently but use a single memory space
+          to share data, are called threads.
+        </p>
+
+        <h2 class="text-xl font-semibold pt-3">
+          Operating System Architectures
+        </h2>
+        <img
+          class="float-right pl-5 pt-3"
+          width="360px"
+          src="https://www.blueflamingo.tech/2020/08/03/Introduction/mono.png" />
+        <p class="indent-6">
+          The <b class="font-medium">monolithic operating system</b> is the
+          earliest and most common operating system architecture. In a
+          monolithic operating system, every component is contained in the
+          kernel. As a result, any component can directly communicate with any
+          other. Monolithic operating systems tend to be highly efficient. A
+          disadvantage of monolithic designs is that it is difficult to
+          determine the source of subtle errors.
+        </p>
+        <img
+          class="float-right pl-5 pt-3"
+          width="360px"
+          src="https://image.slidesharecdn.com/operatingsystemarchitecture-210726040548/75/Operating-system-architecture-9-2048.jpg" />
+        <p class="indent-6">
+          The <b class="font-medium">layered approach</b> to operating systems
+          attempts to address this issue by grouping components that perform
+          similar functions into layers. Each layer communicates exclusively
+          with those immediately above and below it. In a layered approach, a
+          user process's request may need to pass through many layers before
+          completion. Because additional methods must be invoked to pass data
+          and control from one layer to the next, system throughput decreases
+          compared to that with a monolithic kernel, which may require only a
+          single call to service a similar request. The THE operating system is
+          an early example of a layered operating system.
+        </p>
+        <img
+          class="float-right pl-5 pt-3"
+          width="360px"
+          src="https://www.blueflamingo.tech/2020/08/03/Introduction/minix.png" />
+        <p class="indent-6">
+          A <b class="font-medium">microkernel operating system</b> architecture
+          provides only a small number of services in an attempt to keep the
+          kernel small and scalable. In microkernel designs, most operating
+          system components—such as process management, networking, file system
+          interaction and device management—execute outside the kernel with a
+          lower privilege level. Microkernels exhibit a high degree of
+          modularity, making them extensible, portable and scalable.
+          Microkernels exhibit a high degree of modularity, making them
+          extensible, portable and scalable. However, such modularity comes at
+          the cost of an increased level of intermodule communication, which can
+          degrade system performance.
+        </p>
+        <img
+          class="float-right pl-5 pt-3"
+          width="360px"
+          src="https://www.researchgate.net/profile/Arif-Sari-3/publication/287198069/figure/fig10/AS:667601407602695@1536179987568/A-simple-architecture-of-a-distributed-system_W640.jpg" />
+        <p class="indent-6">
+          A <b class="font-medium">distributed operating system</b> is a single
+          operating system that manages resources on more than one computer
+          system. The goals of a distributed operating system include
+          transparent performance, scalability, fault tolerance and consistency.
+          Distributed operating systems are often difficult to implement and
+          require complicated algorithms to enable processes to communicate and
+          share data. Examples of distributed operating systems are MIT's Chord
+          operating system and the Amoeba operating system from the Vrije
+          Universiteit (VU) in Amsterdam.
+        </p>
+        <img
+          class="float-right pl-5 pt-3"
+          width="300px"
+          src="https://static.javatpoint.com/operating-system/images/network-operating-system.png" />
+        <p class="indent-6">
+          A <b class="font-medium">network operating system</b> runs on one
+          computer and allows its processes to access resources such as files
+          and processors on a remote computer. The structure of many networked
+          and distributed operating systems is often based on the client/server
+          model. The management of data, users, groups,security, applications,
+          and other networkingduties is made possible by these
+          server-basedsystems. These operating systems offer sharedaccess to
+          files, printers, security, software, andother networking features via
+          a small privatenetwork. Another essential characteristic of
+          thesesystems is that they are known as TightlyCoupled Systems since
+          every user of NetworkOperating Systems is completely aware of
+          theunderlying configuration, of every other user onthe network, of
+          their unique connections, etc.Examples of network operating systems
+          includeMicrosoft Windows Server 2003, MicrosoftWindows Server 2008,
+          UNIX, Linux, Mac OS X,Novell NetWare, BSD, and others. A
+          networkoperating system's benefits include centralizedservers that are
+          incredibly stable, servers thatmanage security issues, simple
+          systemintegration of new technologies and hardwareupdates, and remote
+          server access from anumber of places and systems. The drawbacks of
+          network operating systems include the highcost of servers, the
+          requirement that usersperform the majority of their operations in
+          asingle place, and frequent maintenance and upgrades.
+        </p>
+
+        <h2 class="text-xl font-medium pt-3">Networks typology</h2>
+        <div class="flex justify-center p-3">
+          <img
+            class="border-solid border-2 border-slate-700"
+            height="300px"
+            width="500px"
+            src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*SW6oche7tew8OmZU4FgO5Q.gif" />
+        </div>
+        <ol class="list-decimal ps-6">
+          <li>
+            <label class="underline">Bus network:</label>
+            all nodes are connected to a common medium along this medium. This
+            was the layout used in the original Ethernet, called 10BASE5 and
+            10BASE2. This is still a common topology on the data link layer,
+            although modern physical layer variants use point-to-point links
+            instead, forming a star or a tree. Since bus networks do not have
+            intermediate nodes that retransmit messages, the length of the bus
+            communication medium must be limited to minimize attenuation. If any
+            individual node in a bus network fails, the entire network will
+            continue functioning. If the bus itself fails, the entire network
+            will fail.
+          </li>
+          <li>
+            <label class="underline">Star network:</label> all nodes are
+            connected to a special central node. This is the typical layout
+            found in a small switched Ethernet LAN, where each client connects
+            to a central network switch, and logically in a wireless LAN, where
+            each wireless client associates with the central wireless access
+            point. The network can survive the failure of one of the outer
+            nodes, but the entire network will fail if the central hub fails.
+            Since the central hub controls all communication, a bottleneck will
+            occur if the network demand exceeds the processing capabilities of
+            the hub.
+          </li>
+          <li>
+            <label class="underline">Ring network:</label> each node is
+            connected to its left and right neighbor node, such that all nodes
+            are connected and that each node can reach each other node by
+            traversing nodes left- or rightwards. Token ring networks, and the
+            Fiber Distributed Data Interface (FDDI), made use of such a
+            topology.One of the most significant limitations of a ring network
+            is that if one node in a ring fails, then communication in the
+            entire ring will fail. This means that a ring network has limited
+            fault tolerance, since the network cannot recover from a single node
+            failure.
+          </li>
+          <li>
+            <label class="underline">Mesh network:</label> each node is
+            connected to an arbitrary number of neighbors in such a way that
+            there is at least one traversal from any node to any other. Mesh
+            networks and fully connected networks are the most fault-tolerant
+            topologies, because typically there are multiple paths between each
+            pair of nodes. The primary disad vantage of mesh networks is the
+            complexity associated with directing messages between nodes that
+            have no direct connection. With fully-connected networks, this is
+            simple since each pair of nodes has a direct link between them. The
+            problem with fully-connected networks is that as the number of nodes
+            increase, the number of links to connect those nodes increases
+            exponentially.
+          </li>
+          <li>
+            <label class="underline">Tree network:</label> nodes are arranged
+            hierarchically. This is the natural topology for a larger Ethernet
+            network with multiple switches and without redundant meshing. A tree
+            topology is often used to join nodes that communicate with each
+            other frequently, thereby increasing network efficiency.
+          </li>
+          <li>
+            Networks can also be classified by the geographic dispersion of
+            their hosts. A
+            <b class="underline font-normal">local area network (LAN)</b> has
+            limited geographic dispersion and is designed to optimize data
+            transfer rates between its hosts. LANs interconnect resources using
+            high-speed communication paths with optimized network protocols for
+            local area environments.
+            <b class="font-normal underline">Wide area networks (WANs)</b> are
+            broader, connecting two or more LANs; the largest WAN is the
+            Internet. WANs generally employ a mesh topology, operate at lower
+            speeds than LANs and have higher error rates, because they handle
+            larger amounts of data being transmitted over far greater distances.
+          </li>
+          <div class="flex justify-center p-5">
+            <img
+              class="border-solid border-2 border-slate-700"
+              width="500px"
+              height="300px"
+              src="https://www.sangfor.com/sites/default/files/inline-images/example2.png" />
+          </div>
+        </ol>
+
+        <h2 class="text-xl font-semibold">Future of OS and Networks</h2>
+        <p class="indent-6">
+          Future operating systems are likely to integrate advanced security
+          mechanisms, such as hardware-rooted security, secure enclaves, and
+          AI-driven threat detection, to provide robust protection against
+          evolving cyber threats. As quantum computing matures, there will be a
+          need for operating systems to manage quantum processors, support
+          quantum programming languages, and address new challenges in quantum
+          algorithms and error correction.
+        </p>
+        <p class="indent-6">
+          As technology becomes more integrated into our lives, operating
+          systems face increasing threats from cyber attacks, data breaches, and
+          privacy infringements. Developing robust security measures and
+          maintaining user privacy are ongoing challenges.
+        </p>
+        <p class="indent-6">
+          Artificial intelligence and automation will likely play a significant
+          role in future operating systems, optimizing resource management,
+          automating system maintenance tasks, and providing personalized user
+          experiences. Future operating systems will need to support
+          cutting-edge innovations in Augmented Reality (AR), Virtual Reality
+          (VR), and blockchain while also delivering seamless integration and
+          improved performance for these novel paradigms.
+        </p>
+        <p class="indent-6">
+          Due to its reliance on human commands, the user interface for the next
+          generation of operating systems is of utmost importance. The use of
+          Command Line Interfaces (CLIs) in the past has been replaced by
+          Graphical User Interfaces (GUIs) in modern systems. Along with the
+          Graphical User Interface, the next generation of operating systems may
+          potentially include Audio User Interfaces (AUIs) and User Gesture
+          Interfaces (UGIs).
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+
+  <style>
+    .base {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://i.imgur.com/qlb7gqc.png");
+      background-size: repeat;
+      height: 100vh;
+      padding: 0 20px;
+    }
+    .papyrus-container {
+      width: 50%;
+      height: 100vh;
+      overflow-y: scroll;
+      background-image: url("https://i.imgur.com/E6I9A3t.png");
+      background-repeat: repeat;
+      padding: -20px;
+      box-sizing: border-box;
+      position: fixed;
+      right: 50vh;
+      top: 1vh;
+    }
+
+    .papyrus-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .content {
+      color: black;
+      padding: 17px;
+      border-radius: 10px;
+    }
+  </style>
 </html>

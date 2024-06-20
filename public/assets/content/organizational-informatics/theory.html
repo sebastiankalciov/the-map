@@ -1,3 +1,73 @@
-<html>
-bau
+<html class="base">
+<div class="papyrus-container">
+    <div class="content">
+        <!--
+    Everything in this divs (papyrus container, content) can be modified
+    You can use the tailwindcss (See https://tailwindcss.com/docs/)
+
+    Please do NOT modify anything from the style attribute from this file
+    In the actual project, this file does not contain the style and script attributes, this is just a template.
+
+    Naming convention:
+        folder_names: [ai-robotics, algorithms, architecture, bioinformatics, computational-science,
+        databases, graphics, human-computer, organizational-informatics, os, programming-languages, software engineering]
+
+        sections: [connections, design, experiment, people, problems, theory, uvtRelationship, venues]
+
+    Each folder contains the sections mentioned before.
+
+    Each section is a different html file.
+
+    Please try to structure your research in this manner.
+-->
+        <br>
+        <h1 class="text-6xl">Introduction</h1>
+        <hr style="height:2px;border-width:0;color:black;background-color:black">
+        <p>
+            <br> Information systems are the primary focus of study for organizational informatics.
+        </p>
+        <h1 class="text-6xl">Theory</h1>
+        <br>
+        <hr style="height:2px;border-width:0;color:black;background-color:black">
+        <br>
+        <br>
+        <p> An information system is a formal, sociotechnical, organizational system designed to collect, process, store, and distribute information. From a sociotechnical perspective, information systems are composed by four components: task, people, structure (or roles), and technology. Information systems can be defined as an integration of components for collection, storage and processing of data of which the data is used to provide information, contribute to knowledge as well as digital products that facilitate decision making. A computer information system is a system that is composed of people and computers that processes or interprets information.] The term is also sometimes used to simply refer to a computer system with software installed. "Information systems" is also an academic field study about systems with a specific reference to information and the complementary networks of computer hardware and software that people and organizations use to collect, filter, process, create and also distribute data. An emphasis is placed on an information system having a definitive boundary, users, processors, storage, inputs, outputs and the aforementioned communication networks. </p>
+    </div>
+</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    .base {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://i.imgur.com/qlb7gqc.png');
+        background-size: repeat;
+        height: 100vh;
+        padding: 0 20px;
+    }
+
+    .papyrus-container {
+        width: 50%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-image: url("https://i.imgur.com/E6I9A3t.png");
+        background-repeat: repeat;
+        padding: -20px;
+        box-sizing: border-box;
+        position: fixed;
+        right: 50vh;
+        top: 1vh;
+    }
+
+    .papyrus-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content {
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+    }
+</style>
 </html>

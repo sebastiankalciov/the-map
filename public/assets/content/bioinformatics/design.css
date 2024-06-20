@@ -1,14 +1,12 @@
 .papyrus-container {
-    width: 50%;
+    width: 60%;
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-image: url("../../objects/papyrusTexture2.png");
     background-repeat: repeat;
-    padding: -20px;
+    padding: 20px;
     box-sizing: border-box;
-    position: fixed;
-    right: 50vh;
-    top: 1vh;
+    margin: auto;
 }
 
 .papyrus-container::-webkit-scrollbar {
@@ -17,14 +15,16 @@
 
 .content {
     color: black;
-    padding: 0px;
     border-radius: 10px;
-    margin-left: 7vh;
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
 }
 
 .design {
     animation: 2s anim-lineUp ease-out;
 }
+
 @keyframes anim-lineUp {
     0% {
         opacity: 0;
@@ -51,40 +51,34 @@
     padding: 5%;
 }
 
-.leftbox {
-    float: left;
-    width: 33%;
-    background-color: black;
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.middlebox {
-    float: left;
-    width: 34%;
+.box {
+    flex: 1;
+    padding: 10px;
+    margin: 0 10px;
     background-color: rgb(46, 42, 37);
-    margin-bottom: 50px;
+    border-radius: 5px;
 }
 
-.rightbox {
-    float: right;
+.leftbox, .middlebox, .rightbox {
     background-color: black;
-    width: 33%;
-    margin-bottom: 50px;
 }
 
-h1 span{
-    transition: .5s linear
-  }
-h1:hover span:nth-child(1){
-    margin-right: 5px
+.database-list {
+    margin-top: 20px;
 }
-h1:hover span:nth-child(2){
-    margin-left: 30px
+
+.database {
+    margin-bottom: 20px;
 }
-h1:hover span{
-    color: #fff;
-    text-shadow: 0 0 10px #fff,
-                 0 0 20px #fff,
-                 0 0 40px #fff;
+
+.main-text {
+    cursor: pointer;
 }
 
 .main-text:hover + .extra-text {
@@ -96,12 +90,25 @@ h1:hover span{
     margin-top: 10px;
     border: 2px solid white;
     padding: 10px;
-    padding-left: 15%;
-    padding-right: 15%;
     display: none;
     text-align: center;
 }
 
-.problems {
-  text-align: center;
+h1 span {
+    transition: .5s linear;
+}
+
+h1:hover span:nth-child(1) {
+    margin-right: 5px;
+}
+
+h1:hover span:nth-child(2) {
+    margin-left: 30px;
+}
+
+h1:hover span {
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff;
 }

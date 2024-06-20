@@ -14,15 +14,15 @@
 
 @font-face {
     font-family: 'cmu_typewriter_textregular';
-    src: url('cmuntt-webfont.woff') format('woff');
+    src: url('../../content/software-engineering/cmuntt-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Alagard';
-    src: url('Alagard.woff2') format('woff2'),
-        url('Alagard.woff') format('woff');
+    src: url('../../content/software-engineering/Alagard.woff2') format('woff2'),
+        url('../../content/software-engineering/Alagard.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -81,34 +81,18 @@ p {
 
 }
 
-/*.papyrus-container {*/
-/*    width: 50%;*/
-/*    height: 100vh;*/
-/*    overflow-y: scroll;*/
-/*    background-color: red;*/
-/*    !*background-image: url("https://i.imgur.com/E6I9A3t.png");*!*/
-/*    !*background-repeat: repeat;*!*/
-/*    padding: -20px;*/
-/*    box-sizing: border-box;*/
-/*    position: fixed;*/
-/*    right: 50vh;*/
-/*    top: 1vh;*/
-/*}*/
 
 .papyrus-container::-webkit-scrollbar {
     display: none;
 }
 
-
 .content {
-    /*top: 50%;*/
     color: black;
     font-size: 1.3vw;
     font-family: 'cmu_serifroman' , Arial, Helvetica, sans-serif;
     font-weight: 600;
     padding: 25px;
     margin: 0 auto;
-    /*padding-left: 30%;*/
 }
 
 /* people.html styling */
@@ -123,8 +107,7 @@ p {
     width: 30%;
     height: auto;
     float: right;
-    border: 15px double #662f1b;
-    background: #86452d;
+    border: 15px ridge #542d1f;
 }
 
 .scholar-image img {
@@ -132,9 +115,7 @@ p {
     width: 30%;
     height: auto;
     float: left;
-
-    border: 15px double #a0a0a0;
-    background: #c9c9c9;
+    border: 15px ridge #c9c9c9;
 }
 
 .figure-name {

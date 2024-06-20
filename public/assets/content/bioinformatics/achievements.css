@@ -1,3 +1,16 @@
+.base {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.imgur.com/qlb7gqc.png');
+    background-size: repeat;
+    height: 100vh;
+    padding: 0 20px;
+
+}
+
 .papyrus-container {
     width: 50%;
     height: 100vh;
