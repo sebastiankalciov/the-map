@@ -14,9 +14,7 @@ export default function Graphics() {
 
 	const objectPagesPathList = {
 		theory: `/assets/content/${PAGE_NAME}/theory.html`,
-		experiment: `/assets/content/${PAGE_NAME}/experiment.html`,
 		problems: `/assets/content/${PAGE_NAME}/problems.html`,
-		design: `/assets/content/${PAGE_NAME}/design.html`,
 		connections: `/assets/content/${PAGE_NAME}/connections.html`,
 		people: `/assets/content/${PAGE_NAME}/people.html`,
 		uvtRelationship: `/assets/content/${PAGE_NAME}/uvtRelationship.html`,
@@ -46,9 +44,7 @@ export default function Graphics() {
 		// Create objects
 		const objectsInfo = [
 			{ id: "theory", name: "Theory", texture: theoryTexture, position: { x: 0.4, y: 0.2 } },
-			{ id: "experiment", name: "Experiments", texture: experimentTexture, position: { x: 0.1, y: 0.5 } },
 			{ id: "problems", name: "Problems", texture: problemsTexture, position: { x: 0.3, y: 0.7 } },
-			{ id: "design", name: "Design", texture: designTexture, position: { x: 0.6, y: 0.1 } },
 			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
 			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
 			{ id: "uvtRelationship", name: "Graphics at UVT", texture: uvtTexture, position: { x: 0.6, y: 0.7 } },
@@ -62,9 +58,7 @@ export default function Graphics() {
 		});
 
 		const theoryObject = hutObjects["theory"];
-		const experimentObject = hutObjects["experiment"];
 		const problemsObject = hutObjects["problems"];
-		const designObject = hutObjects["design"];
 		const connectionsObject = hutObjects["connections"];
 		const peopleObject = hutObjects["people"];
 		const uvtRelationshipObject = hutObjects["uvtRelationship"];
@@ -82,9 +76,7 @@ export default function Graphics() {
 
 		const listOfObjects = [
 			{sprite: theoryObject, papyrus: papyrusContainers['theory']},
-			{sprite: experimentObject, papyrus: papyrusContainers['experiment']},
 			{sprite: problemsObject, papyrus: papyrusContainers['problems']},
-			{sprite: designObject, papyrus: papyrusContainers['design']},
 			{sprite: connectionsObject, papyrus: papyrusContainers['connections']},
 			{sprite: peopleObject, papyrus: papyrusContainers['people']},
 			{sprite: uvtRelationshipObject, papyrus: papyrusContainers['uvtRelationship']},

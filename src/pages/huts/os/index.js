@@ -15,7 +15,6 @@ export default function OS() {
 	const objectPagesPathList = {
 		theory: `/assets/content/${PAGE_NAME}/theory.html`,
 		experiment: `/assets/content/${PAGE_NAME}/experiment.html`,
-		problems: `/assets/content/${PAGE_NAME}/problems.html`,
 		design: `/assets/content/${PAGE_NAME}/design.html`,
 		connections: `/assets/content/${PAGE_NAME}/connections.html`,
 		people: `/assets/content/${PAGE_NAME}/people.html`,
@@ -41,13 +40,11 @@ export default function OS() {
 		const experimentTexture = await PIXI.Assets.load('/assets/objects/experiment.png');
 		const peopleTexture = await PIXI.Assets.load('/assets/objects/people.png');
 		const uvtTexture = await PIXI.Assets.load('/assets/objects/UVT-logo.png');
-		const problemsTexture = await PIXI.Assets.load('/assets/objects/problems.png');
 
 		// Create objects
 		const objectsInfo = [
 			{ id: "theory", name: "Theory", texture: theoryTexture, position: { x: 0.4, y: 0.2 } },
 			{ id: "experiment", name: "Experiments", texture: experimentTexture, position: { x: 0.1, y: 0.5 } },
-			{ id: "problems", name: "Problems", texture: problemsTexture, position: { x: 0.3, y: 0.7 } },
 			{ id: "design", name: "Design", texture: designTexture, position: { x: 0.6, y: 0.1 } },
 			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
 			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
@@ -63,7 +60,6 @@ export default function OS() {
 
 		const theoryObject = hutObjects["theory"];
 		const experimentObject = hutObjects["experiment"];
-		const problemsObject = hutObjects["problems"];
 		const designObject = hutObjects["design"];
 		const connectionsObject = hutObjects["connections"];
 		const peopleObject = hutObjects["people"];
@@ -83,7 +79,6 @@ export default function OS() {
 		const listOfObjects = [
 			{sprite: theoryObject, papyrus: papyrusContainers['theory']},
 			{sprite: experimentObject, papyrus: papyrusContainers['experiment']},
-			{sprite: problemsObject, papyrus: papyrusContainers['problems']},
 			{sprite: designObject, papyrus: papyrusContainers['design']},
 			{sprite: connectionsObject, papyrus: papyrusContainers['connections']},
 			{sprite: peopleObject, papyrus: papyrusContainers['people']},

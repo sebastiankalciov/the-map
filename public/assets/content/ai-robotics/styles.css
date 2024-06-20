@@ -1,28 +1,28 @@
 @font-face {
     font-family: 'cmu_serifroman';
-    src: url('cmunrm-webfont.woff') format('woff');
+    src: url('../../content/ai-robotics/cmunrm-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'cmu_serifbold';
-    src: url('cmunbx-webfont.woff') format('woff');
+    src: url('../../content/ai-robotics/cmunbx-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'cmu_typewriter_textregular';
-    src: url('cmuntt-webfont.woff') format('woff');
+    src: url('../../content/ai-robotics/cmuntt-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Alagard';
-    src: url('Alagard.woff2') format('woff2'),
-        url('Alagard.woff') format('woff');
+    src: url('../../content/ai-robotics/Alagard.woff2') format('woff2'),
+        url('../../content/ai-robotics/Alagard.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -161,7 +161,10 @@ b {
 li {
     text-align: justify;
 }
-
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
 /* Image centering */
 .img-center {
     display: flex;

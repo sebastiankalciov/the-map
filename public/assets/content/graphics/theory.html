@@ -1,3 +1,69 @@
-<html>
-bau
+<html class="base">
+    <div class="papyrus-container">
+        <div class="content">
+    
+            <h1 class="text-6xl mb-4">Theory</h1>
+
+            <h2 class="text-4xl mb-4">What is Graphics?</h2>
+            <p class="mb-4">According to Donald Hearn, computer graphics is the creation of visual content through the use of algorithms and data structures, enabling the representation, manipulation, and rendering of images on digital devices.</p>
+            
+            <h3 class="text-3xl mb-4">Categories of Graphics</h3>
+            <p class="mb-4">Graphics can be divided into multiple categories based on various criteria such as their purpose, used techniques, and their application domains. The most common and popular categories are:</p>
+
+            <h4 class="text-2xl underline mb-4">1. 2D Graphics</h4>
+            <p class="mb-6">2D graphics revolve around visually representing objects and their motions on a computer’s screen. It encompasses the creation of images, the projection of motions onto screens in real-time, and the presentation of complex data sets. It finds application in graphic design, digital art, user interface design, and the creation of virtual realities that closely mimic real-world scenarios.</p>
+
+            <h4 class="text-2xl underline mb-4">2. 3D Graphics</h4>
+            <p class="mb-6">3D graphics create images and animations with depth, simulating three-dimensional space. Unlike 2D graphics, which are flat, 3D graphics add depth and realism to images, making them suitable for games, movies, and virtual reality experiences.</p>
+
+            <h4 class="text-2xl underline mb-4">3. Vector Graphics</h4>
+            <p class="mb-6">Vector graphics use math to create shapes and lines, which can be resized without losing quality. They're great for logos, icons, and illustrations.</p>
+
+            <h4 class="text-2xl underline mb-4">4. Raster Graphics</h4>
+            <p class="mb-6">Raster graphics are made of pixels and are great for detailed images like photos and paintings. They're used in digital photography, web graphics, and printing.</p>
+
+            <h4 class="text-2xl underline mb-4">5. Rendering Techniques</h4>
+            <p class="mb-6">Rendering techniques are methods for turning 3D models into images. They add things like shading and lighting to make images look realistic or stylized.</p>
+
+            <h4 class="text-2xl underline mb-4">6. Interactive Graphics</h4>
+            <p class="mb-6">Interactive graphics let users interact with digital content in real-time. They're used in things like games, educational software, and interactive websites.</p>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.imgur.com/qlb7gqc.png');
+            background-size: repeat;
+            height: 100vh;
+            padding: 0 20px;
+        }
+        .papyrus-container {
+            width: 50%;
+            height: 100vh;
+            overflow-y: scroll;
+            background-image: url("https://i.imgur.com/E6I9A3t.png");
+            background-repeat: repeat;
+            padding: -20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 50vh;
+            top: 1vh;
+        }
+        .papyrus-container::-webkit-scrollbar {
+            display: none;
+        }
+        .content {
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
 </html>

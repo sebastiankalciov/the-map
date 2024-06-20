@@ -1,13 +1,14 @@
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <link rel="stylesheet" href="../assets/content/ai-robotics/styles.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
     </head>
 
     <body>
+
         <div class="content">
-            <h1>What is Artificial Intelligence (A.I.)?</h1>
+            <h1 class = "text-6xl">What is Artificial Intelligence (A.I.)?</h1>
             <p>The field of Artificial Intelligence concerns itself with building machines that are able to compute how to act effectively in situations where traditional algorithmic approaches fail and emulating human-like intelligence is better suited.</p>
             <p>Naturally, this raises the problem of defining intelligence: some researchers view it in terms of fidelity to human performance, while others gave it the more formal definition of rationality - taking the "right decisions" to arrive at its goal in a more mathematical manner, so to say.</p>
             <p>Through the lens of the former, Alan Turing proposed in the year of 1950 the following thought experiment: A computer passes the Turing test if a human interrogator, after posing a series of written questions, is not able to tell whether the responses they get come from a person or from a computer.</p>
@@ -43,7 +44,7 @@
                     <li><span class="par-title">Deep Learning (2011 - present)</span><br><b>Deep learning</b> is a subfield of machine learning that uses multiple layers of simple, adjustable computing elements - <b>neural networks</b>.<br>Experiments with neural networks were done in the previous decades and in 1990, the model of <b>convolutional neural networks</b> was successful in recognizing written digits. However, it wasn't until 2011 that deep learning became widely spread, especially in speech and visual object recognition.<br>In the 2012 competition launched by ImageNet, which required classifying images into a thousand categories, a deep learning system created by Geoffrey Hinton's group demonstrated a dramatic improvement over the previous existing systems.<br>Since then, deep learning systems have surpassed human performance on select vision tasks (while lagging in others). Improvements have also been noticed in speech recognition, machine translation, medical diagnosis, and game playing. This has resulted in bringing AI into the public's attention unlike any other point in history.<br>The availability of large amounts of training data, along with advances in computation power have also played a role in developing deep learning applications - a standard CPU can do \(10^9\) or \(10^{10}\) operations per second, while a deep learning algorithm running on specialized hardware (GPU, TPU, FPGA) might consume between \(10^{14}\) or \(10^{17}\) operations.</li>
                 </ul>
 
-            <h2>What can AI achieve today?</h2>
+            <h2 class = "text-4xl">What can AI achieve today?</h2>
             <p>Below are some examples:</p>
             <ul>
                 <li><span class="par-title">Robotic vehicles:</span> In 2019, Waymo test vehicles passed the threshold of 10 million miles driven on public roads without a significant accident, with the human driving taking over control only once every 6000 miles. Since 2016, autonomous fixed-wing drones have been providing cross-country blood deliveries in Rwanda.</li>
@@ -63,7 +64,7 @@
                 <li><span class="par-title">Climate science:</span> In 2018, a team of scientists won the Gordon Bell Prize for developing a deep learning model that was able to leverage existing, but hard to go through data into discovering detailed information about extreme weather events. They used a supercomputer with a specialized GPU hardware in order to exceed \(10^{18}\) operations per second, being the first machine learning program to do so.</li>
             </ul>
 
-            <h1>Theory</h1>
+            <h1 class="text-6xl">Theory</h1>
             <p>
                 Theory concerns itself with developing abstract principles and frameworks in order to describe the underlying mechanisms and relationships among objects in a domain. The major branches of theory in Artificial Intelligence and Robotics are:
             </p>
@@ -187,7 +188,7 @@
 
                         <li><b>Semantic networks</b> provide a means to graphically visualize a knowledge base. Its building blocks are objects and categories of objects, usually displayed as oval or boxes, connected through labeled links which describe the relationship between them.
                             <div class="img-center">
-                                <img src="img/semantic_network.png" alt="Semantic Network">
+                                <img src="../assets/content/ai-robotics/img/semantic_network.png" alt="Semantic Network">
                             </div>
                         <!-- missing content from pdf -->
                         </li>
@@ -222,7 +223,7 @@
 
                     <b>Example:</b> The N-Queens problem may be translated into a genetic algorithm as exemplified below.
                     <div class="img-center">
-                        <img src="img/genetic1.png" alt="Genetic Algorithm 1">
+                        <img src="../assets/content/ai-robotics/img/genetic1.png" alt="Genetic Algorithm 1">
                     </div>
 
                     <ol type="a">
@@ -231,7 +232,7 @@
                         <li>Two pairs of parents are selected, in alignment with their probabilities: we may notice that one individual is selected twice, while one not at all. For each selected pair, a crossover point is chosen arbitrarily.</li>
                         <li>The parent strings are crossed over, yielding new offspring.
                             <div class="img-center">
-                                <img src="img/genetic2.png" alt="Genetic Algorithm 2">
+                                <img src="../assets/content/ai-robotics/img/genetic2.png" alt="Genetic Algorithm 2">
                             </div>
                             In the picture above, the first two boards correspond to the first two parents in image (c), while the third board represents their child, as seen in (d). The green columns are lost during crossover, while the red columns are retained.
                         </li>

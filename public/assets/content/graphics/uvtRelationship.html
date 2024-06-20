@@ -1,3 +1,81 @@
-<html>
-bau
+<html class="base">
+    <div class="papyrus-container">
+        <div class="content">
+    
+            <h1 class="text-6xl mb-4">UVT and Graphics</h1>
+
+            <h2 class="text-4xl mb-4 underline">UVT Relationship</h2>
+
+            <p class="mb-6">
+                At the West University of Timișoara, in the FMI profile, we get the experience to study Graphics and User Interfaces in the second year, second semester. More opportunities arrive in the Arts profile, especially the design department.
+            </p>
+
+            <h2 class="text-4xl mb-4 underline">Possible Careers</h2>
+
+            <ul class="mb-6">
+                <li><strong>Computer Graphics Programmer:</strong> Designs software and algorithms for creating and manipulating computer-generated imagery (CGI) and 3D models.</li>
+                <li><strong>Visualization Specialist:</strong> Uses graphic design and data visualization techniques to visually present complex information for scientific and business purposes.</li>
+                <li><strong>UI/UX Developer:</strong> Combines graphic design with front-end web development to craft user-friendly interfaces for websites and apps.</li>
+                <li><strong>Game Developer (Graphics Focus):</strong> Specializes in building graphics engines, rendering systems, and visual effects for engaging video game experiences.</li>
+                <li><strong>Digital Media Developer:</strong> Creates interactive digital content like educational software and simulations, blending graphic design with IT skills.</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.imgur.com/qlb7gqc.png');
+            background-size: repeat;
+            height: 100vh;
+            padding: 0 20px;
+        }
+        .papyrus-container {
+            width: 50%;
+            height: 100vh;
+            overflow-y: scroll;
+            background-image: url("https://i.imgur.com/E6I9A3t.png");
+            background-repeat: repeat;
+            padding: -20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 50vh;
+            top: 1vh;
+        }
+        .papyrus-container::-webkit-scrollbar {
+            display: none;
+        }
+        .content {
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: black;
+        }
+        h2 {
+            color: black;
+        }
+        p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+        strong {
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+
 </html>
