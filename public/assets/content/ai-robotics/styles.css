@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'cmu_serifroman';
-    src: url('../../content/software-engineering/cmunrm-webfont.woff') format('woff');
+    src: url('cmunrm-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'cmu_serifbold';
-    src: url('../../content/software-engineering/cmunbx-webfont.woff') format('woff');
+    src: url('cmunbx-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -37,6 +37,10 @@ code {
     font-family: 'cmu_typewriter_textregular', Courier, monospace;
 }
 
+.par-with-title {
+    margin: 20px 0;
+}
+
 .par-title {
     font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
     margin-right: 2.5%;
@@ -45,7 +49,6 @@ code {
 
 h1, h2, h3 {
     font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
-    font-size: xx-large;
     font-weight: 700;
     margin: 5px 0;
 }
@@ -58,31 +61,13 @@ p {
     margin: 10px 0;
 }
 
-.par-with-title {
-    margin: 20px 0;
-}
-
 .line {
     height: 1px;
     background: black;
     margin: 5% 0;
 }
 
-.base {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url('https://i.imgur.com/qlb7gqc.png');
-    /*background-size: repeat;*/
-    height: 100vh;
-    padding: 0 20px;
-
-}
-
-
-.papyrus-container::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
 }
 
@@ -95,7 +80,7 @@ p {
     margin: 0 auto;
 }
 
-/* people.html styling */
+/* Important people section styling */
 .figure-block {
     display: block;
     margin: 5% 0;
@@ -115,6 +100,7 @@ p {
     width: 30%;
     height: auto;
     float: left;
+
     border: 15px ridge #c9c9c9;
 }
 
@@ -141,43 +127,49 @@ p {
     padding-bottom: 2.5%;
 }
 
+/* Styling for figure contact info */
 .important-figure > div:last-child {
     font-family: 'cmu_typewriter_textregular', Courier, monospace;
     text-align: center;
 }
 
-/* venues.html (table) styling */
+/* General table styling */
 table {
-    border: 6px double #a0a0a0;
-    background: #c9c9c939;
-    border-collapse: collapse;
-
-    font-family: 'cmu_serifroman' , Arial, Helvetica, sans-serif;
-    font-weight: 600;
-
+    width: 100%;
+    margin: 3% 0;
+    border: 3px solid black;
     text-align: center;
     font-size: large;
+    border-collapse: collapse;
 }
 
-tr:not(:first-child) {
-    border: 1px solid #2b2b2b;
-}
-
-tr > *:first-child {
+table td {
     padding: 3%;
+    border: 3px solid black;
+    white-space: nowrap;
 }
 
-li:not(:first-child):not(:last-child) {
-    margin: 10px 0;
+table tr th {
+    border-bottom: 4px solid black;
 }
 
-/* connections.html styling */
 b {
     font-family: 'cmu_serifbold', Arial, Helvetica, sans-serif;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 li {
     text-align: justify;
 }
 
+/* Image centering */
+.img-center {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+}
+
+.img-center img {
+    max-width: 80%;
+    border: 2px solid black;
+}
