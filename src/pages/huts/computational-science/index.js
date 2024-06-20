@@ -14,7 +14,6 @@ export default function ComputationalScience() {
 
 	const objectPagesPathList = {
 		theory: `/assets/content/${PAGE_NAME}/theory.html`,
-		experiment: `/assets/content/${PAGE_NAME}/experiment.html`,
 		problems: `/assets/content/${PAGE_NAME}/problems.html`,
 		connections: `/assets/content/${PAGE_NAME}/connections.html`,
 		people: `/assets/content/${PAGE_NAME}/people.html`,
@@ -44,7 +43,6 @@ export default function ComputationalScience() {
 		// Create objects
 		const objectsInfo = [
 			{ id: "theory", name: "Theory", texture: theoryTexture, position: { x: 0.4, y: 0.2 } },
-			{ id: "experiment", name: "Experiments", texture: experimentTexture, position: { x: 0.1, y: 0.5 } },
 			{ id: "problems", name: "Problems", texture: problemsTexture, position: { x: 0.3, y: 0.7 } },
 			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
 			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
@@ -58,7 +56,6 @@ export default function ComputationalScience() {
 		});
 
 		const theoryObject = hutObjects["theory"];
-		const experimentObject = hutObjects["experiment"];
 		const problemsObject = hutObjects["problems"];
 		const connectionsObject = hutObjects["connections"];
 		const peopleObject = hutObjects["people"];
@@ -76,7 +73,6 @@ export default function ComputationalScience() {
 
 		const listOfObjects = [
 			{sprite: theoryObject, papyrus: papyrusContainers['theory']},
-			{sprite: experimentObject, papyrus: papyrusContainers['experiment']},
 			{sprite: problemsObject, papyrus: papyrusContainers['problems']},
 			{sprite: connectionsObject, papyrus: papyrusContainers['connections']},
 			{sprite: peopleObject, papyrus: papyrusContainers['people']},

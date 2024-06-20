@@ -19,7 +19,6 @@ export default function ProgrammingLanguages() {
 		design: `/assets/content/${PAGE_NAME}/design.html`,
 		connections: `/assets/content/${PAGE_NAME}/connections.html`,
 		people: `/assets/content/${PAGE_NAME}/people.html`,
-		uvtRelationship: `/assets/content/${PAGE_NAME}/uvtRelationship.html`,
 		venues: `/assets/content/${PAGE_NAME}/venues.html`
 	}
 
@@ -51,7 +50,6 @@ export default function ProgrammingLanguages() {
 			{ id: "design", name: "Design", texture: designTexture, position: { x: 0.6, y: 0.1 } },
 			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
 			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
-			{ id: "uvtRelationship", name: "Programming Languages at UVT", texture: uvtTexture, position: { x: 0.6, y: 0.7 } },
 			{ id: "venues", name: "Venues", texture: theoryTexture, position: { x: 0.8, y: 0.25 } }
 		]
 
@@ -67,7 +65,6 @@ export default function ProgrammingLanguages() {
 		const designObject = hutObjects["design"];
 		const connectionsObject = hutObjects["connections"];
 		const peopleObject = hutObjects["people"];
-		const uvtRelationshipObject = hutObjects["uvtRelationship"];
 		const venuesObject = hutObjects["venues"];
 
 		// Create papyrus objects
@@ -87,7 +84,6 @@ export default function ProgrammingLanguages() {
 			{sprite: designObject, papyrus: papyrusContainers['design']},
 			{sprite: connectionsObject, papyrus: papyrusContainers['connections']},
 			{sprite: peopleObject, papyrus: papyrusContainers['people']},
-			{sprite: uvtRelationshipObject, papyrus: papyrusContainers['uvtRelationship']},
 			{sprite: venuesObject, papyrus: papyrusContainers['venues']},
 		]
 
