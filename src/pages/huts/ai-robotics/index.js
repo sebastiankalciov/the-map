@@ -15,6 +15,7 @@ export default function AIRobotics() {
 	const objectPagesPathList = {
 		theory: `/assets/content/${PAGE_NAME}/theory.html`,
 		experiment: `/assets/content/${PAGE_NAME}/experiment.html`,
+		whatsAI: `/assets/content/${PAGE_NAME}/whatsAI.html`,
 		connections: `/assets/content/${PAGE_NAME}/connections.html`,
 		people: `/assets/content/${PAGE_NAME}/people.html`,
 		uvtRelationship: `/assets/content/${PAGE_NAME}/uvtRelationship.html`,
@@ -41,10 +42,11 @@ export default function AIRobotics() {
 
 		// Create objects
 		const objectsInfo = [
-			{ id: "theory", name: "Theory", texture: theoryTexture, position: { x: 0.4, y: 0.2 } },
+			{ id: "theory", name: "Theory", texture: theoryTexture, position: { x: 0.45, y: 0.15 } },
+			{ id: "whatsAI", name: "What's AI?", texture: theoryTexture, position: { x: 0.3, y: 0.7 } },
 			{ id: "experiment", name: "Experiments", texture: experimentTexture, position: { x: 0.1, y: 0.5 } },
 			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
-			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
+			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.15 } },
 			{ id: "uvtRelationship", name: "AI & Robotics at UVT", texture: uvtTexture, position: { x: 0.6, y: 0.7 } },
 			{ id: "venues", name: "Venues", texture: theoryTexture, position: { x: 0.8, y: 0.25 } }
 		]
@@ -56,6 +58,7 @@ export default function AIRobotics() {
 		});
 
 		const theoryObject = hutObjects["theory"];
+		const whatsaiObject = hutObjects["whatsAI"];
 		const experimentObject = hutObjects["experiment"];
 		const connectionsObject = hutObjects["connections"];
 		const peopleObject = hutObjects["people"];
@@ -74,6 +77,7 @@ export default function AIRobotics() {
 
 		const listOfObjects = [
 			{sprite: theoryObject, papyrus: papyrusContainers['theory']},
+			{sprite: whatsaiObject, papyrus: papyrusContainers['whatsAI']},
 			{sprite: experimentObject, papyrus: papyrusContainers['experiment']},
 			{sprite: connectionsObject, papyrus: papyrusContainers['connections']},
 			{sprite: peopleObject, papyrus: papyrusContainers['people']},
