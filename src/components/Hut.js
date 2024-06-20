@@ -10,7 +10,7 @@ const Hut = {
      * @param {{x: number, y: number}} position - Position for where the object should be placed
      * @returns
      */
-    createObject(app, title = "", texture, position, size = {width: 100, height: 100}) {
+    createObject(app, title = "", texture, position, size = {width: 200, height: 200}) {
 
         const object = new PIXI.Sprite(texture);
 
