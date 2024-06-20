@@ -14,15 +14,15 @@
 
 @font-face {
     font-family: 'cmu_typewriter_textregular';
-    src: url('cmuntt-webfont.woff') format('woff');
+    src: url('../../content/software-engineering/cmuntt-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Alagard';
-    src: url('Alagard.woff2') format('woff2'),
-        url('Alagard.woff') format('woff');
+    src: url('../../content/software-engineering/Alagard.woff2') format('woff2'),
+        url('../../content/software-engineering/Alagard.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;

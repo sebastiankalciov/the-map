@@ -1,3 +1,101 @@
-<html>
-bau
+<html class="base">
+    <div class="papyrus-container">
+        <div class="content">
+    
+            <h1 class="text-6xl mb-4">Important People</h1>
+
+            <h2 class="text-4xl mb-4">Important people in the graphic design field:</h2>
+
+            <div class="flex mb-6">
+                <img src="https://www.onthisday.com/images/people/ivan-sutherland.jpg?w=200" alt="Ivan Sutherland" class="mr-4 same-height">
+                <div>
+                    <h3 class="text-3xl underline mb-2">Ivan Sutherland</h3>
+                    <p class="mb-2">In 1963, Ivan Sutherland engineered a revolution in computer graphics with his highly-interactive program Sketchpad. It enabled users to design and draw in real time directly on the computer display, using a light pen. Among other innovative features, Sketchpad allowed users to manipulate, duplicate, store, and recall drawings for future use.</p>
+                    <a href="https://dblp.org/pid/35/5713.html" class="text-blue-500">Publications</a>
+                </div>
+            </div>
+
+            <div class="flex mb-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ed_Catmull_at_Web_Summit_2015_%28cropped%29.jpg/1200px-Ed_Catmull_at_Web_Summit_2015_%28cropped%29.jpg" alt="Ed Catmull" class="mr-4 same-height">
+                <div>
+                    <h3 class="text-3xl underline mb-2">Ed Catmull</h3>
+                    <p class="mb-2">Edwin Earl "Ed" Catmull is one of the three founding fathers of Pixar. He was President and CTO of Pixar and later President of Walt Disney Animation Studios and Pixar Animation Studios, until his retirement in 2019. Ed Catmull has played a pivotal role in advancing computer graphics and computer-generated imagery (CGI) in animated films.</p>
+                    <a href="https://dblp.org/search?q=Ed+Catmull" class="text-blue-500">Publications</a>
+                </div>
+            </div>
+
+            <div class="flex mb-6">
+                <img src="https://www.fxguide.com/wp-content/uploads/2012/07/jim.jpg" alt="Jim Blinn" class="mr-4 same-height">
+                <div>
+                    <h3 class="text-3xl underline mb-2">Jim Blinn</h3>
+                    <p class="mb-2">Jim Blinn is known for his significant contributions to computer graphics, including the development of Blinn-Phong shading and other techniques that have become standard in the field. He has worked at NASA's Jet Propulsion Laboratory and Microsoft Research.</p>
+                    <a href="https://www.jimblinn.com" class="text-blue-500">Homepage</a> |
+                    <a href="https://www.jimblinn.com/publications/" class="text-blue-500">Publications</a> |
+                    <a href="https://www.jimblinn.com/contact/" class="text-blue-500">Contact</a>
+                </div>
+            </div>
+
+            <div class="flex mb-6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_5CuYjcmB5v8j7r0RhSh_rq4gHaQgliFdyQ&s" alt="James Kajiya" class="mr-4 same-height">
+                <div>
+                    <h3 class="text-3xl underline mb-2">James Kajiya</h3>
+                    <p class="mb-2">Jim Kajiya is a pioneer in the field of computer graphics. He is perhaps best known for the development of the rendering equation. Kajiya received his PhD from the University of Utah in 1979, was a professor at Caltech from 1979 through 1994, and is currently a researcher at Microsoft Research.</p>
+                    <a href="https://dblp.org/pid/43/808.html" class="text-blue-500">Publications</a>
+                </div>
+            </div>
+
+            <div class="flex mb-6">
+                <img src="https://www.cs.cornell.edu/annual_report/1997/Greenberg.gif" alt="Donald Greenberg" class="mr-4 same-height">
+                <div>
+                    <h3 class="text-3xl underline mb-2">Donald Greenberg</h3>
+                    <p class="mb-2">Donald Greenberg is a computer graphics researcher and teacher, who is professor of Cornell University's program of computer graphics. He was a computer graphics technical consultant for the animation studio Hanna-Barbera.</p>
+                    <a href="https://www.graphics.cornell.edu/people/director" class="text-blue-500">Homepage</a> |
+                    <a href="https://dblp.org/pid/g/DonaldPGreenberg.html" class="text-blue-500">Publications</a> |
+                    <a href="mailto:dpg5@cornell.edu" class="text-blue-500">Email</a> |
+                    <span>Phone number: (607) 255-7444</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.imgur.com/qlb7gqc.png');
+            background-size: repeat;
+            height: 100vh;
+            padding: 0 20px;
+        }
+        .papyrus-container {
+            width: 50%;
+            height: 100vh;
+            overflow-y: scroll;
+            background-image: url("https://i.imgur.com/E6I9A3t.png");
+            background-repeat: repeat;
+            padding: -20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 50vh;
+            top: 1vh;
+        }
+        .papyrus-container::-webkit-scrollbar {
+            display: none;
+        }
+        .content {
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .same-height {
+            height: 150px; /* Fixed height */
+            width: auto; /* Maintain aspect ratio */
+        }
+    </style>
+
 </html>
