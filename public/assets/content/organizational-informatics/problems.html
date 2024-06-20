@@ -1,3 +1,76 @@
-<html>
-bau
+<html class="base">
+<div class="papyrus-container">
+    <div class="content">
+        <!--
+            Everything in this divs (papyrus container, content) can be modified
+            You can use the tailwindcss (See https://tailwindcss.com/docs/)
+
+            Please do NOT modify anything from the style attribute from this file
+            In the actual project, this file does not contain the style and script attributes, this is just a template.
+
+            Naming convention:
+                folder_names: [ai-robotics, algorithms, architecture, bioinformatics, computational-science,
+                databases, graphics, human-computer, organizational-informatics, os, programming-languages, software engineering]
+
+                sections: [connections, design, experiment, people, problems, theory, uvtRelationship, venues]
+
+            Each folder contains the sections mentioned before.
+
+            Each section is a different html file.
+
+            Please try to structure your research in this manner.
+        -->
+        <br>
+        <h1 class="text-6xl">&nbsp;&nbsp;&nbsp;&nbsp;Problems</h1>
+        <hr style="height:2px;border-width:0;color:black;background-color:black">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Some important problems/experiments:</p>
+        <br>
+        <dl>
+            <dt>
+                <b>Minnesota Experiments</b>
+            </dt>
+            <p>The use of computer based information-decision systems to support decision making in organizations has increased significantly in the last decade. Very little effort has been devoted, however, to determine what relationships exist between the structure of information presented for decision making and the ensuing effectiveness of the decision. This article summarizes a series of experiments. The Minnesota Experiments, which were conducted to examine the significance of various information system characteristics on decision activity. Several research programs administered in the period 1970–1975 are discussed in this paper. By varying the manner in which information was provided to participants in each experiment, the impact of various information system characteristics and individual differences on decision effectiveness was investigated. Analysis of the results shows that, in many cases, the decisions/decision-making process of the participants was affected by the information system structure and/or attributes of individual decision makers. The results suggest guidelines for the designers of information systems and fruitful avenues for continued research.</p>
+            <dt>
+                <b>Online controlled experiments at large scale</b>
+            </dt>
+            <p>Web-facing companies, including Amazon, eBay, Etsy, Facebook, Google, Groupon, Intuit, LinkedIn, Microsoft, Netflix, Shop Direct, StumbleUpon, Yahoo, and Zynga use online controlled experiments to guide product development and accelerate innovation. At Microsoft's Bing, the use of controlled experiments has grown exponentially over time, with over 200 concurrent experiments now running on any given day. Running experiments at large scale requires addressing multiple challenges in three areas: cultural/organizational, engineering, and trustworthiness. On the cultural and organizational front, the larger organization needs to learn the reasons for running controlled experiments and the tradeoffs between controlled experiments and other methods of evaluating ideas. We discuss why negative experiments, which degrade the user experience short term, should be run, given the learning value and long-term benefits. On the engineering side, we architected a highly scalable system, able to handle data at massive scale: hundreds of concurrent experiments, each containing millions of users. Classical testing and debugging techniques no longer apply when there are billions of live variants of the site, so alerts are used to identify issues rather than relying on heavy up-front testing. On the trustworthiness front, we have a high occurrence of false positives that we address, and we alert experimenters to statistical interactions between experiments. The Bing Experimentation System is credited with having accelerated innovation and increased annual revenues by hundreds of millions of dollars, by allowing us to find and focus on key ideas evaluated through thousands of controlled experiments. A 1% improvement to revenue equals more than $10M annually in the US, yet many ideas impact key metrics by 1% and are not well estimated a-priori. The system has also identified many negative features that we avoided deploying, despite key stakeholders' early excitement, saving us similar large amounts.</p>
+        </dl>
+    </div>
+</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    .base {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://i.imgur.com/qlb7gqc.png');
+        background-size: repeat;
+        height: 100vh;
+        padding: 0 20px;
+    }
+
+    .papyrus-container {
+        width: 50%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-image: url("https://i.imgur.com/E6I9A3t.png");
+        background-repeat: repeat;
+        padding: -20px;
+        box-sizing: border-box;
+        position: fixed;
+        right: 50vh;
+        top: 1vh;
+    }
+
+    .papyrus-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content {
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+    }
+</style>
 </html>
