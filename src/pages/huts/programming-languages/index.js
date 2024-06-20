@@ -34,13 +34,14 @@ export default function ProgrammingLanguages() {
 
 		// Load textures for each object
 		await PIXI.Assets.load('/assets/fonts/OpenSans.ttf');
-		const theoryTexture = await PIXI.Assets.load('/assets/objects/desk.png');
-		const designTexture = await PIXI.Assets.load('/assets/objects/library.png');
-		const globeTexture = await PIXI.Assets.load('/assets/objects/globe.png');
-		const experimentTexture = await PIXI.Assets.load('/assets/objects/experiment.png');
-		const peopleTexture = await PIXI.Assets.load('/assets/objects/people.png');
-		const uvtTexture = await PIXI.Assets.load('/assets/objects/UVT-logo.png');
-		const problemsTexture = await PIXI.Assets.load('/assets/objects/problems.png');
+		const theoryTexture = await PIXI.Assets.load('/assets/objects/newObjectsTextures/TheoryObject.png');
+		const globeTexture = await PIXI.Assets.load('/assets/objects/newObjectsTextures/ConnectionsObject.png');
+		const experimentTexture = await PIXI.Assets.load('/assets/objects/newObjectsTextures/ExperimentsObject.png');
+		const peopleTexture = await PIXI.Assets.load('/assets/objects/newObjectsTextures/ImportantPeopleObject.png');
+		const uvtTexture = await PIXI.Assets.load('/assets/objects/newObjectsTextures/UVT.png');
+		const venuesTexture = await PIXI.Assets.load('/assets/objects/newObjectsTextures/VenuesObject.png');
+		const designTexture = await PIXI.Assets.load('/assets/objects/newObjectsTextures/DesignObject.png');
+		const problemsTexture = await PIXI.Assets.load('/assets/objects/newObjectsTextures/ProblemsObject.png');
 
 		// Create objects
 		const objectsInfo = [
@@ -50,7 +51,7 @@ export default function ProgrammingLanguages() {
 			{ id: "design", name: "Design", texture: designTexture, position: { x: 0.6, y: 0.1 } },
 			{ id: "connections", name: "Connections", texture: globeTexture, position: { x: 0.7, y: 0.5 } },
 			{ id: "people", name: "Important people", texture: peopleTexture, position: { x: 0.15, y: 0.1 } },
-			{ id: "venues", name: "Venues", texture: theoryTexture, position: { x: 0.8, y: 0.25 } }
+			{ id: "venues", name: "Venues", texture: venuesTexture, position: { x: 0.8, y: 0.25 } }
 		]
 
 		const hutObjects = {};
