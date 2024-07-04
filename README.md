@@ -5,22 +5,22 @@
 ## Preview
 
 ### Landing
-<img src = "previews/landing.png" width = "720px" height = "320px">
+<img src = "previews/landing.png" width = "720px" height = "360px">
 
 ### Info
-<img src = "previews/info.png" width = "720px" height = "320px">
+<img src = "previews/info.png" width = "720px" height = "360px">
 
 ### Loading
-<img src = "previews/loading.png" width = "720px" height = "320px">
+<img src = "previews/loading.png" width = "720px" height = "360px">
 
 ### Village
-<img src = "previews/village.png" width = "720px" height = "320px">
+<img src = "previews/village.png" width = "720px" height = "360px">
 
 ### House (Software Engineering)
-<img src = "previews/house.png" width = "720px" height = "320px">
+<img src = "previews/house.png" width = "720px" height = "360px">
 
 ### Papyrus (is scrollable)
-<img src = "previews/papyrus.png" width = "720px" height = "320px">
+<img src = "previews/papyrus.png" width = "720px" height = "360px">
 
 ## Technologies
 - [Node.js](https://nodejs.org/en)
