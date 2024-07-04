@@ -2,8 +2,25 @@
 
 **The Map** is an Interactive **2D** Website designed to represent the field of **Computer Science** for the **Methods and Practices in Informatics** Course.
 
-The Map can also be accessed online (for a short time) on https://cs-map.live/
-<!-- <img src = "https://i.imgur.com/PKKzg6u.png" width = "720px" height = "320px"/> -->
+## Preview
+
+### Landing
+<img src = "previews/landing.png" width = "720px" height = "320px">
+
+### Info
+<img src = "previews/info.png" width = "720px" height = "320px">
+
+### Loading
+<img src = "previews/loading.png" width = "720px" height = "320px">
+
+### Village
+<img src = "previews/village.png" width = "720px" height = "320px">
+
+### House (Software Engineering)
+<img src = "previews/house.png" width = "720px" height = "320px">
+
+### Papyrus (is scrollable)
+<img src = "previews/papyrus.png" width = "720px" height = "320px">
 
 ## Technologies
 - [Node.js](https://nodejs.org/en)
@@ -31,27 +48,15 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in the browser to see **The Map**.
 
-
 ## Contributors
-Artiom Leliuhin,
-
-Bianca Vatavu,
-
-Ecaterina Manole,
-
-Elena Moglan,
-
-Ionuț Anghel,
-
-Maia Marin,
-
-Maria-Miruna Mesaroşiu,
-
-Natalia-Ana Matiuț,
-
-Radu Dinculescu,
-
-Raul-Andrei Ariton,
-
-Silviu-Ştefan Mitrea 
-
+- Artiom Leliuhin,
+- Bianca Vatavu,
+- Ecaterina Manole,
+- Elena Moglan,
+- Ionuț Anghel,
+- Maia Marin,
+- Maria-Miruna Mesaroşiu,
+- Natalia-Ana Matiuț,
+- Radu Dinculescu,
+- Raul-Andrei Ariton,
+- Silviu-Ştefan Mitrea
