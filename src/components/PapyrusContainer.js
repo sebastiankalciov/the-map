@@ -59,6 +59,7 @@ export function createPapyrusContainer(document, content, PAGE_NAME) {
 		papyrusContainer.appendChild(script);
 		papyrusContainer.appendChild(script1);
 	}
+    
 	papyrusContainer.appendChild(contentDiv);
 
 	return papyrusContainer;

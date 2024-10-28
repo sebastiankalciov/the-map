@@ -1,4 +1,4 @@
-import * as PIXI from 'pixi.js';
+import {Sprite, Text, TextStyle} from 'pixi.js';
 
 const Hut = {
 
@@ -12,16 +12,16 @@ const Hut = {
      */
     createObject(app, title = "", texture, position, size = {width: 200, height: 200}) {
 
-        const object = new PIXI.Sprite(texture);
+        const object = new Sprite(texture);
 
-        const titleStyle = new PIXI.TextStyle({
+        const titleStyle = new TextStyle({
             fontFamily: "OpenSans",
             fontSize: 22,
             fontWeight: "bold",
             fill: '#ffffff'
         });
 
-        const objectTitle = new PIXI.Text({text: title, style: titleStyle});
+        const objectTitle = new Text({text: title, style: titleStyle});
 
         objectTitle.resolution = 3;
         object.texture.source.scaleMode = "nearest";
@@ -32,9 +32,11 @@ const Hut = {
         object.position.set((app.renderer.screen.width * position.x), (app.renderer.screen.height * position.y));
 
         // Set the size of the object
+
 		const maxHutSize = 100;
 		const minHutSize = 50;
 		const baseScale = Math.min(app.renderer.screen.width, app.renderer.screen.height) * 0.1;
+        
 		object.width = Math.max(minHutSize, baseScale);
 		object.height = Math.max(minHutSize, baseScale);
 

@@ -1,4 +1,4 @@
-import * as PIXI from 'pixi.js';
+import {Sprite} from 'pixi.js';
 
 const Character = {
 
@@ -10,7 +10,7 @@ const Character = {
      */
     create(app, texture) {
 
-        const character = PIXI.Sprite.from(texture);
+        const character = Sprite.from(texture);
 
         // Increase the resolution of the texture
         character.width = 105;
